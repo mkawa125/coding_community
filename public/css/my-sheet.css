@@ -1,0 +1,225 @@
+body{
+    background-color: whitesmoke;
+}
+footer{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: small;
+    line-height: 30px;
+}
+header{
+    margin: 10px auto;
+}
+.content{
+    background-color: white;
+    border: 1px solid #c1c5cc;
+    margin: 0 auto;
+    width: 500px;
+    padding: 15px;
+    font-size: small;
+    font-family:sans-serif;
+    box-shadow: 0 5px 5px 0 #c1c5cc;
+}
+.form-control{
+    font-size: small;
+    font-family:sans-serif;
+    color: #707B7C;
+    height: 30px;
+}
+.container{
+    margin: 100px auto;
+}
+.modal-head{
+    border: 1px solid #c1c5cc;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 3px 0 #c1c5cc;
+    color: #707B7C;
+}
+.modal-body{
+    color: #707B7C;
+    font-size: small;
+}
+.panel{
+    margin-bottom:30px;
+}
+.panel-body{
+    color: #707B7C;
+    font-size: small;
+    border: 1px solid #c1c5cc;
+    padding: 2px 30px 2px 30px;
+}
+.modal-footer{
+    background-color: whitesmoke;
+    border-top: 1px solid #c1c5cc;
+}
+.panel-footer{
+    background-color: whitesmoke;
+    border: 1px solid #c1c5cc;
+    padding: 15px;
+    font-size: small;
+    color: #707B7C;
+    box-shadow: 0 3px 3px 0 #c1c5cc;
+}
+.header-panel{
+    background-color: #c1c5cc;
+    text-align: center;
+    font-size: medium;
+    /*border-top-left-radius: 8px;*/
+    /*border-top-right-radius: 8px;*/
+}
+.panel-heading{
+    background-color: whitesmoke;
+    padding: 5px;
+    color: #707B7C;
+    text-align: center;
+    border: 1px solid #c1c5cc;
+    box-shadow: 0 3px 3px 0 #c1c5cc;
+}
+.fa-twitter-square{
+    color:#1DA1F2;
+}
+.fa-facebook-square{
+    color: #3B5998;
+}
+.fa-whatsapp{
+    color: #34af23;
+}
+.fa-instagram{
+    color: #e95950;
+}
+.fa-linkedin-square{
+    color: #0077B5;
+}
+.fa-angle-double-right{
+    font-size: small;
+}
+.fa{
+    font-size: large;
+}
+.fa-search{
+    color: white;
+}
+.fa-android{
+    color: #AAC639;
+    font-size: large;
+}
+.navbar{
+    border-radius: 0;
+    font-size: medium;
+    font-family: "Noto Sans Georgian";
+}
+.navbar-brand{
+    font-size: small;
+    font-family: 'Raleway', sans-serif;
+}
+.main-content{
+    margin: 62px auto 0 auto;
+    background-color: white;
+    color: #707B7C;
+    padding: 5px;
+    border-bottom: 1px solid #707B7C;
+    border-top: 2px solid #707B7C;
+}
+.main-content-2{
+    margin: 30px auto;
+    background-color: white;
+    color: #707B7C;
+}
+.main-content-3{
+    margin: 0 auto;
+    background-color: white;
+    color: #707B7C;
+}
+.home-head{
+    font-family: Roboto;
+    font-size: medium;
+}
+.register-head{
+    font-family: Roboto;
+    font-size: small;
+    padding: 8px;
+}
+.logo-head{
+    font-family: Roboto;
+    font-size: large;
+    margin-top: 10px;
+    color: white;
+}
+.social a {
+    margin-left: 15px;
+}
+.social a i:hover{
+    font-size: large;
+}
+.column{
+    font-size: small;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.column ul li a{
+    color: #7FB3D5;
+}
+.column ul li a:hover{
+    color: chocolate;
+    font-family: Roboto;
+}
+.search{
+    margin: 0 auto;
+}
+.welcome{
+    color: #707B7C;
+    font-size: 14px;
+    font-family: Roboto;
+}
+.welcome-register{
+    color: #707B7C;
+    font-size: 14px;
+    font-family: Roboto;
+    padding: 8px;
+}
+.head{
+    background-color: #17A589;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+}
+.category{
+    border: 1px solid #c1c5cc;
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+    box-shadow: 0 5px 5px 0 #c1c5cc;
+
+}
+.category ul li a{
+    font-size: small;
+    color: #707B7C;
+}
+.category ul li a:hover{
+    color: chocolate;
+}
+.category-head{
+    text-align: center;
+    font-size: 15px;
+}
+.has-error{
+    color: #e95950;
+}
+@media only screen and (max-width: 800px) {
+    .register-slide {
+        display: none;
+    }
+    .social{
+        display: none;
+    }
+    .about-img{
+        display: none;
+    }
+}
+.input-group-text{
+    background-color: #EC7063;
+    padding: 2px 10px 2px 10px;
+}
+.\.checkbox-inline{
+    margin: 5px;
+}
