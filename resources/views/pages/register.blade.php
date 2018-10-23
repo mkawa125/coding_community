@@ -43,46 +43,6 @@
                 Please make sure your details are correct so that people can know who are you in computer programming field.
                 </p>
 
-                {{--<div id="demo" class="carousel slide register-slide" data-ride="carousel">--}}
-                    {{--<ul class="carousel-indicators">--}}
-                        {{--<li data-target="#demo" data-slide-to="0" class="active"></li>--}}
-                        {{--<li data-target="#demo" data-slide-to="1"></li>--}}
-                        {{--<li data-target="#demo" data-slide-to="2"></li>--}}
-                    {{--</ul>--}}
-                    {{--<div class="carousel-inner">--}}
-                        {{--<div class="carousel-item active">--}}
-                            {{--<img src="{{ asset('images/start1.png') }}" alt="Los Angeles" width="100%" height="300">--}}
-                            {{--<div class="carousel-caption">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-item">--}}
-                            {{--<img src="{{ asset('images/start2.jpeg') }}" alt="Chicago" width="100%" height="300">--}}
-                            {{--<div class="carousel-caption">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-item">--}}
-                            {{--<img src="{{ asset('images/start4.png') }}" alt="New York" width="100%" height="300">--}}
-                            {{--<div class="carousel-caption">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-item">--}}
-                            {{--<img src="{{ asset('images/start3.jpeg') }}" alt="Chicago" width="100%" height="300">--}}
-                            {{--<div class="carousel-caption">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="carousel-item">--}}
-                            {{--<img src="{{ asset('images/start5.jpeg') }}" alt="New York" width="100%" height="300">--}}
-                            {{--<div class="carousel-caption">--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<a class="carousel-control-prev" href="#demo" data-slide="prev">--}}
-                        {{--<span class="carousel-control-prev-icon"></span>--}}
-                    {{--</a>--}}
-                    {{--<a class="carousel-control-next" href="#demo" data-slide="next">--}}
-                        {{--<span class="carousel-control-next-icon"></span>--}}
-                    {{--</a>--}}
-                {{--</div>--}}
 
                 <div class="social">
                     <h5 class="register-head"><strong>Social Networks</strong></h5>
@@ -105,7 +65,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="/register" name="register-form" class="#" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('signup/store') }}" name="register-form" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
                                     {{--Displying errors--}}
@@ -164,10 +124,10 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
-                                                @if($errors->has('password'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('password') }}</small>
-                                                </span>
+                                                @if ($errors->has('password'))
+                                                    <span class=" has-error">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
                                                 @endif
                                             </h5>
                                             <label for="password"><strong>Enter password:</strong></label>
@@ -437,7 +397,7 @@
                                         </select>
                                     </div>
                                     <button class="btn btn-primary btn-xs" name="login" type="submit" style="background-color: #2874A6; float: right; margin-top: 5px; padding: 5px; font-size: small">
-                                        Next <i class="fa fa-arrow-right" style="font-size: smaller"></i></button>
+                                        Continue  <i class="fa fa-arrow-right" style="font-size: smaller"></i></button>
                                 </form>
                             </div>
                         </div>

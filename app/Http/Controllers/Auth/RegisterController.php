@@ -6,9 +6,12 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class RegisterController extends Controller
 {
@@ -23,24 +26,26 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -68,21 +73,11 @@ class RegisterController extends Controller
     {
        return view('/pages/register');
     }
-    public function home(){
+    public function home()
+    {
         return view('pages/home');
     }
-    public function developers(){
-        return view('pages/home');
-    }
-    public function about(){
-        return view('pages/about');
-    }
-    public function categories(){
-        return view('pages/home');
-    }
-    public function jobs(){
-        return view('pages/home');
-    }
+
     public function store(Request $request){
 
         //validating user inputs
@@ -105,17 +100,61 @@ class RegisterController extends Controller
             'password' => bcrypt($request->input('password')),
             'created_at' => date('Y-m-d H:i:s'),
         );
-        DB::table('users')->insert($data);
-        return RegisterController::addSkills();
+        $last_user = DB::table('users')->insertGetId($data);
+        $request->session()->put('last_user', $last_user);
+        $request->session()->put('username', $request->input('username'));
+        $request->session()->put('surname', $request->input('surname'));
+        $request->session()->put('name', $request->input('name'));
+        $request->session()->put('email', $request->input('email'));
+        $request->session()->put('gender', $request->input('gender'));
+        return RegisterController::createSkills();
+    }
+    public function createSkills(){
+        return view('pages/register_two');
     }
     public function addSkills(Request $request){
-        $data = array(
-            'skills' => $request->input('skills'),
-            'user_phone' => $request->input('phone'),
-        );
-        $data_two = array(
 
+        //validating user inputs
+        $this->validate(Request(),[
+            'skills' => 'required',
+            'user_status' => 'required',
+            'phone_number' => 'required',
+            'gender' => 'required'
+        ]);
+        //getting post user inputs
+        $data = array(
+            'skills' => implode(',', $request->get('skills')),
+            'user_phone' => $request->input('phone_number'),
+            'work' => $request->input('user_status'),
+            'status' => 1,
+            'gender' => $request->input('gender'),
         );
-        DB::update('update users set skills = $skills where id = ', []);
+        DB::table('users')->WHERE('id', $request->session()->get('last_user'))->update($data);
+        Auth::loginUsingId($request->session()->get('last_user'));
+        return redirect()->route('home');
+    }
+    public function userLogin(){
+        $this->validate(request(), [
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        if (auth()->attempt(request(['email', 'password'])) == false) {
+            return back()->withErrors([
+                'message' => 'The email or password is incorrect, please try again'
+            ]);
+
+        }
+        return redirect()->to('/register');
+    }
+
+    public function ShowRegistrationForm(){
+        return RegisterController::create();
+    }
+    public function logout(Request $request)
+    {
+        $this->performLogout($request);
+        return redirect()->route('home');
     }
 }
+

@@ -42,20 +42,36 @@
             </li>
         </ul>
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/register"><i class="fa fa-user-o"></i> Register</a>
-            </li>
-            <li class="nav-item">
-                @if( auth()->check())
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i> Login</a>
-                <a class="nav-link" href="#">{{ auth()->user()->username }}</a>
-                    @else( !auth()->check())
-                    <a class="nav-link" href="/login" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i> Login</a>
-                @endif
-            </li>
+        <div class=" col-sm-5 input-group">
+            <input type="text" class="form-control" placeholder="what are you looking for ?" id="search" name="search" style="font-size: small">
+            <div class="input-group-append">
+                <span class="input-group-text"><a href="#"><i class="fa fa-search"></i></a></span>
+            </div>
+        </div>
 
-        </ul>
+        @if (Auth::guest())
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url("signup/create") }}"><i class="fa fa-user-o"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-lock"></i> Login</a>
+                </li>
+            </ul>
+            @else
+            <div class="dropdown" style="margin: 0 auto">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> {{ Auth::user()->name }}</a>
+                <div class="dropdown-menu" style="color: white">
+                    <a class="dropdown-item" href="{{ url("notes/data") }}"><i class="fa fa-code"></i> My storage</a>
+                    <a class="dropdown-item" href="{{url('users/profile')}}?id=1"><i class="fa fa-user-circle"></i> user profile</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-cog"></i> settings</a>
+                    <a class="dropdown-item" href="{{ route("logout") }}"><i class="fa fa-sign-out"></i> logout</a>
+                    <a class="nav-link" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> Register</a>
+                </div>
+            </div>
+        @endif
+
+
     </div>
 </nav>
 
@@ -75,20 +91,20 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <form action="/login" enctype="multipart/form-data" method="post">
+                        <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             {{--Displying errors--}}
                             <h5 style="font-size: small">
-                                @if($errors->has('username'))
+                                @if($errors->has('email'))
                                     <span class="has-error">
-                                        <small>{{ $errors->first('username') }}</small>
+                                        <small>{{ $errors->first('email') }}</small>
                                     </span>
                                 @endif
                             </h5>
                             <label for="pass1" ><strong>Username or Email:</strong></label>
                             <div class="form-group input-group">
-                                <input type="email" class="form-control" id="username" name="username" placeholder="username or email">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="username or email">
                             </div>
 
                             {{--Displying errors--}}
@@ -106,10 +122,9 @@
 
                             <input type="checkbox" name="remember" id="remember">
                             <label for="remember">Remember me</label>
-                            <button class="btn btn-primary btn-block" name="login" type="submit" style="background-color: #2874A6">Signin</button>
+                            <button class="btn btn-primary btn-block" value="login" name="login" type="submit" style="background-color: #2874A6">Signin</button>
                             <a href="#" class="#">forget password ?</a>
                         </form>
-
                     </div>
                 </div>
             </div>

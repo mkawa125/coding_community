@@ -39,13 +39,7 @@
         <div class="row">
             <div class="col-sm-8"><h5 class="logo-head">About Tanzania programming community</h5></div>
             <div class="col-sm-4">
-                <div class="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="what are you looking for ?" id="search" name="search" style="font-size: small">
-                        <div class="input-group-append">
-                            <span class="input-group-text" style="background-color: #EC7063"><a href="#"><i class="fa fa-search"></i></a></span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -120,7 +114,6 @@
             </div>
         </div>
     </div>
-</div>
 
 {{--modal for user login--}}
 

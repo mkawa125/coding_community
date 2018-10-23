@@ -62,11 +62,18 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="/register" name="register-form" class="#" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('signup/addSkills') }}" name="register-form" class="#" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
                                     <div class="#">
                                         <label><strong style="color: cornflowerblue">Favourite programming languages and professional skills: </strong></label><br>
+                                        <h5 style="font-size: small">
+                                            @if($errors->has('skills'))
+                                                <span class="has-error">
+                                                    <small>{{ $errors->first('skills', 'please select at least one professional skills') }}</small>
+                                                </span>
+                                            @endif
+                                        </h5>
                                         <label for="pass1" class=".checkbox-inline"><input type="checkbox" class="" id="username" name="skills[]" value="php">Php: </label>
                                         <label for="pass1" class=".checkbox-inline"><input type="checkbox" class="" id="username" name="skills[]" value="javaScript">JavaScript: </label>
                                         <label for="pass1" class=".checkbox-inline"><input type="checkbox" class="" id="username" name="skills[]" value="python">Python: </label>
@@ -83,44 +90,58 @@
 
                                     </div>
 
-                                    <div class="">
-                                        <label for="user_status" ><strong style="color: cornflowerblue">Current status:</strong></label>
-                                        <ul>
-                                            <li><input type="radio" class="" id="user_status" name="user_status" value="student"> Student</li>
-                                            <li><input type="radio" class="" id="user_status" name="user_status" value="employed"> Employed</li>
-                                            <li><input type="radio" class="" id="user_status" name="user_status" value="none"> None</li>
-                                        </ul>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="user_status" ><strong style="color: cornflowerblue">Current status:</strong></label>
+                                            <h5 style="font-size: small">
+                                                @if($errors->has('user_status'))
+                                                    <span class="has-error">
+                                                    <small>{{ $errors->first('user_status', 'Please select your status here') }}</small>
+                                                </span>
+                                                @endif
+                                            </h5>
+                                            <ul>
+                                                <li><input type="radio" class="" id="user_status" name="user_status" value="student"> Student</li>
+                                                <li><input type="radio" class="" id="user_status" name="user_status" value="employed"> Employed</li>
+                                                <li><input type="radio" class="" id="user_status" name="user_status" value="none"> None</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="gender" ><strong style="color: chocolate">gender:</strong></label>
+                                            <h5 style="font-size: small">
+                                                @if($errors->has('gender'))
+                                                    <span class="has-error">
+                                                    <small>{{ $errors->first('gender', 'please select your gender') }}</small>
+                                                </span>
+                                                @endif
+                                            </h5>
+                                            <ul>
+                                                <li><input type="radio" class="" id="gender" name="gender" value="male"> Male</li>
+                                                <li><input type="radio" class="" id="gender" name="gender" value="female"> Female</li>
+                                            </ul>
+                                        </div>
+
                                     </div>
 
 
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
-                                                @if($errors->has('first_name'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('first_name') }}</small>
+                                                @if($errors->has('phone_number'))
+                                                    <span class="has-error" style="border: 3px dotted red">
+                                                    <small>{{ $errors->first('phone_number') }}</small>
                                                 </span>
                                                 @endif
                                             </h5>
                                             <label for="first-name"><strong style="color: cornflowerblue">Phone number:</strong></label>
                                             <div class="input-group">
-                                                <input type="text" name="phone" id="phone" class="form-control" placeholder="e.g. 0717495198" >
+                                                <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="e.g. 0717495198" >
                                             </div>
 
 
                                         </div>
                                         <div class="col-sm-6">
-                                            <h5 style="font-size: small">
-                                                @if($errors->has('first_name'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('first_name') }}</small>
-                                                </span>
-                                                @endif
-                                            </h5>
-                                            <label for="pass2"><strong style="color: cornflowerblue">Link on github/gitlab:</strong></label>
-                                            <div class="input-group">
-                                                <input type="text" name="surname" id="surname" class="form-control" placeholder="https://github.com/mkawa95" >
-                                            </div>
+
                                         </div>
                                     </div>
 

@@ -34,23 +34,36 @@
 </div>
 
 <div class="container-fluid">
+<div class="row">
+    <div class="col-sm-2 side-menu" id="sticky-sidebar">
+        <div class="sticky-top">
+            <div class="nav flex-column">
+                @if (Auth::guest())
 
-    <div class="col-sm-10 main-content" style="background-color: #2874A6">
-        <div class="row">
-            <div class="col-sm-8"><h5 class="logo-head">welcome to Tanzania programming community to share your skills</h5></div>
-            <div class="col-sm-4">
-                <div class="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="what are you looking for ?" id="search" name="search" style="font-size: small">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><a href="#"><i class="fa fa-search"></i></a></span>
-                        </div>
+                @else
+                    <div class="btn-group" style="margin-bottom: 15px; font-size: small">
+                        <button type="button" class="btn btn-primary">Add Note <i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn btn-danger">Question <i class="fa fa-question"></i></button>
                     </div>
-                </div>
+                @endif
+                <h5><strong>Categories</strong></h5>
+                <ul class="list-inline">
+                    <li><a href="" class="nav-link">Php Programing</a></li>
+                    <li><a href="" class="nav-link">Web Programming</a></li>
+                    <li><a href="" class="nav-link">Android development</a></li>
+                    <li><a href="" class="nav-link">USSD applications</a></li>
+                    <li><a href="" class="nav-link">JavaScript</a></li>
+                    <li><a href="" class="nav-link">Java Programming</a></li>
+                    <li><a href="" class="nav-link">Python</a></li>
+                    <li><a href="" class="nav-link">Web Development</a></li>
+                    <li><a href="" class="nav-link">Design Patterns</a></li>
+                    <li><a href="" class="nav-link">Database systems</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="col-sm-10 main-content-3" style="">
+
+    <div class="col-sm-9 main-content" style="margin-top: 100px">
         <div class="row" style="margin-top: 10px">
         <div class="col-sm-7" style="margin-top: 10px">
             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -106,9 +119,6 @@
                 and you are looking for the opportunity be please <a href="#">registered here </a> people are always looking for developers</p>
         </div>
             <div class="col-sm-4 column" style="margin-top: 10px">
-                <h5 class="home-head">Tanzania programming community</h5>
-                <p class="welcome">Welcome to Tanzania coding community where you can meet with several number of programmers so as to exchange some
-                ideas concerning to software development field</p>
 
                 <h5 class="home-head head">Recent discussions </h5>
 
@@ -130,8 +140,10 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-sm-10 main-content-2" style="">
+<div class="row">
+    <div class="col-sm-9 main-content-2" style="">
         <h5 class="home-head" style="margin-top: 10px; color: chocolate">Categories of Programming discussions <span><i class="fa fa-code"></i></span></h5>
         <div class="row" style="margin-top: 10px">
             <div class="col-sm-3 category">
@@ -176,9 +188,10 @@
             </div>
         </div>
     </div>
+</div>
 
-
-    <div class="col-sm-10 main-content-2" style="">
+<div class="row">
+    <div class="col-sm-9 main-content-2" style="">
         <div class="row" style="margin-top: 10px">
             <div class="col-sm-3 category">
                 <h5 style="border-bottom: 1px solid #c1c5cc; padding: 5px; font-size: 16px; box-shadow: 0 3px 3px 0 #F5B041;">
@@ -221,8 +234,10 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-sm-10 main-content-2" style="">
+<div>
+    <div class="col-sm-9 main-content-2" style="">
         <div class="row" style="margin-top: 10px">
             <div class="col-sm-3 category">
                 <h5 style="border-bottom: 1px solid #c1c5cc; padding: 5px; font-size: 16px; box-shadow: 0 5px 5px 0 #c1c5cc;">
@@ -265,6 +280,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {{--modal for user login--}}
