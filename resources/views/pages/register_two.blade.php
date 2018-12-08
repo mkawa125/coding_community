@@ -30,6 +30,9 @@
     <header>
         @include('include.head')
     </header>
+    <div class="row" style="margin-top: 80px">
+
+    </div>
 </div>
 
 <div class="container-fluid">

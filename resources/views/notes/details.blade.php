@@ -38,129 +38,188 @@
     <header>
         @include('include.head')
     </header>
-</div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-2 side-menu" id="sticky-sidebar">
-            <div class="sticky-top">
-                <div class="nav flex-column">
-                    @if (Auth::guest())
-
+    <div class="row"  style="margin-top: 80px">
+        <div class="col-sm-3">
+            <aside>
+                <div id="sidebar" class="nav-collapse ">
+                    <!-- sidebar menu start-->
+                    @if(Auth::guest())
                     @else
-                        <div class="btn-group" style="margin-bottom: 15px; font-size: small">
-                            <button type="button" class="btn btn-primary">Add Note <i class="fa fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger">Question <i class="fa fa-question"></i></button>
-                        </div>
+                        <a class="#" href="{{ url('notes/create') }}">
+                            <button class="btn btn-primary" style="padding: 5px; margin-bottom: 10px"><i class="fa fa-pencil"></i> Create New Notes</button>
+                        </a>
                     @endif
-                    <h5><strong>My Notes</strong></h5>
-                    <ul class="list-inline">
-                        <li><a href="" class="nav-link">Php Programing</a></li>
-                        <li><a href="" class="nav-link">Web Programming</a></li>
-                        <li><a href="" class="nav-link">Android development</a></li>
-                        <li><a href="" class="nav-link">USSD applications</a></li>
-                        <li><a href="" class="nav-link">JavaScript</a></li>
+                    <h5 class="category-head"><strong>Top Categories</strong></h5>
+                    <ul class="sidebar-menu" style="margin-top: 5px">
 
+                        <li class="sub-menu">
+                            <a href="" class="nav-link">
+                                <span>Php Programing</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#">
+                                <span>Java</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>Web development</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>Android development</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>Python</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>JavaScript</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>Database systems</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="#" class="">
+                                <span>Networking</span>
+                            </a>
+                        </li>
                     </ul>
+
+                    <ul class="sidebar-menu">
+                        <li class="sub-menu">
+                            <a class="" href="#"><span>Settings</span></a>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a class="" href="#"><span>Logout</span></a>
+                        </li>
+                    </ul>
+                    <!-- sidebar menu end-->
                 </div>
-            </div>
+            </aside>
         </div>
 
-        <div class="col-sm-9 main-content" style="margin-top: 100px;">
-            <div class="row" style="margin-top: 10px">
-                <div class="col-sm-7">
-                    <label class="notes-search"><strong>My Saved Notes  <span><i class="fa fa-save"></i></span></strong></label>
-                </div>
-                <div class="col-sm-3">
-                    <div class="ui transparent icon input">
-                        <input class="prompt form-control" type="text" placeholder="search notes here...">
+        <div class="col-sm-9">
+            <div class=" main-content-head">
+                <div class="row">
+                    <div class="col-sm-7" style="padding-left: 40px">
+                        <label class="notes-search"><strong><a href="#">Notes</a><span> <i class="fa fa-angle-double-right"></i> <a href="#">Details</a></span></strong></label>
                     </div>
-                    <div class="results"></div>
-                </div>
+                    <div class="col-sm-3">
+                        <div class="input-group">
+                            <input type="search" class="form-control" placeholder="search notes" id="notes" name="notes" style="font-size: small">
+                            <div class="input-group-append">
+                            <span class="input-group-text" style="background-color: white">
+                                <a href="#">
+                                    <i class="fa fa-search" style="color: #707B7C"></i>
+                                </a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="results"></div>
+                    </div>
 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-sm-9 main-content" style="margin-top: 0; padding: 15px 50px 15px 50px; min-height: 390px">
-    <div class="row" style="margin-top: 10px">
-        <div class="col-sm-12 jumbotron">
-            <div class="row">
-                <div class="col-sm-12">
-                    <a href="#" class="details-head"><strong>How to install linux mint on mac os</strong></a>
-                    <span class="category-details"><a href="#" style="color: chocolate">Windows installation</a></span>
-                </div>
-            </div>
-            <div class="notes-body">
-                <p class="notes-paragraph">Linux is just an operating system developed to meet the development needs and the following
-                    are some steps to install it in the mac operating systems
-                </p>
-                <strong>steps to install linux</strong>
-                <ol>
-                    <li>Download your linux image</li>
-                    <li>Prepare disc image</li>
-                    <li>Insert your disc and restart your machine</li>
-                    <li>Follow the steps to install your os</li>
-                    <li>remove disc and restart your machine</li>
-                </ol>
-                <img src="{{ asset('images/sample-image.png') }}" alt="Chicago" width="100%" height="250" style="margin-bottom: 10px">
-                <span><strong>July 10, 2018</strong></span>
-                <span><strong style="color: cadetblue">Author: </strong> <a href="#">Dahabu Saidi</a>, <a href="#" style="color: coral">Web Programmer</a></span>
-            </div>
-            <div class="actions">
-                <div class="btn-group" style="float: right">
-                    <a href="{{ url('notes/edit') }}" class="btn btn-success"><i class="fa fa-edit"></i></a>
-                    <button type="button" class="btn btn-info btn-xs" title="make this public">
-                        <i class="fa fa-eye"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal" title="delete this note">
-                        <i class="fa fa-trash"></i>
-                    </button>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class=" main-content" style="margin-top: 0; padding: 15px 50px 15px 50px; min-height: 390px">
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-sm-12 jumbotron">
 
-
-
-
-    <!-- The Modal -->
-    <div class="modal" id="deleteModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header modal-head">
-                    <h4 class="modal-title home-head"><strong>Are you sure you want to delete this note ?</strong></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-12">
-
-                            <form method="POST" action="#" enctype="multipart/form-data">
-                                <label for="title" ><strong>Notes Title:</strong></label>
-                                <div class="form-group input-group">
-                                    <input type="text" class="form-control" disabled="" id="title" name="email" value="Installation of linux">
+                        @if($data)
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#" class="details-head"><strong>{{ $data->notes_title }}</strong></a>
+                                    <span class="category-details"><a href="#" style="color: chocolate">{{ $data->notes_category }}</a></span>
                                 </div>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right">
-                                    <i class="fa fa-trash"></i> Yes...Delete
-                                </button>
-                            </form>
+                            </div>
+                            <div class="notes-body">
+                                {!!$data->notes_body !!}
+                                <img src="{{ asset('images/sample-image.png') }}" alt="Chicago" width="100%" height="250" style="margin-bottom: 10px">
+                                <span><strong>{{ $data->notes_add_date }}</strong></span>
+                                <span><strong style="color: cadetblue">Author: </strong> <a href="#">{{ $data->name }} {{ $data->surname }}</a>, <a href="#" style="color: coral">Web Programmer</a></span>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group" style="float: right">
+                                    <a href="{{ url('notes/edit') }}" class="btn btn-success"><i class="fa fa-edit"></i></a>
+                                    @if($data->notes_accessibility == 'public')
+                                        <a class="btn btn-info btn-xs" title="make this public">
+                                            <i class="fa fa-eye"></i>
+                                        </a>
+                                    @else
+                                        <a class="btn btn-warning btn-xs" title="make this notes private">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </a>
+                                    @endif
+                                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteModal{{ $data->notes_id }}" title="delete this note">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+
+
+
+                <!-- The Modal -->
+                <div class="modal" id="deleteModal{{ $data->notes_id }}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header modal-head">
+                                <h4 class="modal-title home-head"><strong style="color: cornflowerblue">Are you sure you want to delete this note ?</strong></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <form  action="{{ 'delete' }}?notes={{ $data->notes_id }}" enctype="multipart/form-data" name="form" method="post">
+                                            {{ csrf_field() }}
+                                            <label for="title" ><strong>Notes Title:</strong></label>
+                                            <div class="form-group input-group">
+                                                <input type="text" class="form-control" disabled="" id="title" name="email" value="{{ $data->notes_title }}">
+                                            </div>
+                                                <button type="submit" name="delete" class="btn btn-danger" style="float: right">
+                                                    <i class="fa fa-trash"></i> Yes...Delete
+                                                </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                </div>
-
             </div>
         </div>
-    </div>
 
+</div>
 </div>
 
 {{--modal for user login--}}

@@ -6,7 +6,7 @@
  * Time: 12:52 PM
  */
 ?>
-        <!doctype html>
+<!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-s heet.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -116,92 +116,82 @@
             </aside>
         </div>
 
-        <div class="col-sm-9">
-            <div class=" main-content-head">
+        <div class="col-sm-8">
+            <h4>Dahabu Saidi: Profile</h4>
+            <div class="main-content" style="margin-top: 0; padding: 15px 50px 15px 50px; min-height: 430px;border: none; border-radius: 8px">
+
                 <div class="row">
-                    <div class="col-sm-7">
-                        <label class="notes-search"><strong><a href="#">My Saved Notes  </a></strong></label>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="input-group">
-                            <input type="search" class="form-control" placeholder="search notes" id="notes" name="notes" style="font-size: small">
-                            <div class="input-group-append">
-                            <span class="input-group-text" style="background-color: white">
-                                <a href="#">
-                                    <i class="fa fa-search" style="color: #707B7C"></i>
-                                </a>
-                            </span>
+                    <div class="col-sm-12 profile-head">
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <img src="{{ asset('images/naa-fb.jpg') }}" alt="Los Angeles"  width=100% class="img-responsive avatar">
+                            </div>
+                            <div class="col-sm-9">
+                                <span style="font-size: small; color: chocolate"> <strong>Saidi Dahabu Mkawa</strong></span>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item" style="background-color: #D5D8DC; border-radius: 18px">General</li>
+                                            <li class="list-inline-item">Notes</li>
+                                            <li class="list-inline-item">Followers</li>
+                                            <li class="list-inline-item">Conversations</li>
+                                            <li class="list-inline-item">Contributions</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="results"></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="main-content" style="margin-top: 0; padding: 10px 40px 10px 40px; min-height: 370px">
-                @forelse($data as $notes)
-                    <div class="row">
-                        <div class="col-sm-12 jumbotron">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a href="{{ url('notes/details') }}?notes={{$notes->notes_id}}" class="notes-head">
-                                        <strong style="color: #1F618D">{{ $notes->notes_title }}</strong>
-                                    </a><br>
-                                    <span class="date">{{ date('M, d Y:', strtotime($notes->notes_add_date)) }}</span>
-                                    @if($notes->notes_accessibility == 'private')
-                                        <span title="This notes can be viewed to public">
-                                            <i class="fa fa-user-secret" style="color: #E6B0AA"></i>
-                                        </span>
-                                    @elseif($notes->notes_accessibility == 'public')
-                                        <span title="This notes can be viewed to public">
-                                            <i class="fa fa-users" style="color: inherit"></i>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="notes-body">
-                                <div class="initial-body" style="max-height: 70px; overflow: hidden; margin-bottom: 10px">
-                                    {!!$notes->notes_body !!}
-                                </div>
-                                <span style="padding-left: 10px"><i class="fa fa-thumbs-up" style="color: cornflowerblue"></i> 332</span>
-                                <span style="padding-left: 10px">
-                                    <a href="#" style="color: #707B7C">
-                                        <i class="fa fa-comments" style="color: #EC7063"></i> 2 comments
-                                    </a>
-                                </span>
-                                <a href="{{ url('notes/details') }}?notes={{$notes->notes_id}}" class="btn btn-default" style="float: right; padding: 3px; font-size: small">More details <i class="fa fa-angle-double-down"></i></a>
-                            </div>
-                        </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-3 img-responsive">
+                        <img src="{{ asset('images/naa-fb.jpg') }}" alt="Los Angeles"  width="100%" class="img-responsive">
+                        <h5 style="font-size: small; text-align: center; margin-top: 10px"><a href="#">change photo</a></h5>
                     </div>
-
-                @empty
-                    <div class="col-sm-12" style="padding-top: 15px">
+                    <div class="col-sm-9 contacts">
                         <div class="row">
-                            <label class="empty-hello">Hello <span>{{ Auth::user()->name }}</span></label>
-                            <p class="empty-notes">
-                                Your account currently does not have any saved notes. To add notes to your account for the future use
-                                and for the benefits of other developers is free please <a href="{{ url('notes/create') }}" class="empty-link">click here </a> to create your add notes to your account
-                            </p>
-                            <label class="empty-hello">NB:</label>
-                            <p class="empty-notes">
-                                The added notes can be setup to public or private. Public notes will be viewed by anyone how searches for the
-                                help of a particular problem of particular procedures for doing something. And the private notes will only
-                                be seen by yourself. We recommend users to to make notes public so that they can provide the technical support for the
-                                new developers
-                            </p>
+                            <div class="col-sm-8">
+                                <span style="font-size: 15px"> <strong>Contact Information</strong></span>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>Username:</td>
+                                        <td contenteditable="true" style="color: cornflowerblue">mkawa95</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Names:</td>
+                                        <td contenteditable="true" style="color: cornflowerblue">Dahabu Saidi</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table">E-mail:</td>
+                                        <td class="table" style="color: cornflowerblue" contenteditable="true">dahabusaidi@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table">Mobile:</td>
+                                        <td class="table" style="color: chocolate" contenteditable="true">0717495198</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location:</td>
+                                        <td contenteditable="true">Tanzania</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="action-box">
+                                    <label></label><span style="font-size: small"> <strong>Actions</strong></span><br>
+                                    <button class="btn btn-primary btn-block"><i class="fa fa-edit"></i> Edit Profile</button>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                @endforelse
-
-        </div>
-            <div class="pagination-link">
-                <div class="col-sm-2" style="margin: 0 auto">
-                    <span class="link">{{ $data->links() }}</span>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 {{--modal for user login--}}
 

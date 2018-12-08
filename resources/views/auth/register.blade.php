@@ -25,26 +25,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <!-- Styles -->
 </head>
+
 <body style="background-color: whitesmoke">
 
 <div class="container-fluid">
     <header>
         @include('include.head')
     </header>
-
-    <div class="row" style="margin-top: 80px">
-
-    </div>
 </div>
 
 <div class="container-fluid">
-    <div class="col-sm-9 main-content" style="">
+    <div class="col-sm-10 main-content" style="">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <h5 class="register-head"><strong style="color: #2874A6">You have two steps to complete your registration. Please follow the steps to complete registration</strong></h5>
                 <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
                 <p class="welcome-register">Fill the the correct details to form the given form and then click next to proceed with the other steps.
-                Please make sure your details are correct so that people can know who are you in computer programming field.
+                    Please make sure your details are correct so that people can know who are you in computer programming field.
                 </p>
 
 
@@ -57,31 +54,29 @@
                     <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-sm-7" style="margin: 0 auto">
+            <div class="col-sm-6" style="margin: 0 auto">
                 <div class="panel">
 
                     <!-- Modal Header -->
                     <div class="panel-heading">
-                        <h4 class="panel-title home-head" style="text-transform: uppercase"><strong>Programming community registration form</strong></h4>
+                        <h4 class="panel-title home-head"><strong>Programming community registration form</strong></h4>
                     </div>
 
                     <!-- Modal body -->
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="{{ url('signup/store') }}" name="register-form" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('login') }}" name="register-form" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
 
                                     {{--Displying errors--}}
-                                    <h5 style="font-size: small">
-                                        @if($errors->has('username'))
-                                            <span class="has-error">
+                                    <label for="pass1"><strong>Username:</strong></label>
+                                            @if($errors->has('username'))
+                                                <span class="has-error">
                                                     <small>{{ $errors->first('username') }}</small>
                                                 </span>
-                                        @endif
-                                    </h5>
-                                    <label for="pass1" ><strong>Username:</strong></label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="e.g. mkawa92">
+                                            @endif
+                                    <input type="text" class="form-control" value="{{ old('username') }}" id="username" name="username" placeholder="e.g. mkawa92" required>
 
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -94,62 +89,53 @@
                                             </h5>
                                             <label for="first-name"><strong>First name:</strong></label>
                                             <div class="input-group">
-                                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Enter your name" >
+                                                <input type="text" value="{{ old('first_name') }}" name="first_name" id="first_name" class="form-control" placeholder="first name" required >
                                             </div>
 
 
                                         </div>
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
-                                                @if($errors->has('first_name'))
+                                                @if($errors->has('surname'))
                                                     <span class="has-error">
-                                                    <small>{{ $errors->first('first_name') }}</small>
+                                                    <small>{{ $errors->first('surname') }}</small>
                                                 </span>
                                                 @endif
                                             </h5>
                                             <label for="pass2"><strong>Surname:</strong></label>
                                             <div class="input-group">
-                                                <input type="text" name="surname" id="surname" class="form-control" placeholder="please fill the last name" >
+                                                <input type="text" value="{{ old('surname') }}" name="surname" id="surname" class="form-control" placeholder="last name" required>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <h5 style="font-size: small">
-                                        @if($errors->has('email'))
-                                            <span class="has-error">
-                                                    <small>{{ $errors->first('email') }}</small>
-                                                </span>
-                                        @endif
-                                    </h5>
-                                    <label for="email-address" ><strong>Email Address:</strong></label>
+                                    <label for="email-address" class="{{ $errors->has('email') ? ' has-error' : '' }}"><strong>Email Address:</strong></label>
+                                    @if($errors->has('email'))
+                                        <span class="has-error">
+                                        <small>{{ $errors->first('email') }}</small>
+                                        </span>
+                                    @endif
                                     <div class="input-group">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="e.g dahabusaidi@gmail.com">
+                                        <input type="email" value="{{ old('email') }}" class="form-control" id="email" name="email" placeholder="e.g dahabusaidi@gmail.com" required>
                                     </div>
+
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <h5 style="font-size: small">
-                                                @if ($errors->has('password'))
-                                                    <span class=" has-error">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                                @endif
-                                            </h5>
-                                            <label for="password"><strong>Enter password:</strong></label>
+                                        <div class="col-sm-6 form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                            <label for="password" ><strong>Enter password:</strong></label>
                                             <div class="input-group">
-                                                <input type="password" name="password" id="password" class="form-control" placeholder="************" >
+                                                <input type="password" name="password" id="password" class="form-control" placeholder="password" required>
                                             </div>
                                         </div>
+
                                         <div class="col-sm-6">
-                                            <h5 style="font-size: small">
-                                                @if($errors->has('re_password'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('re_password') }}</small>
+                                            <label for="password"><strong>Confirm password:</strong></label>
+                                            <div class="input-group">
+                                                <input type="password" name="re_password" id="re_password" class="form-control" required>
+                                                @if($errors->has('password'))
+                                                    <span class="help-block has-error">
+                                                    <small>{{ $errors->first('password') }}</small>
                                                 </span>
                                                 @endif
-                                            </h5>
-                                            <label for="pass2"><strong>Confirm password:</strong></label>
-                                            <div class="input-group">
-                                                <input type="password" name="re_password" id="re_password" class="form-control" placeholder="*************" >
                                             </div>
                                         </div>
                                     </div>
@@ -408,7 +394,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="panel-footer">
-                         <a href="#">terms of services</a> and <a href="#">privacy policies</a>
+                        <a href="#">terms of services</a> and <a href="#">privacy policies</a>
                     </div>
                 </div>
             </div>
@@ -424,5 +410,3 @@
 
 </body>
 </html>
-
-

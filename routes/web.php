@@ -39,7 +39,7 @@ Route::group(['prefix' => 'notes'], function (){
     Route::post('save', 'NotesController@save');
     Route::get('edit', 'NotesController@edit');
     Route::get('update', 'NotesController@update');
-    Route::post('delete', 'NotesController@delete');
+    Route::post('delete', 'NotesController@deleteNotes');
 });
 
 //user accounts routes

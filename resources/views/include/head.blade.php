@@ -69,6 +69,7 @@
                     <a class="nav-link" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> Register</a>
                 </div>
             </div>
+            <a class="#" href="#" style="color: white"><button class="btn btn-default" style="padding: 2px"><i class="fa fa-question"></i> Ask Question</button></a>
         @endif
 
 
