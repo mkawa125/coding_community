@@ -1,222 +1,96 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 10/19/18
- * Time: 12:51 PM
- */
-?>
-        <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>coders-tz</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <!-- Include Editor style. -->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_style.min.css' rel='stylesheet' type='text/css' />
-
-    <!-- Include JS file. -->
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/js/froala_editor.min.js'></script>
-    <!-- Styles -->
-</head>
-<body style="background-color: whitesmoke">
-
-<div class="container-fluid">
-    <header>
-        @include('include.head')
-    </header>
-
-    <div class="row" style="margin-top: 80px">
-        <div class="col-sm-3">
-            <aside>
-                <div id="sidebar" class="nav-collapse ">
-                    <!-- sidebar menu start-->
-                    @if(Auth::guest())
-                    @else
-                        <a class="#" href="{{ url('notes/create') }}">
-                            <button class="btn btn-primary" style="padding: 5px; margin-bottom: 10px"><i class="fa fa-pencil"></i> Create New Notes</button>
-                        </a>
-                    @endif
-                    <h5 class="category-head"><strong>Top Categories</strong></h5>
-                    <ul class="sidebar-menu" style="margin-top: 5px">
-
-                        <li class="sub-menu">
-                            <a href="" class="nav-link">
-                                <span>Php Programing</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#">
-                                <span>Java</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Web development</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Android development</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Python</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>JavaScript</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Database systems</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Networking</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="sidebar-menu">
-                        <li class="sub-menu">
-                            <a class="" href="#"><span>Settings</span></a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a class="" href="#"><span>Logout</span></a>
-                        </li>
-                    </ul>
-                    <!-- sidebar menu end-->
-                </div>
-            </aside>
-        </div>
-
-        <div class="col-sm-9">
-            <div class=" main-content-head">
-                <div class="row">
-                    <div class="col-sm-7" style="padding-left: 40px">
-                        <label class="notes-search"><strong><a href="#">Notes</a><span> <i class="fa fa-angle-double-right"></i> <a href="#">Add New Notes</a></span></strong></label>
-                    </div>
-                    <div class="col-sm-3">
-
-                    </div>
-
-                </div>
+@extends('layouts.main')
+@section('content')
+<div class="col-sm-10 offset-1">
+    <div class=" main-content-head">
+        <div class="row">
+            <div class="col-sm-7" style="padding-left: 40px">
+                <label class="notes-search"><strong><a href="#">Notes</a><span> <i class="fa fa-angle-double-right"></i> <a href="#">Add New Notes</a></span></strong></label>
             </div>
-            <div class="main-content" style="padding: 15px 50px 15px 50px">
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-sm-12">
-                        <h4 class="home-head"><strong>Add New Notes <span><i class="fa fa-edit"></i></span></strong></h4>
+            <div class="col-sm-3">
 
-                        <form class="notes-form" action="{{ 'save' }}" enctype="multipart/form-data" name="form" method="post">
-                            {{ csrf_field() }}
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label for="title" class="#"><strong>Notes title: </strong></label>
-                                    @if($errors->has('title'))
-                                        <span class="has-error">
-                                     <small>{{ $errors->first('title') }}</small>
-                                      </span>
-                                    @endif
-                                    <div class="form-group input-group">
-                                        <input type="text" name="title" id="title" class="form-control" placeholder="e.g laravel installation in linux">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="category" class="#"><strong>Notes Category: </strong></label>
-                                    @if($errors->has('category'))
-                                        <span class="has-error">
-                                     <small>{{ $errors->first('category') }}</small>
-                                      </span>
-                                    @endif
-                                    <div class="form-group input-group">
-                                        <select class="form-control" id="category" name="category">
-                                            <option value="" selected >--select notes category--</option>
-                                            <option value="php">PHp programming</option>
-                                            <option value="web">Web Development</option>
-                                            <option value="android">Android Development</option>
-                                            <option value="ussd">USSD Applications</option>
-                                            <option value="javaScript">JavaScript</option>
-                                            <option value="java">Java Programming</option>
-                                            <option value="database">Database systems</option>
-                                            <option value="php">Python programming</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label for="photo" class="#"><strong>Add Photo if necessary: </strong></label>
-                                    <div class="form-group input-group">
-                                        <input type="file" name="photo" id="photo" class="form-control" style="padding-bottom: 30px">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="access" class="#"><strong>Accessibility: </strong></label>
-                                    @if($errors->has('access'))
-                                        <span class="has-error">
-                                     <small>{{ $errors->first('access') }}</small>
-                                      </span>
-                                    @endif
-                                    <div class="form-group input-group">
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><input id="access" type="radio" name="access" class="" value="public"> Public</li>
-                                            <li class="list-inline-item"><input id="access" type="radio" name="access" class="" value="private"> Private</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
 
-                            <label for="notes_body"><strong>Notes body</strong></label>
-                            @if($errors->has('notes_body'))
+        </div>
+    </div>
+    <div class="main-content" style="padding: 15px 50px 15px 50px">
+        <div class="row" style="margin-top: 10px">
+            <div class="col-sm-12">
+                <h4 class="home-head"><strong>Add New Notes <span><i class="fa fa-edit"></i></span></strong></h4>
+
+                <form class="notes-form" action="{{ 'save' }}" enctype="multipart/form-data" name="form" method="post">
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="title" class="#"><strong>Notes title: </strong></label>
+                            @if($errors->has('title'))
                                 <span class="has-error">
-                                     <small>{{ $errors->first('notes_body') }}</small>
-                                      </span>
+                             <small>{{ $errors->first('title') }}</small>
+                              </span>
                             @endif
-                            <textarea name="notes_body" id="notes_body"></textarea>
-
-                            <button class="btn btn-primary" style="float: right"><i class="fa fa-save"></i> Save</button>
-                        </form>
+                            <div class="form-group input-group">
+                                <input type="text" name="title" id="title" class="form-control" placeholder="e.g laravel installation in linux">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="category" class="#"><strong>Notes Category: </strong></label>
+                            @if($errors->has('category'))
+                                <span class="has-error">
+                             <small>{{ $errors->first('category') }}</small>
+                              </span>
+                            @endif
+                            <div class="form-group input-group">
+                                <select class="form-control" id="category" name="category">
+                                    <option value="" selected >--select notes category--</option>
+                                    <option value="php">PHp programming</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="android">Android Development</option>
+                                    <option value="ussd">USSD Applications</option>
+                                    <option value="javaScript">JavaScript</option>
+                                    <option value="java">Java Programming</option>
+                                    <option value="database">Database systems</option>
+                                    <option value="php">Python programming</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="photo" class="#"><strong>Add Photo if necessary: </strong></label>
+                            <div class="form-group input-group">
+                                <input type="file" name="photo" id="photo" class="form-control" style="padding-bottom: 30px">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="access" class="#"><strong>Accessibility: </strong></label>
+                            @if($errors->has('access'))
+                                <span class="has-error">
+                             <small>{{ $errors->first('access') }}</small>
+                              </span>
+                            @endif
+                            <div class="form-group input-group">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><input id="access" type="radio" name="access" class="" value="public"> Public</li>
+                                    <li class="list-inline-item"><input id="access" type="radio" name="access" class="" value="private"> Private</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="notes_body"><strong>Notes body</strong></label>
+                    @if($errors->has('notes_body'))
+                        <span class="has-error">
+                             <small>{{ $errors->first('notes_body') }}</small>
+                              </span>
+                    @endif
+                    <textarea name="notes_body" id="notes_body"></textarea>
+
+                    <button class="btn btn-primary" style="float: right"><i class="fa fa-save"></i> Save</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
-{{--modal for user login--}}
-
-<footer>
-    @include('include.footer')
-</footer>
-
-</body>
-</html>
+@endsection
 
 <script>
     $(function() {

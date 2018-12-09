@@ -1,44 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 9/9/18
- * Time: 11:08 PM
- */
-?>
-        <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>coders-tz</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <!-- Styles -->
-</head>
-<body style="background-color: whitesmoke">
-
+@extends('layouts.main')
+@section('content')
 <div class="container-fluid">
-    <header>
-        @include('include.head')
-    </header>
-    <div class="row" style="margin-top: 80px">
-
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="col-sm-10 main-content" style="">
+    <div class="col-sm-10 offset-1 main-content-4" style="">
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-4">
                 <h5 class="register-head"><strong>You are about to complete your registration. Please follow the steps to complete registration</strong></h5>
                 <h5 class="register-head" style="color: chocolate"><strong>Step 2 of 2</strong></h5>
                 <p class="welcome-register">Please select the options on the given form and click finish to complete your registration
@@ -53,7 +18,7 @@
                     <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-sm-6" style="margin: 0 auto">
+            <div class="col-sm-7" style="margin: 0 auto">
                 <div class="panel">
 
                     <!-- Modal Header -->
@@ -165,14 +130,6 @@
         </div>
     </div>
 </div>
-
-{{--modal for user login--}}
-
-<footer>
-    @include('include.footer')
-</footer>
-
-</body>
-</html>
+@endsection
 
 

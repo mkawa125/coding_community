@@ -1,122 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 10/19/18
- * Time: 12:51 PM
- */
-?>
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>coders-tz</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <!-- Include Editor style. -->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_style.min.css' rel='stylesheet' type='text/css' />
-
-    <!-- Include JS file. -->
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/js/froala_editor.min.js'></script>
-    <!-- Styles -->
-</head>
-<body style="background-color: whitesmoke">
-
-<div class="container-fluid">
-    <header>
-        @include('include.head')
-    </header>
-
-    <div class="row" style="margin-top: 80px">
-        <div class="col-sm-3">
-            <aside>
-                <div id="sidebar" class="nav-collapse ">
-                    <!-- sidebar menu start-->
-                    @if(Auth::guest())
-                    @else
-                        <a class="#" href="{{ url('notes/create') }}">
-                            <button class="btn btn-primary" style="padding: 5px; margin-bottom: 10px"><i class="fa fa-pencil"></i> Create New Notes</button>
-                        </a>
-                    @endif
-                    <h5 class="category-head"><strong>Top Categories</strong></h5>
-                    <ul class="sidebar-menu" style="margin-top: 5px">
-
-                        <li class="sub-menu">
-                            <a href="" class="nav-link">
-                                <span>Php Programing</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#">
-                                <span>Java</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Web development</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Android development</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Python</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>JavaScript</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Database systems</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#" class="">
-                                <span>Networking</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="sidebar-menu">
-                        <li class="sub-menu">
-                            <a class="" href="#"><span>Settings</span></a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a class="" href="#"><span>Logout</span></a>
-                        </li>
-                    </ul>
-                    <!-- sidebar menu end-->
-                </div>
-            </aside>
-        </div>
-
-        <div class="col-sm-9">
+@extends('layouts.main')
+@section('content')
+        <div class="col-sm-9 offset-2">
             <div class=" main-content-head">
                 <div class="row">
                     <div class="col-sm-7" style="padding-left: 40px">
@@ -206,17 +90,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-{{--modal for user login--}}
-
-<footer>
-    @include('include.footer')
-</footer>
-
-</body>
-</html>
+        @endsection
 
 <script>
     $(function() {

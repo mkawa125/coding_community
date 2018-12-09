@@ -1,44 +1,7 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 9/9/18
- * Time: 11:08 PM
- */
-?>
-        <!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>coders-tz</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <!-- Styles -->
-</head>
-<body style="background-color: whitesmoke">
-
+@extends('layouts.main')
+@section('content')
 <div class="container-fluid">
-    <header>
-        @include('include.head')
-    </header>
-
-    <div class="row" style="margin-top: 80px">
-
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="col-sm-9 main-content" style="">
+    <div class="col-sm-10 offset-1 main-content-4">
         <div class="row">
             <div class="col-sm-4">
                 <h5 class="register-head"><strong style="color: #2874A6">You have two steps to complete your registration. Please follow the steps to complete registration</strong></h5>
@@ -69,27 +32,24 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="{{ url('signup/store') }}" name="register-form" method="POST" enctype="multipart/form-data">
+                                <form action="{{ url('signup/store') }}" class="register-form" name="register-form" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
-
-                                    {{--Displying errors--}}
                                     <h5 style="font-size: small">
                                         @if($errors->has('username'))
-                                            <span class="has-error">
-                                                    <small>{{ $errors->first('username') }}</small>
-                                                </span>
+                                            <span class="has-error"><strong>{{ $errors->first('username') }}</strong></span>
                                         @endif
                                     </h5>
                                     <label for="pass1" ><strong>Username:</strong></label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="e.g. mkawa92">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="username" name="username" placeholder="e.g. mkawa92">
+                                    </div>
+
 
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
                                                 @if($errors->has('first_name'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('first_name') }}</small>
-                                                </span>
+                                                    <span class="has-error"><strong>{{ $errors->first('first_name') }}</strong></span>
                                                 @endif
                                             </h5>
                                             <label for="first-name"><strong>First name:</strong></label>
@@ -102,9 +62,7 @@
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
                                                 @if($errors->has('first_name'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('first_name') }}</small>
-                                                </span>
+                                                    <span class="has-error"><strong>{{ $errors->first('first_name') }}</strong></span>
                                                 @endif
                                             </h5>
                                             <label for="pass2"><strong>Surname:</strong></label>
@@ -116,22 +74,20 @@
 
                                     <h5 style="font-size: small">
                                         @if($errors->has('email'))
-                                            <span class="has-error">
-                                                    <small>{{ $errors->first('email') }}</small>
-                                                </span>
+                                            <span class="has-error"><strong>{{ $errors->first('email') }}</strong></span>
                                         @endif
                                     </h5>
                                     <label for="email-address" ><strong>Email Address:</strong></label>
                                     <div class="input-group">
                                         <input type="email" class="form-control" id="email" name="email" placeholder="e.g dahabusaidi@gmail.com">
                                     </div>
+
+
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
                                                 @if ($errors->has('password'))
-                                                    <span class=" has-error">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                                    <span class=" has-error"><strong>{{ $errors->first('password') }}</strong></span>
                                                 @endif
                                             </h5>
                                             <label for="password"><strong>Enter password:</strong></label>
@@ -142,9 +98,7 @@
                                         <div class="col-sm-6">
                                             <h5 style="font-size: small">
                                                 @if($errors->has('re_password'))
-                                                    <span class="has-error">
-                                                    <small>{{ $errors->first('re_password') }}</small>
-                                                </span>
+                                                    <span class="has-error"><strong>{{ $errors->first('re_password') }}</strong></span>
                                                 @endif
                                             </h5>
                                             <label for="pass2"><strong>Confirm password:</strong></label>
@@ -153,6 +107,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+
 
                                     <label for="location"><strong>location:</strong></label>
                                     <div class="input-group">
@@ -415,14 +371,6 @@
         </div>
     </div>
 </div>
-
-{{--modal for user login--}}
-
-<footer>
-    @include('include.footer')
-</footer>
-
-</body>
-</html>
+@endsection
 
 
