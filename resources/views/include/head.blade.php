@@ -1,29 +1,13 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 9/9/18
- * Time: 11:14 PM
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
 
-
-
-</head>
-<body>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#" style="font-size: medium; font-family: 'Noto Sans Georgian'">MKAWA CODING COMMUNITY</a>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="font-size: 15px">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <a class="" href="#" style="color: white; font-size: small">
+            MKAWA CODING COMMUNITY
+        </a>
+
         <ul class="navbar-nav" style="margin-left: 30px">
             <li class="nav-item">
                 <a class="nav-link" href="{{ action("Auth\RegisterController@home") }}">Home</a>
@@ -42,10 +26,10 @@
             </li>
         </ul>
 
-        <div class=" col-sm-5 input-group">
+        <div class=" col-sm-4 input-group">
             <input type="text" class="form-control" placeholder="what are you looking for ?" id="search" name="search" style="font-size: small">
             <div class="input-group-append">
-                <span class="input-group-text"><a href="#"><i class="fa fa-search"></i></a></span>
+                <a href="#" class="input-group-text"><i class="fa fa-search"></i></a>
             </div>
         </div>
 
@@ -60,7 +44,10 @@
             </ul>
             @else
             <div class="dropdown" style="margin: 0 auto">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> {{ Auth::user()->name }}</a>
+                <a class="nav-link " data-toggle="dropdown" href="{{ action("Auth\RegisterController@register") }}">
+                    <i class="fa fa-user-o"></i>
+                    {{ Auth::user()->name }} <i class="fa fa-angle-double-down"></i>
+                </a>
                 <div class="dropdown-menu" style="color: white">
                     <a class="dropdown-item" href="{{ url("notes/data") }}"><i class="fa fa-code"></i> My storage</a>
                     <a class="dropdown-item" href="{{url('users/profile')}}?id=1"><i class="fa fa-user-circle"></i> user profile</a>
@@ -69,7 +56,11 @@
                     <a class="nav-link" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> Register</a>
                 </div>
             </div>
-            <a class="#" href="#" style="color: white"><button class="btn btn-default" style="padding: 2px"><i class="fa fa-question"></i> Ask Question</button></a>
+            <a class="#" href="#" style="color: white">
+                <button class="btn btn-danger">
+                    <i class="fa fa-question"></i> Ask Question
+                </button>
+            </a>
         @endif
 
 
@@ -83,7 +74,7 @@
 
             <!-- Modal Header -->
             <div class="modal-header modal-head">
-                <h4 class="modal-title home-head"><strong>Please enter your details to login</strong></h4>
+                <h4 class="modal-title home-head"><strong>Please Login</strong></h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
@@ -92,7 +83,7 @@
                 <div class="row">
                     <div class="col-sm-12">
 
-                        <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data" class="login-modal">
                             {{ csrf_field() }}
 
                             {{--Displying errors--}}
@@ -123,7 +114,8 @@
 
                             <input type="checkbox" name="remember" id="remember">
                             <label for="remember">Remember me</label>
-                            <button class="btn btn-primary btn-block" value="login" name="login" type="submit" style="background-color: #2874A6">Signin</button>
+                            <button class="btn btn-primary btn-block" value="login" name="login" type="submit" style="background-color: #2874A6">
+                                Signin <i class="fa fa-sign-in"></i></button>
                             <a href="#" class="#">forget password ?</a>
                         </form>
                     </div>
@@ -138,5 +130,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

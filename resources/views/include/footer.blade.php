@@ -1,12 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 9/9/18
- * Time: 11:12 PM
- */
-?>
-<div id="copyright text-right" style="background-color: #CCD1D1; margin-bottom: 0; margin-top: 50px; padding: 10px; border-top: 1px solid #707B7C">
+
+<div id="copyright text-right footer">
     <div id="copyright text-right"> © Copyright 2018 Mkawa Coding community, Dar es salaam Tanzania </div>
      <ul class="list-inline">
          <li class="list-inline-item">
