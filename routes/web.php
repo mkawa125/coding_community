@@ -34,7 +34,7 @@ Route::group(['prefix' => 'signup'], function () {
 //user notes routes
 Route::group(['prefix' => 'notes'], function (){
     Route::get('data', 'NotesController@data');
-    Route::get('details', 'NotesController@details');
+    Route::get('/{id}/details', 'NotesController@details')->name('notes.details');
     Route::get('create', 'NotesController@create');
     Route::post('save', 'NotesController@save');
     Route::get('edit', 'NotesController@edit');
