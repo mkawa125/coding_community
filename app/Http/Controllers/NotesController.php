@@ -23,8 +23,7 @@ class NotesController extends Controller
     }
 
 
-    public function details(){
-        $notes_id = $_GET['notes'];
+    public function details($notes_id){
         $data = DB::table('user_notes')
             ->join('users', 'users.id', '=', 'user_notes.id')
             ->where(array(['user_notes.notes_id' , $notes_id, 'users.id' => Auth::id()]))

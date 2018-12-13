@@ -4,9 +4,9 @@
         <a class="#" href="#">Home</a> /
         <span><a class="#" href="#">About</a></span>
     </div>
-        <div class="main-content-3">
+        <div class="main-content-3" style="background-color: whitesmoke">
                 <div class="row"  style="margin-top: 10px; padding: 5px 5px 5px 20px">
-                    <div class="col-sm-8 slide-show">
+                    <div class="col-sm-8 slide-show" style="background-color: white">
                         {{--<div class="logo-div">--}}
                             {{--<h5 class="about-head">About Tanzania programming community</h5>--}}
                         {{--</div>--}}
@@ -48,7 +48,7 @@
                         <div class="latest_head">
                             <h5 class="home-head head">Recent discussions </h5>
                         </div>
-                        <ul class="list-group" style="padding: 15px">
+                        <ul class="list-group" style="padding: 0">
                             <li class="list-group-item">
                                 <i class="fa fa-list-alt"></i>
                                 <a href="#">

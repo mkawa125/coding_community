@@ -1,18 +1,22 @@
 @extends('layouts.main')
 @section('content')
-<div class="col-sm-10 offset-1">
-    <div class=" main-content-head">
-        <div class="row">
-            <div class="col-sm-7" style="padding-left: 40px">
-                <label class="notes-search"><strong><a href="#">Notes</a><span> <i class="fa fa-angle-double-right"></i> <a href="#">Add New Notes</a></span></strong></label>
+    <div class="col-sm-11 offset-1">
+        <div class=" main-content-head" style=" margin: 10px 0 0 0">
+            <div class="row" style="padding: 0; margin: 0">
+                <div class="col-md-12 head-column" style="padding: 0">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active"
+                           style="padding: 10px 20px 10px 20px" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                        <a class="nav-item nav-link"
+                           style="padding: 10px 20px 10px 20px" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                        <a class="nav-item nav-link"
+                           style="padding: 10px 20px 10px 20px" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-3">
-
-            </div>
-
         </div>
-    </div>
-    <div class="main-content" style="padding: 15px 50px 15px 50px">
+
+        <div class="main-content-notes" style="padding: 25px 45px 25px 45px">
         <div class="row" style="margin-top: 10px">
             <div class="col-sm-12">
                 <h4 class="home-head"><strong>Add New Notes <span><i class="fa fa-edit"></i></span></strong></h4>

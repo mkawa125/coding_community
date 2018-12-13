@@ -57,7 +57,7 @@
                 </div>
             </div>
             <a class="#" href="#" style="color: white">
-                <button class="btn btn-danger">
+                <button class="btn btn-warning">
                     <i class="fa fa-question"></i> Ask Question
                 </button>
             </a>
