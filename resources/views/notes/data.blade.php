@@ -1,126 +1,137 @@
 @extends('layouts.main')
 @section('content')
-        <div class="col-sm-10 offset-1">
-            <div class=" main-content-head">
-                <div class="row">
-                    <div class="col-sm-7">
-                        <label class="notes-search"><strong><a href="#">My Saved Notes  </a></strong></label>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="input-group">
-                            <input type="search" class="form-control" placeholder="search notes" id="notes" name="notes" style="font-size: small">
-                            <div class="input-group-append">
-                            <span class="input-group-text" style="background-color: white">
-                                <a href="#">
-                                    <i class="fa fa-search" style="color: #707B7C"></i>
-                                </a>
-                            </span>
-                            </div>
-                        </div>
-                        <div class="results"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main-content" style="margin-top: 0; padding: 10px 40px 10px 40px; min-height: 370px">
-                @forelse($data as $notes)
-                    <div class="row">
-                        <div class="col-sm-12 jumbotron">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a href="{{ url('notes/details') }}?notes={{$notes->notes_id}}" class="notes-head">
-                                        <strong style="color: #1F618D">{{ $notes->notes_title }}</strong>
-                                    </a><br>
-                                    <span class="date">{{ date('M, d Y:', strtotime($notes->notes_add_date)) }}</span>
-                                    @if($notes->notes_accessibility == 'private')
-                                        <span title="This notes can be viewed to public">
-                                            <i class="fa fa-user-secret" style="color: #E6B0AA"></i>
-                                        </span>
-                                    @elseif($notes->notes_accessibility == 'public')
-                                        <span title="This notes can be viewed to public">
-                                            <i class="fa fa-users" style="color: inherit"></i>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="notes-body">
-                                <div class="initial-body" style="max-height: 70px; overflow: hidden; margin-bottom: 10px">
-                                    {!!$notes->notes_body !!}
-                                </div>
-                                <span style="padding-left: 10px"><i class="fa fa-thumbs-up" style="color: cornflowerblue"></i> 332</span>
-                                <span style="padding-left: 10px">
-                                    <a href="#" style="color: #707B7C">
-                                        <i class="fa fa-comments" style="color: #EC7063"></i> 2 comments
-                                    </a>
-                                </span>
-                                <a href="{{ url('notes/details') }}?notes={{$notes->notes_id}}" class="btn btn-default" style="float: right; padding: 3px; font-size: small">More details <i class="fa fa-angle-double-down"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                @empty
-                    <div class="col-sm-12" style="padding-top: 15px">
-                        <div class="row">
-                            <label class="empty-hello">Hello <span>{{ Auth::user()->name }}</span></label>
-                            <p class="empty-notes">
-                                Your account currently does not have any saved notes. To add notes to your account for the future use
-                                and for the benefits of other developers is free please <a href="{{ url('notes/create') }}" class="empty-link">click here </a> to create your add notes to your account
-                            </p>
-                            <label class="empty-hello">NB:</label>
-                            <p class="empty-notes">
-                                The added notes can be setup to public or private. Public notes will be viewed by anyone how searches for the
-                                help of a particular problem of particular procedures for doing something. And the private notes will only
-                                be seen by yourself. We recommend users to to make notes public so that they can provide the technical support for the
-                                new developers
-                            </p>
-                        </div>
-                    </div>
-                @endforelse
-
-        </div>
-            <div class="pagination-link">
-                <div class="col-sm-2" style="margin: 0 auto">
-                    <span class="link">{{ $data->links() }}</span>
+    @include('modals.notes_details')
+    @php($num = 1)
+<div class="col-sm-11 offset-1">
+    <div class=" main-content-head" style=" margin: 10px 0 0 0">
+        <div class="row" style="padding: 0; margin: 0">
+            <div class="col-md-12 head-column" style="padding: 0">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active"
+                       style="padding: 10px 20px 10px 20px" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                    <a class="nav-item nav-link"
+                       style="padding: 10px 20px 10px 20px" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                    <a class="nav-item nav-link"
+                       style="padding: 10px 20px 10px 20px" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
                 </div>
             </div>
         </div>
-        @endsection
+    </div>
 
-<script>
-    $(document).ready(function() {
-        // Configure/customize these variables.
-        var showChar = 100;  // How many characters are shown by default
-        var ellipsestext = "...";
-        var moretext = "Show more";
-        var lesstext = "Show less";
+    <div class="main-content-notes table-responsive">
+        <table id="myTable" class="table table-hover table-bordered table-sm"
+               style="font-size: small">
+            <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Date added</th>
+                <th>Action</th>
+            </tr>
 
+            </thead>
+            <tbody>
+            @foreach($data as $notes)
+                <tr>
+                    <td>{{$num++}}</td>
+                    <td>
+                        <a href="{{ url('/notes/'.$notes->notes_id.'/details') }}" style="cursor: pointer">
+                            {{$notes->notes_title}}
+                           <span>
+                            @if($notes->notes_accessibility == "private")
+                                   <i class="fa fa-lock text-success" title="This title is private"></i>
+                               @elseif($notes->notes_accessibility == "public")
 
-        $('.more').each(function() {
-            var content = $(this).html();
+                                   <i class="fa fa-unlock text-warning" title="This note is public"></i>
+                               @endif
+                        </span>
+                        </a>
 
-            if(content.length > showChar) {
+                    </td>
+                    <td>{{$notes->notes_category}}</td>
+                    <td>
+                        {{\Carbon\Carbon::parse($notes->notes_add_date)->format('M d, Y')}}
+                    </td>
+                    <td>
+                        <a href="{{ url('/notes/'.$notes->notes_id.'/details') }}">
+                            <button class="btn btn-info" title="view prices"
+                                    style="float: right; margin: 2px; padding: 5px; font-size: small">
+                                <i class="fa fa-eye"></i> More
+                            </button>
+                        </a>
+                    </td>
+                </tr>
 
-                var c = content.substr(0, showChar);
-                var h = content.substr(showChar, content.length - showChar);
+                <div id="notes_details_modal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="notes_title"></h4>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form name="add_product_form" id="add_product_form">
+                                    <div class="form-group">
+                                        <label for="product_name">Name:</label>
+                                        <input type="text" class="form-control" name="name" id="notes_category" placeholder="product name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="product_code">Code:</label>
+                                        <input type="text" class="form-control" name="code" id="product_code" placeholder="product code">
+                                    </div>
+                                    <div class="form-group" style="float: right">
+                                        <button class="btn btn-danger" data-dismiss="modal" style="padding: 5px; font-size: small">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
 
-                $(this).html(html);
-            }
-
+    <script>
+        $(document).ready( function() {
+            callMe();
         });
 
-        $(".morelink").click(function(){
-            if($(this).hasClass("less")) {
-                $(this).removeClass("less");
-                $(this).html(moretext);
-            } else {
-                $(this).addClass("less");
-                $(this).html(lesstext);
-            }
-            $(this).parent().prev().toggle();
-            $(this).prev().toggle();
-            return false;
-        });
-    });
-</script>
+        function callMe() {
+            table = $("#myTable").DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'print',
+                        exportOptions: {
+                            columns: ":not(:last-child)"
+                        },
+                        title: "Products",
+                        messageTop: "The List Of Products As Of {{date('d-m-Y')}}"
+                    },
+                    {
+                        extend: 'excel',
+                        exportOptions: {
+                            columns: ":not(:last-child)"
+                        },
+                        title: "Products",
+                        messageTop: "The List Of Products As Of {{date('d-m-Y')}}"
+                    },
+                    {
+                        extend: 'pdf',
+                        exportOptions: {
+                            columns: ":not(:last-child)"
+                        },
+                        title: "Products",
+                        messageTop: "The List Of Products As Of {{date('d-m-Y')}}"
+                    }
+                ],
+                iDisplayLength: 5,
+                bLengthChange: false
+            });
+        }
+    </script>
+@endsection

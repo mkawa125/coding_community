@@ -60,7 +60,7 @@
             <div class="latest_head">
                 <h5 class="home-head head">Recent discussions </h5>
             </div>
-            <ul class="list-group" style="padding: 15px">
+            <ul class="list-group" style="padding: 0">
                 <li class="list-group-item">
                     <i class="fa fa-list-alt"></i>
                     <a href="#">

@@ -1,5 +1,6 @@
 body{
     background-color: whitesmoke;
+    overflow: auto;
 }
 footer{
     text-align: center;
@@ -24,6 +25,9 @@ header{
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     color: #707B7C;
     height: 30px;
+}
+.form-group input.form-control::placeholder{
+    font-size: small;
 }
 .container{
     margin: 100px auto;
@@ -136,11 +140,22 @@ header{
     margin:0 auto;
     background-color: white;
     color: #707B7C;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #C1C4C4;
     font-size: small;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 
+}
+.main-content-notes{
+    margin:0 auto;
+    background-color: white;
+    color: #707B7C;
+    border: 1px solid #E5E8E8;
+    font-size: small;
+    border-top: none;
+    padding: 25px;
+    box-shadow: 2px 3px 3px 0 #CCD1D1;
+    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 }
 .main-content-2{
     margin:0 auto;
@@ -169,14 +184,11 @@ header{
     color: #707B7C;
 }
 .main-content-head{
-    margin:0 auto;
-    background-color: #CCD1D1;
+    margin: 5px auto;
     color: #707B7C;
-    padding: 10px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border: 1px solid #C1C4C4;
-    border-bottom: 2px cornflowerblue solid;
+    font-size: small;
+    padding-bottom: 0;
+
 
 }
 .home-head{
@@ -206,7 +218,7 @@ header{
     line-height: 20px;
     margin-bottom: 0;
     border: none;
-    padding: 0;
+    padding: 5px;
 
 }
 .latest_head{
@@ -220,7 +232,7 @@ header{
 .column ul.list-group li.list-group-item{
     color: #707B7C;
     border: none;
-    padding: 0;
+    padding: 10px;
     margin-top: 5px;
 }
 .column ul.list-group li.list-group-item a:hover{
@@ -376,7 +388,14 @@ header{
 }
 .notes-body{
     font-size: small;
-    padding-bottom: 20px;
+    border: 1px solid #CCD1D1;
+    padding: 20px;
+    background-color: whitesmoke;
+    box-shadow: 2px 3px 3px 0 #CCD1D1;
+    position: fixed;
+}
+body .notes-body{
+    overflow: hidden;
 }
 .profile-body{
     font-size: small;
@@ -428,11 +447,12 @@ header{
 .notes-panel:hover{
     background-color: whitesmoke;
 }
-.jumbotron{
+.jumbo-tron{
     padding: 20px 30px 30px 30px;
     border-bottom: 1px solid #C1C4C4;
     border-radius: 0;
     margin-bottom: 15px;
+    background-color: whitesmoke;
 }
 .prompt {
     transition: all 1s ease-in-out !important;
@@ -633,7 +653,14 @@ header{
 .contacts tbody tr td{
     padding: 5px;
 }
-
+.head-column{
+    padding: 0;
+    background-color: #2E4053;
+    border-bottom: 2px solid #F5B041;
+}
+.head-column .nav a{
+    border-radius: 0;
+}
 
 
 
