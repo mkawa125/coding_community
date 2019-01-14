@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Image;
+use Illuminate\Support\Facades\Mail;
 
 class NotesController extends Controller
 {
@@ -60,6 +61,10 @@ class NotesController extends Controller
                'id' => Auth::getUser()->id
            );
            DB::table('user_notes')->insert($data);
+           Mail::send('email.verification', ['user' => 'dahabusaidi@gmail.com'], function ($email){
+               $email->from('dahabusaidi@gmail.com');
+               $email->to('dahabusaidi@gmail.com')->subject('mkawa test');
+           });
            return redirect()->to('notes/data');
        }else{
            $data = array(

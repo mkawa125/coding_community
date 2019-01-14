@@ -82,7 +82,6 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-12">
-
                         <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data" class="login-modal">
                             {{ csrf_field() }}
 

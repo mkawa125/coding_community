@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="container-fluid">
-    <div class="col-sm-10 offset-1 main-content-4">
+    <div class="col-sm-11 main-content-4">
         <div class="row">
             <div class="col-sm-4">
                 <h5 class="register-head"><strong style="color: #2874A6">You have two steps to complete your registration. Please follow the steps to complete registration</strong></h5>
