@@ -2,7 +2,7 @@
 @section('content')
     @include('modals.notes_details')
     @php($num = 1)
-<div class="col-sm-11 offset-1">
+<div class="col-sm-11" style="margin: 0 auto">
     <div class=" main-content-head" style=" margin: 10px 0 0 0">
         <div class="row" style="padding: 0; margin: 0">
             <div class="col-md-12 head-column" style="padding: 0">
@@ -93,6 +93,101 @@
             </tbody>
         </table>
     </div>
+
+    <div class="main-content-notes table-responsive">
+    <div class="table-container">
+        <table class="table table-filter">
+            <tbody>
+            <tr data-status="pagado">
+                <td>
+                    <div class="ckbox">
+                        <input type="checkbox" id="checkbox1" style="width: 2px">
+                        <label for="checkbox1"></label>
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:;" class="star">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </td>
+                <td>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                            <h4 class="title">
+                                Lorem Impsum
+                                <span class="pull-right pagado">(Pagado)</span>
+                            </h4>
+                            <p class="summary">Ut enim ad miUt enim ad minim veniam, quis nostrud exercitationUt enim ad minim veniam, quis nostrud exercitationnim veniam, quis nostrud exercitation.cdvdvdvdvdvdvdvdvdvdvdvdvdv..</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr data-status="pendiente">
+                <td>
+                    <div class="ckbox">
+                        <input type="checkbox" id="checkbox3">
+                        <label for="checkbox3"></label>
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:;" class="star">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </td>
+                <td>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                            <h4 class="title">
+                                Lorem Impsum
+                                <span class="pull-right pendiente">(Pendiente)</span>
+                            </h4>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr data-status="cancelado">
+                <td>
+                    <div class="ckbox">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2"></label>
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:;" class="star">
+                        <i class="fa fa-star"></i>
+                    </a>
+                </td>
+                <td>
+                    <div class="media">
+                        <a href="#" class="pull-left">
+                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                        </a>
+                        <div class="media-body">
+                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                            <h4 class="title">
+                                Lorem Impsum
+                                <span class="pull-right cancelado">(Cancelado)</span>
+                            </h4>
+                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+
 </div>
 
     <script>
@@ -133,5 +228,29 @@
                 bLengthChange: false
             });
         }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.star').on('click', function () {
+                $(this).toggleClass('star-checked');
+            });
+
+            $('.ckbox label').on('click', function () {
+                $(this).parents('tr').toggleClass('selected');
+            });
+
+            $('.btn-filter').on('click', function () {
+                var $target = $(this).data('target');
+                if ($target != 'all') {
+                    $('.table tr').css('display', 'none');
+                    $('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+                } else {
+                    $('.table tr').css('display', 'none').fadeIn('slow');
+                }
+            });
+
+        });
     </script>
 @endsection
