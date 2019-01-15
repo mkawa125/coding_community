@@ -45,7 +45,7 @@
 <body>
 
 <div class="container-fluid" style="background-color: whitesmoke">
-    <div class="row" style="margin-top: 55px">
+    <div class="row" style="margin-top: 54px">
         <div class="col-md-2" style="padding: 0">
             @include('pages.side-nav-bar')
         </div>
