@@ -1,10 +1,10 @@
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="font-size: 15px">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="font-size: 15px; border-bottom: 1px solid #D1D4D5">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <a class="" href="#" style="color: white; font-size: small">
+        <a class="" href="#" style="color: #566573; font-size: small; font-weight: bold">
             MKAWA CODING COMMUNITY
         </a>
 
@@ -43,12 +43,15 @@
                 </li>
             </ul>
             @else
-            <div class="dropdown" style="margin: 0 auto">
+            <a class="#" href="#" style="font-size: small">
+                <i class="fa fa-question"></i> Ask Question
+            </a>
+            <div class="dropdown user-account">
                 <a class="nav-link " data-toggle="dropdown" href="{{ action("Auth\RegisterController@register") }}">
                     <i class="fa fa-user-o"></i>
                     {{ Auth::user()->name }} <i class="fa fa-angle-double-down"></i>
                 </a>
-                <div class="dropdown-menu" style="color: white">
+                <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ url("notes/data") }}"><i class="fa fa-code"></i> My storage</a>
                     <a class="dropdown-item" href="{{url('users/profile')}}?id=1"><i class="fa fa-user-circle"></i> user profile</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-cog"></i> settings</a>
@@ -56,11 +59,7 @@
                     <a class="nav-link" href="{{ action("Auth\RegisterController@register") }}"><i class="fa fa-user-o"></i> Register</a>
                 </div>
             </div>
-            <a class="#" href="#" style="color: white">
-                <button class="btn btn-warning">
-                    <i class="fa fa-question"></i> Ask Question
-                </button>
-            </a>
+
         @endif
 
 

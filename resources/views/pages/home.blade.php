@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="main-content-2" style="margin-top: 20px">
+<div class="main-content-2">
     <div class="row" style="margin-top: 10px; padding: 5px 5px 5px 20px">
         <div class="col-sm-8 slide-show" >
             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -58,7 +58,7 @@
         </div>
         <div class="col-sm-3">
             <div class="latest_head">
-                <h5 class="home-head head">Recent discussions </h5>
+                <h5 class="home-head head">Recent discussions <i class="fa fa-clock-o"></i></h5>
             </div>
             <div class="column">
                 <ul class="list-group" style="padding: 0">

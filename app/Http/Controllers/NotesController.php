@@ -49,7 +49,7 @@ class NotesController extends Controller
        if ($request->hasFile('photo')){
            $notes_image = $request->file('photo');
            $filename = time().'.'.$notes_image->getClientOriginalExtension();
-//           $image_path = Image::make($notes_image)->save( public_path('/uploads/notes_images/' . $filename ));
+           $image_path = Image::make($notes_image)->save( public_path('/uploads/notes_images/' . $filename ));
 
            $data = array(
                'notes_title' => $request->input('title'),
