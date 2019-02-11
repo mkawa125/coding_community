@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Image;
+use Illuminate\Support\Facades\Mail;
 
 class NotesController extends Controller
 {
@@ -48,7 +49,7 @@ class NotesController extends Controller
        if ($request->hasFile('photo')){
            $notes_image = $request->file('photo');
            $filename = time().'.'.$notes_image->getClientOriginalExtension();
-//           $image_path = Image::make($notes_image)->save( public_path('/uploads/notes_images/' . $filename ));
+           $image_path = Image::make($notes_image)->save( public_path('/uploads/notes_images/' . $filename ));
 
            $data = array(
                'notes_title' => $request->input('title'),
@@ -60,6 +61,10 @@ class NotesController extends Controller
                'id' => Auth::getUser()->id
            );
            DB::table('user_notes')->insert($data);
+           Mail::send('email.verification', ['user' => 'dahabusaidi@gmail.com'], function ($email){
+               $email->from('dahabusaidi@gmail.com');
+               $email->to('dahabusaidi@gmail.com')->subject('mkawa test');
+           });
            return redirect()->to('notes/data');
        }else{
            $data = array(
