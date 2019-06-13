@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="font-size: 15px">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -23,6 +22,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ action("Auth\RegisterController@about") }}">About us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ action("Auth\RegisterController@about") }}">Chats</a>
             </li>
         </ul>
 
@@ -62,8 +64,6 @@
                 </button>
             </a>
         @endif
-
-
     </div>
 </nav>
 
