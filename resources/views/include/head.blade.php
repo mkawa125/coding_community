@@ -24,7 +24,7 @@
                 <a class="nav-link" href="{{ action("Auth\RegisterController@about") }}">About us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ action("Auth\RegisterController@about") }}">Chats</a>
+                <a class="nav-link" href="{{ route('chat.create') }}">Chats</a>
             </li>
         </ul>
 
