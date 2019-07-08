@@ -7,20 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-    <title>:: Alpino Horizontal :: Home</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/morrisjs/morris.css" />
-    <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
+    <title>Alpino Horizontal : Home</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> <!-- Favicon-->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}">    <link rel="stylesheet" href="{{ asset('') }}{{ asset('') }}assets/plugins/morrisjs/morris.css" />
+    <link rel="stylesheet" href="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
     <!-- Custom Css -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/color_skins.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/color_skins.css') }}">
 </head>
-<body class="theme-black">
+<body class="">
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img src="assets/images/logo.svg" width="48" height="48" alt="Alpino"></div>
+        <div class="m-t-30"><img src="{{ asset('assets/images/logo.svg') }}" width="48" height="48" alt="Alpino"></div>
         <p>Please wait...</p>
     </div>
 </div>
@@ -42,25 +41,24 @@
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12">
                 <div class="social">
-                    <a class="icon" href="https://www.facebook.com/thememakkerteam" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
-                    <a class="icon" href="https://www.behance.net/thememakker" target="_blank"><i class="zmdi zmdi-behance"></i></a>
-                    <a class="icon" href="#"><i class="zmdi zmdi-twitter"></i></a>
-                    <a class="icon" href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                    <p>Coded by WrapTheme<br> Designed by <a href="http://thememakker.com/" target="_blank">thememakker.com</a></p>
+                    <a class="icon" href="{{ asset('https://www.facebook.com/thememakkerteam') }}" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                    <a class="icon" href="{{ asset('https://www.behance.net/thememakker') }}" target="_blank"><i class="zmdi zmdi-behance"></i></a>
+                    <a class="icon" href="{{ asset('#') }}"><i class="zmdi zmdi-twitter"></i></a>
+                    <a class="icon" href="{{ asset('#') }}"><i class="zmdi zmdi-linkedin"></i></a>
+                    <p>Coded by WrapTheme<br> Designed by <a href="{{ asset('http://thememakker.com/') }}" target="_blank">thememakker.com</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="overlay"></div><!-- Overlay For Sidebars -->
 
 <nav class="navbar">
     <div class="container">
         <ul class="nav navbar-nav">
             <li>
                 <div class="navbar-header">
-                    <a href="javascript:void(0);" class="h-bars"></a>
-                    <a class="navbar-brand" href="index-2.html"><img src="assets/images/logo-black.svg" width="35" alt="Alpino"><span class="m-l-10">Alpino</span></a>
+                    <a href="{{ asset('') }}javascript:void(0);" class="h-bars"></a>
+                    <a class="navbar-brand" href="{{ asset('index-2.html') }}"><img src="assets/images/logo-black.svg" width="35" alt="Alpino"><span class="m-l-10">Alpino</span></a>
                 </div>
             </li>
             <li class="search_bar">
@@ -68,18 +66,18 @@
                     <input type="text" class="form-control" placeholder="Search...">
                 </div>
             </li>
-            <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
+            <li class="dropdown"><a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
                 <ul class="dropdown-menu pullDown">
-                    <li><a href="mail-inbox.html"><i class="zmdi zmdi-email m-r-10"></i><span>Mail</span></a></li>
-                    <li><a href="contact.html"><i class="zmdi zmdi-accounts-list m-r-10"></i><span>Contacts</span></a></li>
-                    <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>Chat</span></a></li>
-                    <li><a href="invoices.html"><i class="zmdi zmdi-arrows m-r-10"></i><span>Invoices</span></a></li>
-                    <li><a href="events.html"><i class="zmdi zmdi-calendar-note m-r-10"></i><span>Calendar</span></a></li>
-                    <li><a href="javascript:void(0)"><i class="zmdi zmdi-arrows m-r-10"></i><span>Notes</span></a></li>
-                    <li><a href="javascript:void(0)"><i class="zmdi zmdi-view-column m-r-10"></i><span>Taskboard</span></a></li>
+                    <li><a href="{{ asset('') }}mail-inbox.html"><i class="zmdi zmdi-email m-r-10"></i><span>Mail</span></a></li>
+                    <li><a href="{{ asset('') }}contact.html"><i class="zmdi zmdi-accounts-list m-r-10"></i><span>Contacts</span></a></li>
+                    <li><a href="{{ asset('') }}chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>Chat</span></a></li>
+                    <li><a href="{{ asset('') }}invoices.html"><i class="zmdi zmdi-arrows m-r-10"></i><span>Invoices</span></a></li>
+                    <li><a href="{{ asset('') }}events.html"><i class="zmdi zmdi-calendar-note m-r-10"></i><span>Calendar</span></a></li>
+                    <li><a href="{{ asset('') }}javascript:void(0)"><i class="zmdi zmdi-arrows m-r-10"></i><span>Notes</span></a></li>
+                    <li><a href="{{ asset('') }}javascript:void(0)"><i class="zmdi zmdi-view-column m-r-10"></i><span>Taskboard</span></a></li>
                 </ul>
             </li>
-            <li class="dropdown notifications badgebit"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+            <li class="dropdown notifications badgebit"><a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
                     <div class="notify">
                         <span class="heartbit"></span>
                         <span class="point"></span>
@@ -90,7 +88,7 @@
                     <li class="body">
                         <ul class="menu list-unstyled">
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object" src="assets/images/xs/avatar5.jpg" alt="">
                                         <div class="media-body">
@@ -101,7 +99,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object" src="assets/images/xs/avatar6.jpg" alt="">
                                         <div class="media-body">
@@ -112,7 +110,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object" src="assets/images/xs/avatar3.jpg" alt="">
                                         <div class="media-body">
@@ -123,7 +121,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <div class="media">
                                         <img class="media-object" src="assets/images/xs/avatar4.jpg" alt="">
                                         <div class="media-body">
@@ -135,10 +133,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
+                    <li class="footer"> <a href="{{ asset('') }}javascript:void(0);">View All</a> </li>
                 </ul>
             </li>
-            <li class="dropdown task badgebit"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+            <li class="dropdown task badgebit"><a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
                     <div class="notify">
                         <span class="heartbit"></span>
                         <span class="point"></span>
@@ -149,7 +147,7 @@
                     <li class="body">
                         <ul class="menu tasks list-unstyled">
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <span class="text-muted">Clockwork Orange <span class="float-right">29%</span></span>
                                     <div class="progress">
                                         <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
@@ -157,7 +155,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <span class="text-muted">Blazing Saddles <span class="float-right">78%</span></span>
                                     <div class="progress">
                                         <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
@@ -165,7 +163,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <span class="text-muted">Project Archimedes <span class="float-right">45%</span></span>
                                     <div class="progress">
                                         <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
@@ -173,7 +171,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <span class="text-muted">Eisenhower X <span class="float-right">68%</span></span>
                                     <div class="progress">
                                         <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
@@ -181,7 +179,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0);">
+                                <a href="{{ asset('') }}javascript:void(0);">
                                     <span class="text-muted">Oreo Admin Templates <span class="float-right">21%</span></span>
                                     <div class="progress">
                                         <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
@@ -190,14 +188,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="footer"><a href="javascript:void(0);">View All</a></li>
+                    <li class="footer"><a href="{{ asset('') }}javascript:void(0);">View All</a></li>
                 </ul>
             </li>
             <li class="float-right">
-                <a href="javascript:void(0);" class="fullscreen" data-provide="fullscreen"><i class="zmdi zmdi-fullscreen"></i></a>
-                <a href="javascript:void(0);" class="btn_overlay"><i class="zmdi zmdi-sort-amount-desc"></i></a>
-                <a href="javascript:void(0);" class="js-right-sidebar"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
-                <a href="sign-in.html" class="mega-menu"><i class="zmdi zmdi-power"></i></a>
+                <a href="{{ asset('') }}javascript:void(0);" class="fullscreen" data-provide="fullscreen"><i class="zmdi zmdi-fullscreen"></i></a>
+                <a href="{{ asset('') }}javascript:void(0);" class="btn_overlay"><i class="zmdi zmdi-sort-amount-desc"></i></a>
+                <a href="{{ asset('') }}javascript:void(0);" class="js-right-sidebar"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+                <a href="{{ asset('') }}sign-in.html" class="mega-menu"><i class="zmdi zmdi-power"></i></a>
             </li>
         </ul>
     </div>
@@ -208,140 +206,140 @@
         <div class="row">
             <div class="col-md-12">
                 <ul class="h-menu">
-                    <li class="open active"><a href="index-2.html"><i class="zmdi zmdi-home"></i></a></li>
-                    <li><a href="javascript:void(0)">Apps</a>
+                    <li class="open active"><a href="{{ asset('') }}index-2.html"><i class="zmdi zmdi-home"></i></a></li>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Apps</a>
                         <ul class="sub-menu">
-                            <li><a href="mail-inbox.html">Inbox</a></li>
-                            <li><a href="chat.html">Chat</a></li>
-                            <li><a href="events.html">Calendar</a></li>
-                            <li><a href="file-dashboard.html">File Manager</a></li>
-                            <li><a href="contact.html">Contact list</a></li>
-                            <li><a href="app-ticket.html">Support Ticket</a></li>
+                            <li><a href="{{ asset('') }}mail-inbox.html">Inbox</a></li>
+                            <li><a href="{{ asset('') }}chat.html">Chat</a></li>
+                            <li><a href="{{ asset('') }}events.html">Calendar</a></li>
+                            <li><a href="{{ asset('') }}file-dashboard.html">File Manager</a></li>
+                            <li><a href="{{ asset('') }}contact.html">Contact list</a></li>
+                            <li><a href="{{ asset('') }}app-ticket.html">Support Ticket</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Blog</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Blog</a>
                         <ul class="sub-menu">
-                            <li><a href="blog-dashboard.html">Dashboard</a></li>
-                            <li><a href="blog-post.html">New Post</a></li>
-                            <li><a href="blog-list.html">Blog List</a></li>
-                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                            <li><a href="blog-details.html">Blog Single</a></li>
+                            <li><a href="{{ asset('') }}blog-dashboard.html">Dashboard</a></li>
+                            <li><a href="{{ asset('') }}blog-post.html">New Post</a></li>
+                            <li><a href="{{ asset('') }}blog-list.html">Blog List</a></li>
+                            <li><a href="{{ asset('') }}blog-grid.html">Blog Grid</a></li>
+                            <li><a href="{{ asset('') }}blog-details.html">Blog Single</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">UI Kit</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">UI Kit</a>
                         <ul class="sub-menu mega-menu">
                             <li>
                                 <ul class="sub-menu-two">
-                                    <li><a href="ui_kit.html">UI KIT</a></li>
-                                    <li><a href="alerts.html">Alerts</a></li>
-                                    <li><a href="collapse.html">Collapse</a></li>
-                                    <li><a href="colors.html">Colors</a></li>
+                                    <li><a href="{{ asset('') }}ui_kit.html">UI KIT</a></li>
+                                    <li><a href="{{ asset('') }}alerts.html">Alerts</a></li>
+                                    <li><a href="{{ asset('') }}collapse.html">Collapse</a></li>
+                                    <li><a href="{{ asset('') }}colors.html">Colors</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul class="sub-menu-two">
-                                    <li><a href="icons.html">Icons</a></li>
-                                    <li><a href="dialogs.html">Dialogs</a></li>
-                                    <li><a href="list-group.html">List Group</a></li>
-                                    <li><a href="media-object.html">Media Object</a></li>
+                                    <li><a href="{{ asset('') }}icons.html">Icons</a></li>
+                                    <li><a href="{{ asset('') }}dialogs.html">Dialogs</a></li>
+                                    <li><a href="{{ asset('') }}list-group.html">List Group</a></li>
+                                    <li><a href="{{ asset('') }}media-object.html">Media Object</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul class="sub-menu-two">
-                                    <li><a href="modals.html">Modals</a></li>
-                                    <li><a href="notifications.html">Notifications</a></li>
-                                    <li><a href="progressbars.html">Progress Bars</a></li>
-                                    <li><a href="range-sliders.html">Range Sliders</a></li>
+                                    <li><a href="{{ asset('') }}modals.html">Modals</a></li>
+                                    <li><a href="{{ asset('') }}notifications.html">Notifications</a></li>
+                                    <li><a href="{{ asset('') }}progressbars.html">Progress Bars</a></li>
+                                    <li><a href="{{ asset('') }}range-sliders.html">Range Sliders</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul class="sub-menu-two">
-                                    <li><a href="sortable-nestable.html">Sortable & Nestable</a></li>
-                                    <li><a href="tabs.html">Tabs</a></li>
-                                    <li><a href="waves.html">Waves</a></li>
+                                    <li><a href="{{ asset('') }}sortable-nestable.html">Sortable & Nestable</a></li>
+                                    <li><a href="{{ asset('') }}tabs.html">Tabs</a></li>
+                                    <li><a href="{{ asset('') }}waves.html">Waves</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Forms</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Forms</a>
                         <ul class="sub-menu">
-                            <li><a href="basic-form-elements.html">Basic Elements</a></li>
-                            <li><a href="advanced-form-elements.html">Advanced Elements</a></li>
-                            <li><a href="form-examples.html">Form Examples</a></li>
-                            <li><a href="form-validation.html">Form Validation</a></li>
-                            <li><a href="form-wizard.html">Form Wizard</a></li>
-                            <li><a href="form-editors.html">Editors</a></li>
-                            <li><a href="form-upload.html">File Upload</a></li>
-                            <li><a href="form-img-cropper.html">Image Cropper</a></li>
-                            <li><a href="form-summernote.html">Summernote</a></li>
+                            <li><a href="{{ asset('') }}basic-form-elements.html">Basic Elements</a></li>
+                            <li><a href="{{ asset('') }}advanced-form-elements.html">Advanced Elements</a></li>
+                            <li><a href="{{ asset('') }}form-examples.html">Form Examples</a></li>
+                            <li><a href="{{ asset('') }}form-validation.html">Form Validation</a></li>
+                            <li><a href="{{ asset('') }}form-wizard.html">Form Wizard</a></li>
+                            <li><a href="{{ asset('') }}form-editors.html">Editors</a></li>
+                            <li><a href="{{ asset('') }}form-upload.html">File Upload</a></li>
+                            <li><a href="{{ asset('') }}form-img-cropper.html">Image Cropper</a></li>
+                            <li><a href="{{ asset('') }}form-summernote.html">Summernote</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Tables</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Tables</a>
                         <ul class="sub-menu">
-                            <li><a href="normal-tables.html">Normal Tables</a></li>
-                            <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
-                            <li><a href="editable-table.html">Editable Tables</a></li>
+                            <li><a href="{{ asset('') }}normal-tables.html">Normal Tables</a></li>
+                            <li><a href="{{ asset('') }}jquery-datatable.html">Jquery Datatables</a></li>
+                            <li><a href="{{ asset('') }}editable-table.html">Editable Tables</a></li>
 
-                            <li><a href="table-color.html">Tables Color</a></li>
-                            <li><a href="table-filter.html">Tables Filter</a></li>
+                            <li><a href="{{ asset('') }}table-color.html">Tables Color</a></li>
+                            <li><a href="{{ asset('') }}table-filter.html">Tables Filter</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Charts</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Charts</a>
                         <ul class="sub-menu">
-                            <li><a href="morris.html">Morris</a></li>
-                            <li><a href="flot.html">Flot</a></li>
-                            <li><a href="chartjs.html">ChartJS</a></li>
-                            <li><a href="sparkline.html">Sparkline</a></li>
-                            <li><a href="jquery-knob.html">Jquery Knob</a></li>
+                            <li><a href="{{ asset('') }}morris.html">Morris</a></li>
+                            <li><a href="{{ asset('') }}flot.html">Flot</a></li>
+                            <li><a href="{{ asset('') }}chartjs.html">ChartJS</a></li>
+                            <li><a href="{{ asset('') }}sparkline.html">Sparkline</a></li>
+                            <li><a href="{{ asset('') }}jquery-knob.html">Jquery Knob</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Widgets</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Widgets</a>
                         <ul class="sub-menu">
-                            <li><a href="widgets-app.html">Apps Widgetse</a></li>
-                            <li><a href="widgets-data.html">Data Widgetse</a></li>
-                            <li><a href="widgets-chart.html">Chart Widgetse</a></li>
+                            <li><a href="{{ asset('') }}widgets-app.html">Apps Widgetse</a></li>
+                            <li><a href="{{ asset('') }}widgets-data.html">Data Widgetse</a></li>
+                            <li><a href="{{ asset('') }}widgets-chart.html">Chart Widgetse</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Authentication</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Authentication</a>
                         <ul class="sub-menu">
-                            <li><a href="sign-in.html">Sign In</a></li>
-                            <li><a href="sign-up.html">Sign Up</a></li>
-                            <li><a href="forgot-password.html">Forgot Password</a></li>
-                            <li><a href="404.html">Page 404</a></li>
-                            <li><a href="403.html">Page 403</a></li>
-                            <li><a href="500.html">Page 500</a></li>
-                            <li><a href="503.html">Page 503</a></li>
-                            <li><a href="page-offline.html">Page Offline</a></li>
-                            <li><a href="locked.html">Locked Screen</a></li>
+                            <li><a href="{{ asset('') }}sign-in.html">Sign In</a></li>
+                            <li><a href="{{ asset('') }}sign-up.html">Sign Up</a></li>
+                            <li><a href="{{ asset('') }}forgot-password.html">Forgot Password</a></li>
+                            <li><a href="{{ asset('') }}404.html">Page 404</a></li>
+                            <li><a href="{{ asset('') }}403.html">Page 403</a></li>
+                            <li><a href="{{ asset('') }}500.html">Page 500</a></li>
+                            <li><a href="{{ asset('') }}503.html">Page 503</a></li>
+                            <li><a href="{{ asset('') }}page-offline.html">Page Offline</a></li>
+                            <li><a href="{{ asset('') }}locked.html">Locked Screen</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Maps</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Maps</a>
                         <ul class="sub-menu">
-                            <li><a href="google.html">Google Map</a></li>
-                            <li><a href="yandex.html">YandexMap</a></li>
-                            <li><a href="jvectormap.html">jVectorMap</a></li>
+                            <li><a href="{{ asset('') }}google.html">Google Map</a></li>
+                            <li><a href="{{ asset('') }}yandex.html">YandexMap</a></li>
+                            <li><a href="{{ asset('') }}jvectormap.html">jVectorMap</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)">Pages</a>
+                    <li><a href="{{ asset('') }}javascript:void(0)">Pages</a>
                         <ul class="sub-menu sm-mega-menu">
                             <li>
                                 <ul>
-                                    <li><a href="blank.html">Blank Page</a></li>
-                                    <li><a href="teams-board.html">Teams Board</a></li>
-                                    <li><a href="projects.html">Projects List</a></li>
-                                    <li><a href="image-gallery.html">Image Gallery</a></li>
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="timeline.html">Timeline</a></li>
+                                    <li><a href="{{ asset('') }}blank.html">Blank Page</a></li>
+                                    <li><a href="{{ asset('') }}teams-board.html">Teams Board</a></li>
+                                    <li><a href="{{ asset('') }}projects.html">Projects List</a></li>
+                                    <li><a href="{{ asset('') }}image-gallery.html">Image Gallery</a></li>
+                                    <li><a href="{{ asset('') }}profile.html">Profile</a></li>
+                                    <li><a href="{{ asset('') }}timeline.html">Timeline</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <ul>
-                                    <li><a href="horizontal-timeline.html">Horizontal Timeline</a></li>
-                                    <li><a href="pricing.html">Pricing</a></li>
-                                    <li><a href="invoices.html">Invoices</a></li>
-                                    <li><a href="faqs.html">FAQs</a></li>
-                                    <li><a href="search-results.html">Search Results</a></li>
-                                    <li><a href="helper-class.html">Helper Classes</a></li>
+                                    <li><a href="{{ asset('') }}horizontal-timeline.html">Horizontal Timeline</a></li>
+                                    <li><a href="{{ asset('') }}pricing.html">Pricing</a></li>
+                                    <li><a href="{{ asset('') }}invoices.html">Invoices</a></li>
+                                    <li><a href="{{ asset('') }}faqs.html">FAQs</a></li>
+                                    <li><a href="{{ asset('') }}search-results.html">Search Results</a></li>
+                                    <li><a href="{{ asset('') }}helper-class.html">Helper Classes</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -355,8 +353,8 @@
 <aside class="right_menu">
     <div id="rightsidebar" class="right-sidebar">
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting">Setting</a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#activity">Activity</a></li>
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="{{ asset('') }}#setting">Setting</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="{{ asset('') }}#activity">Activity</a></li>
         </ul>
         <div class="tab-content slim_scroll">
             <div class="tab-pane slideRight active" id="setting">
@@ -454,67 +452,67 @@
                             <div class="sl-item">
                                 <div class="sl-content">
                                     <div class="text-muted">Just now</div>
-                                    <p>Finished task <a href="#" class="text-info">#features 4</a>.</p>
+                                    <p>Finished task <a href="{{ asset('') }}#" class="text-info">#features 4</a>.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-info">
                                 <div class="sl-content">
                                     <div class="text-muted">10:30</div>
-                                    <p><a href="#">@Jessi</a> retwit your post</p>
+                                    <p><a href="{{ asset('') }}#">@Jessi</a> retwit your post</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">12:30</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">1 days ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">2 days ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">3 days ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">4 Week ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">5 days ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">5 Week ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">3 Week ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">1 Month ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                         </div>
@@ -535,7 +533,7 @@
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12">
                     <ul class="breadcrumb float-md-right padding-0">
-                        <li class="breadcrumb-item"><a href="index-2.html"><i class="zmdi zmdi-home"></i></a></li>
+                        <li class="breadcrumb-item"><a href="{{ asset('') }}index-2.html"><i class="zmdi zmdi-home"></i></a></li>
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ul>
                 </div>
@@ -588,12 +586,12 @@
                     <div class="header">
                         <h2><strong>Monthly</strong> Earnings</h2>
                         <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            <li class="dropdown"> <a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                    <li><a href="javascript:void(0);" class="boxs-close">Delete</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Another action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Something else</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);" class="boxs-close">Delete</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -622,12 +620,12 @@
                     <div class="header">
                         <h2><strong>Revenue</strong></h2>
                         <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            <li class="dropdown"> <a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                    <li><a href="javascript:void(0);" class="boxs-close">Delete</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Another action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Something else</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);" class="boxs-close">Delete</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -658,11 +656,11 @@
                     <div class="header">
                         <h2><strong>Earning</strong> Report</h2>
                         <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            <li class="dropdown"> <a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu slideUp">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Another action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Something else</a></li>
                                     <li><a role="button" class="boxs-close">Delete</a></li>
                                 </ul>
                             </li>
@@ -764,49 +762,49 @@
                             <div class="sl-item">
                                 <div class="sl-content">
                                     <div class="text-muted">Just now</div>
-                                    <p>Finished task <a href="#" class="text-info">#features 4</a>.</p>
+                                    <p>Finished task <a href="{{ asset('') }}#" class="text-info">#features 4</a>.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-info">
                                 <div class="sl-content">
                                     <div class="text-muted">10:30</div>
-                                    <p><a href="#">@Jessi</a> retwit your post</p>
+                                    <p><a href="{{ asset('') }}#">@Jessi</a> retwit your post</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">12:30</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">1 days ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">2 days ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-primary">
                                 <div class="sl-content">
                                     <div class="text-muted">3 days ago</div>
-                                    <p>Call to customer <a href="#" class="text-info">Jacob</a> and discuss the detail.</p>
+                                    <p>Call to customer <a href="{{ asset('') }}#" class="text-info">Jacob</a> and discuss the detail.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">4 Week ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                             <div class="sl-item b-warning">
                                 <div class="sl-content">
                                     <div class="text-muted">5 days ago</div>
-                                    <p><a href="#" class="text-info">Jessi</a> commented your post.</p>
+                                    <p><a href="{{ asset('') }}#" class="text-info">Jessi</a> commented your post.</p>
                                 </div>
                             </div>
                         </div>
@@ -820,12 +818,12 @@
                     <div class="header">
                         <h2><strong>Radar</strong> Chart</h2>
                         <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            <li class="dropdown"> <a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                    <li><a href="javascript:void(0);" class="boxs-close">Delete</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Another action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Something else</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);" class="boxs-close">Delete</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -840,12 +838,12 @@
                     <div class="header">
                         <h2><strong>Polar</strong> Area Chart</h2>
                         <ul class="header-dropdown">
-                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            <li class="dropdown"> <a href="{{ asset('') }}javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="javascript:void(0);">Action</a></li>
-                                    <li><a href="javascript:void(0);">Another action</a></li>
-                                    <li><a href="javascript:void(0);">Something else</a></li>
-                                    <li><a href="javascript:void(0);" class="boxs-close">Delete</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Another action</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);">Something else</a></li>
+                                    <li><a href="{{ asset('') }}javascript:void(0);" class="boxs-close">Delete</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -920,19 +918,14 @@
         </div>
     </div>
 </section>
-<!-- Jquery Core Js -->
-<script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-<script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
-
-<script src="assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
-<script src="assets/bundles/sparkline.bundle.js"></script> <!-- sparkline Plugin Js -->
-<script src="assets/plugins/chartjs/Chart.bundle.js"></script> <!-- Chart Plugins Js -->
-<script src="assets/plugins/chartjs/polar_area_chart.js"></script><!-- Polar Area Chart Js -->
-
-<script src="assets/bundles/mainscripts.bundle.js"></script>
-<script src="assets/js/pages/index.js"></script>
-<script src="assets/js/pages/charts/polar_area_chart.js"></script>
+<script src="{{ asset('assets/bundles/libscripts.bundle.js') }}"></script>
+<script src="{{ asset('assets/bundles/vendorscripts.bundle.js') }}"></script>
+<script src="{{ asset('assets/bundles/knob.bundle.js') }}"></script>
+<script src="{{ asset('assets/bundles/sparkline.bundle.js') }}"></script>
+<script src="{{ asset('assets/plugins/chartjs/Chart.bundle.js') }}"></script>
+<script src="{{ asset('assets/plugins/chartjs/polar_area_chart.js') }}"></script>
+<script src="{{ asset('assets/bundles/mainscripts.bundle.js') }}"></script>
+<script src="{{ asset('assets/js/pages/index.js') }}"></script>
+<script src="{{ asset('assets/js/pages/charts/polar_area_chart.js') }}"></script>
 </body>
-
-<!-- Mirrored from www.wrraptheme.com/templates/alpino/horizontal/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Apr 2019 11:41:16 GMT -->
 </html>
