@@ -258,6 +258,7 @@ header{
     font-size: small;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     padding: 8px;
+    text-align: justify;
     line-height: 25px;
 }
 .head{
@@ -330,6 +331,9 @@ header{
 
     }
     .img-responsive{
+        display: none;
+    }
+    .instructions{
         display: none;
     }
 }
