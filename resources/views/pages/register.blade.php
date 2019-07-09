@@ -21,12 +21,9 @@
             <div class="col-sm-7" style="margin: 0 auto">
                 <div class="panel">
 
-                    <!-- Modal Header -->
                     <div class="panel-heading">
-                        <h4 class="panel-title home-head" style="text-transform: uppercase"><strong>Programming community registration form</strong></h4>
+                        <h4 class="panel-title home-head" style="text-transform: uppercase"><strong><i class="fa fa-user"></i> register your account</strong></h4>
                     </div>
-
-                    <!-- Modal body -->
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
@@ -105,8 +102,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
 
                                     <label for="location"><strong>location:</strong></label>
                                     <div class="input-group">

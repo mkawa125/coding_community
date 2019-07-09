@@ -53,6 +53,7 @@ header{
     font-size: small;
     border: 1px solid #c1c5cc;
     padding: 2px 30px 2px 30px;
+    background-color: white;
 }
 .modal-content .modal-footer{
     background-color: whitesmoke;
@@ -80,7 +81,8 @@ header{
     color: #707B7C;
     text-align: center;
     border: 1px solid #c1c5cc;
-    box-shadow: 0 3px 3px 0 #c1c5cc;
+    border-bottom: none;
+    /*box-shadow: 0 3px 3px 0 #c1c5cc;*/
 }
 .fa-twitter-square{
     color:#1DA1F2;
@@ -194,7 +196,7 @@ header{
 .home-head{
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     font-size: 14px;
-    color: #2874A6  ;
+    
 }
 .register-head{
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
