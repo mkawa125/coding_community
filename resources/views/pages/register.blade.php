@@ -22,8 +22,7 @@
                     <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
                     <a class="#" href="#" title="Instagram" ><i class="fa fa-instagram"></i></a>
                     <a class="#" href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
-                    <a class="#" href="#" title="twitter"><i class="fa fa-twitter-square"></i></a>
-                    <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
+                    <a class="#" href="#" title="Click here to join whatssap group"><i class="fa fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-sm-7" style="margin: 0 auto">
@@ -356,6 +355,10 @@
                                             <option value="Zimbabwe">Zimbabwe</option>
                                         </select>
                                     </div>
+                                    <div class="mt-3 position-relative form-check">
+                                        <input name="check" id="exampleCheck" type="checkbox" class="form-check-input">
+                                        <label for="exampleCheck" class="form-check-label">Accept our <a href="#">Terms
+                                                and Conditions</a>.</label></div>
                                     <div class="col-md-10" style="margin: 10px auto">
                                         <button class="btn btn-primary btn-block" name="login" type="submit" style="background-color: #2874A6;
                                         border-radius: 80px; float: right; margin-top: 5px; margin-bottom: 10px; padding: 5px; font-size: small">
