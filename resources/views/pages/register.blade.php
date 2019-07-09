@@ -9,8 +9,6 @@
                 <p class="welcome-register">Fill the the correct details to form the given form and then click next to proceed with the other steps.
                 Please make sure your details are correct so that people can know who are you in computer programming field.
                 </p>
-
-
                 <div class="social">
                     <h5 class="register-head"><strong>Social Networks</strong></h5>
                     <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>

@@ -169,14 +169,14 @@ header{
     box-shadow: 1px 3px 3px 1px #c1c5cc;
 }
 .main-content-4{
-    margin:0 auto;
-    background-color: white;
-    color: #707B7C;
-    padding: 10px;
-    border: 1px solid #C1C4C4;
+    /*margin:0 auto;*/
+    /*background-color: white;*/
+    /*color: #707B7C;*/
+    /*padding: 10px;*/
+    /*border: 1px solid #C1C4C4;*/
     font-size: small;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
-    box-shadow: 1px 3px 3px 1px #c1c5cc;
+    /*box-shadow: 1px 3px 3px 1px #c1c5cc;*/
 }
 .main-content-3{
     margin: 0 auto;
