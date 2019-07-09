@@ -349,15 +349,12 @@
                                             <option value="Zimbabwe">Zimbabwe</option>
                                         </select>
                                     </div>
-                                    <button class="btn btn-primary btn-xs" name="login" type="submit" style="background-color: #2874A6; float: right; margin-top: 5px; padding: 5px; font-size: small">
-                                        Continue  <i class="fa fa-arrow-right" style="font-size: smaller"></i></button>
+                                    <button class="btn btn-primary" name="login" type="submit" style="background-color: #2874A6; float: right; margin-top: 5px; margin-bottom: 10px; padding: 6px; font-size: small">
+                                        Register
+                                    </button>
                                 </form>
                             </div>
                         </div>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="panel-footer">
-                         <a href="#">terms of services</a> and <a href="#">privacy policies</a>
                     </div>
                 </div>
             </div>
