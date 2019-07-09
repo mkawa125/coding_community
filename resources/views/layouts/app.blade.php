@@ -11,6 +11,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/my-sheet.css') }}" rel="stylesheet">
     <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -23,7 +24,7 @@
         @include('_partials.sidebar')
         <div class="app-main__outer">
             <div class="app-main__inner">
-                Main content goes here
+                @yield('content')
             </div>
             {{--footer start--}}
             @include('_partials.footer')

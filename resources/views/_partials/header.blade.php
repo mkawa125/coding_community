@@ -1,4 +1,5 @@
 {{--Header start--}}
+@include('modals.login_modal')
 <div class="app-header header-shadow">
     <div class="app-header__logo">
         <div class="logo-src" style="font-family: cursive"><strong><span class="text-danger">Code</span><span class="text-warning">Community</span></strong></div>
@@ -160,7 +161,7 @@
                             </div>
                         </div>
                         @else
-                        <a href="#" style="text-decoration: none">
+                        <a  href="#" data-toggle="modal" data-target="#myModal">
                             <button class="btn btn-default">
                                 <i class="fa fa-sign-in"></i> Login
                             </button>
