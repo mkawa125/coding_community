@@ -97,9 +97,9 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="metismenu-icon pe-7s-plugin"></i>
-                        Applications
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                        <i class="metismenu-icon fa fa-balance-scale" style="font-size: small"></i>
+                        Jobs
+                        <i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>
                     </a>
                     <ul>
                         <li>
