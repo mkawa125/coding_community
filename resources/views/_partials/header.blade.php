@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: mkawa
- * Date: 7/8/19
- * Time: 5:20 PM
- */
-?>
+{{--Header start--}}
 <div class="app-header header-shadow">
     <div class="app-header__logo">
         <div class="logo-src"></div>
@@ -29,13 +22,13 @@
         </div>
     </div>
     <div class="app-header__menu">
-        <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                <span class="btn-icon-wrapper">
-                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                </span>
-            </button>
-        </span>
+            <span>
+                <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                    <span class="btn-icon-wrapper">
+                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                    </span>
+                </button>
+            </span>
     </div>
     <div class="app-header__content">
         <div class="app-header-left">
@@ -54,7 +47,7 @@
                         <div class="widget-content-left">
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                    <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                    <img width="35" height="35" class="rounded-circle" src="{{ asset('images/naa-fb.jpg') }}" alt="No Avatar">
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
@@ -65,14 +58,13 @@
                                                 <div class="widget-content p-0">
                                                     <div class="widget-content-wrapper">
                                                         <div class="widget-content-left mr-3">
-                                                            <img width="42" class="rounded-circle"
-                                                                 src="assets/images/avatars/1.jpg"
-                                                                 alt="">
+                                                            <img width="40"  height="40" class="rounded-circle"
+                                                                 src="{{ asset('images/naa-fb.jpg') }}" alt="No Image">
                                                         </div>
                                                         <div class="widget-content-left">
-                                                            <div class="widget-heading">Alina Mcloughlin
+                                                            <div class="widget-heading">Dahabu Saidi
                                                             </div>
-                                                            <div class="widget-subheading opacity-8">A short profile description
+                                                            <div class="widget-subheading opacity-8">Admin
                                                             </div>
                                                         </div>
                                                         <div class="widget-content-right mr-2">
@@ -153,10 +145,10 @@
                         </div>
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
-                                Alina Mclourd
+                                Dahabu Saidi
                             </div>
                             <div class="widget-subheading">
-                                VP People Manager
+                                Administrator
                             </div>
                         </div>
                         <div class="widget-content-right header-user-info ml-3">
@@ -170,3 +162,4 @@
         </div>
     </div>
 </div>
+{{--Header ends--}}
