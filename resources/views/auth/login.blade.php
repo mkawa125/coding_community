@@ -5,11 +5,12 @@
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
                 <div class="col-sm-4 instructions">
-                    <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc"><strong style="color: #707B7C; text-align: center">
+                    <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc">
+                        <strong style="color: #AF7AC5; text-align: center">
                             Welcome back to codeCom enter your details to login
                         </strong></h5>
                     {{--<h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>--}}
-                    <p class="welcome-register">Fill the the correct details to form the given form to register or sign in with social networks below.
+                    <p class="welcome-register">Fill the the correct details to form the given form to sign in or sign in with social networks below.
                     </p>
                     <button class="btn btn-default btn-block" style="border-radius: 16px; color: white; background-color: #3b5998">
                         <i class="fa fa-facebook"></i> Sign in with facebook
@@ -70,8 +71,14 @@
                                         <label for="remember">Remember me</label>
                                         <button class="btn btn-dark btn-block" value="login" name="login" type="submit">
                                             Signin <i class="fa fa-sign-in"></i></button>
-                                        <a href="#" class="#">forget password ?</a>
+
                                     </form>
+                                    <div class="col-md-12" style="margin-bottom: 15px; color: #3b5998">
+                                        <a href="#" class="#" style="margin-top: 15px; color: #3b5998; font-weight: bold; font-family: sans-serif">
+                                            Forget Password ?
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
