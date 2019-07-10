@@ -161,7 +161,7 @@
                             </div>
                         </div>
                         @else
-                        <a  href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none;">
+                        <a  href="{{ route('login') }}" style="text-decoration: none;">
                             <button class="btn btn-default">
                                 <i class="fa fa-sign-in"></i> Login
                             </button>
