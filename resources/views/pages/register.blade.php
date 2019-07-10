@@ -1,34 +1,35 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
-<div class="container-fluid">
-    <div class="col-sm-10 offset-1 main-content-4">
+<div class="container-fluid" style=" padding: 0">
+    <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
         <div class="row">
-            <div class="col-sm-4">
-                <h5 class="register-head"><strong style="color: #2874A6">You have two steps to complete your registration. Please follow the steps to complete registration</strong></h5>
+            <div class="col-sm-4 instructions">
+                <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc"><strong style="color: #707B7C; text-align: center">
+                        You have two steps to complete your registration.
+                    </strong></h5>
                 <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
-                <p class="welcome-register">Fill the the correct details to form the given form and then click next to proceed with the other steps.
-                Please make sure your details are correct so that people can know who are you in computer programming field.
+                <p class="welcome-register">Fill the the correct details to form the given form and then click register to proceed with the other steps.
                 </p>
+                <button class="btn btn-primary btn-block">
+                    <i class="fa fa-facebook"></i> Sign in with facebook
+                </button>
 
-
+                <button class="btn btn-danger btn-block">
+                    <i class="fa fa-google"></i> Sign in with google
+                </button>
                 <div class="social">
-                    <h5 class="register-head"><strong>Social Networks</strong></h5>
+                    <h5 class="register-head"><strong>Find us on social networks</strong></h5>
                     <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
                     <a class="#" href="#" title="Instagram" ><i class="fa fa-instagram"></i></a>
                     <a class="#" href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
-                    <a class="#" href="#" title="twitter"><i class="fa fa-twitter-square"></i></a>
-                    <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
+                    <a class="#" href="#" title="Click here to join whatssap group"><i class="fa fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-sm-7" style="margin: 0 auto">
                 <div class="panel">
-
-                    <!-- Modal Header -->
                     <div class="panel-heading">
-                        <h4 class="panel-title home-head" style="text-transform: uppercase"><strong>Programming community registration form</strong></h4>
+                        <h4 class="panel-title home-head" style="text-transform: uppercase"><strong><i class="fa fa-user"></i> register your account</strong></h4>
                     </div>
-
-                    <!-- Modal body -->
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-12">
@@ -107,8 +108,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
 
                                     <label for="location"><strong>location:</strong></label>
                                     <div class="input-group">
@@ -356,15 +355,19 @@
                                             <option value="Zimbabwe">Zimbabwe</option>
                                         </select>
                                     </div>
-                                    <button class="btn btn-primary btn-xs" name="login" type="submit" style="background-color: #2874A6; float: right; margin-top: 5px; padding: 5px; font-size: small">
-                                        Continue  <i class="fa fa-arrow-right" style="font-size: smaller"></i></button>
+                                    <div class="mt-3 position-relative form-check">
+                                        <input name="check" id="exampleCheck" type="checkbox" class="form-check-input">
+                                        <label for="exampleCheck" class="form-check-label">Accept our <a href="#">Terms
+                                                and Conditions</a>.</label></div>
+                                    <div class="col-md-10" style="margin: 10px auto">
+                                        <button class="btn btn-primary btn-block" name="login" type="submit" style="background-color: #2874A6;
+                                        border-radius: 80px; float: right; margin-top: 5px; margin-bottom: 10px; padding: 5px; font-size: small">
+                                            Register
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
-                    </div>
-                    <!-- Modal footer -->
-                    <div class="panel-footer">
-                         <a href="#">terms of services</a> and <a href="#">privacy policies</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 @section('content')
 <div class="main-content-2" style="margin-top: 20px">
     <div class="row" style="margin-top: 10px; padding: 5px 5px 5px 20px">

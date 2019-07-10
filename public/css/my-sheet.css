@@ -53,6 +53,7 @@ header{
     font-size: small;
     border: 1px solid #c1c5cc;
     padding: 2px 30px 2px 30px;
+    background-color: white;
 }
 .modal-content .modal-footer{
     background-color: whitesmoke;
@@ -80,7 +81,8 @@ header{
     color: #707B7C;
     text-align: center;
     border: 1px solid #c1c5cc;
-    box-shadow: 0 3px 3px 0 #c1c5cc;
+    border-bottom: none;
+    /*box-shadow: 0 3px 3px 0 #c1c5cc;*/
 }
 .fa-twitter-square{
     color:#1DA1F2;
@@ -169,14 +171,14 @@ header{
     box-shadow: 1px 3px 3px 1px #c1c5cc;
 }
 .main-content-4{
-    margin:0 auto;
-    background-color: white;
-    color: #707B7C;
-    padding: 10px;
-    border: 1px solid #C1C4C4;
+    /*margin:0 auto;*/
+    /*background-color: white;*/
+    /*color: #707B7C;*/
+    /*padding: 10px;*/
+    /*border: 1px solid #C1C4C4;*/
     font-size: small;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
-    box-shadow: 1px 3px 3px 1px #c1c5cc;
+    /*box-shadow: 1px 3px 3px 1px #c1c5cc;*/
 }
 .main-content-3{
     margin: 0 auto;
@@ -194,7 +196,7 @@ header{
 .home-head{
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     font-size: 14px;
-    color: #2874A6  ;
+
 }
 .register-head{
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
@@ -256,6 +258,7 @@ header{
     font-size: small;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     padding: 8px;
+    text-align: justify;
     line-height: 25px;
 }
 .head{
@@ -328,6 +331,9 @@ header{
 
     }
     .img-responsive{
+        display: none;
+    }
+    .instructions{
         display: none;
     }
 }
@@ -658,152 +664,6 @@ body .notes-body{
     background-color: #2E4053;
     border-bottom: 2px solid #F5B041;
 }
-.head-column .nav a{
+.head-column .nav a {
     border-radius: 0;
 }
-
-
-
-
-
-
-
-
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
-}
-
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    overflow: auto;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    height: 100%;
-    background: #154360;
-    color: #fff;
-    transition: all 0.3s;
-    position: fixed;
-    overflow: auto;
-    padding-bottom: 100px;
-}
-
-#sidebar.active {
-    margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #08324D;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    /*border-bottom: 1px solid #47748b;*/
-    color: white;
-    font-size: small;
-}
-
-
-#sidebar ul li a {
-    padding: 12px;
-    display: block;
-    color: white;
-    text-decoration: none;
-}
-
-#sidebar ul li a:hover {
-    color: wheat;
-    background: #2471A3;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #1A5276;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #1A5276;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-
-/*---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------*/
-
-#content {
-    width: 100%;
-    padding: 0 20px 20px 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
-
-/* ---------------------------------------------------
-    MEDIA QUERIES
------------------------------------------------------ */
-
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
-
-
