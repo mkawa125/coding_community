@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -81,26 +81,17 @@ class RegisterController extends Controller
     public function store(Request $request){
 
         //validating user inputs
-        $this->validate(request(), [
-            'username' => 'required|unique:users',
-            'first_name' => 'required',
-            'surname' => 'required',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|min:8',
-            're_password' => 'required|same:password'
-        ]);
+        $this->validate(request(), User::rules());
 
-        $data = array(
-            'name' => $request->input('first_name'),
-            'username' => $request->input('username'),
-            'surname' => $request->input('surname'),
-            'location' => $request->input('location'),
-            'email' => $request->input('email'),
-            'status' => 0,
-            'password' => bcrypt($request->input('password')),
-            'created_at' => date('Y-m-d H:i:s'),
-        );
-        $last_user = DB::table('users')->insertGetId($data);
+        //get all request value
+        $body = $request->all();
+
+        //generate value from the field
+        $body['name'] = $request->input('first_name').' '.$request->input('surname');
+        $body['gender'] = 'MALE';
+        $body['phone_number'] = '0717495198';
+        $body['password'] = bcrypt($request->input('password'));
+        $last_user = User::create($body);
         $request->session()->put('last_user', $last_user);
         $request->session()->put('username', $request->input('username'));
         $request->session()->put('surname', $request->input('surname'));

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+use Emadadly\LaravelUuid\Uuids;
 class CreateUsersTable extends Migration
 {
     /**
@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('occupation')->nullable();
             $table->string('skills')->nullable();
             $table->boolean('status')->default(0);
-            $table->boolean('phone_number');
+            $table->string('phone_number');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
