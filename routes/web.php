@@ -69,7 +69,7 @@ Route::get('chats', 'ChartsController@create')->name('chat.create');
 Route::post('developers', 'Auth\RegisterController@developers');
 
 //login routes
-Route::get('login', function (){return view('pages/login');});
+//Route::get('login', function (){return view('pages/login');});
 //Route::post('login', 'Auth\RegisterController@userLogin');
 //Route::get('/logout', 'Auth\RegisterController@logout')->name('logout');
 

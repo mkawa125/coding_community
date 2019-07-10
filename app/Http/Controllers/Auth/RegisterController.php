@@ -124,20 +124,20 @@ class RegisterController extends Controller
         Auth::loginUsingId($request->session()->get('last_user'));
         return redirect()->route('home');
     }
-    public function userLogin(){
-        $this->validate(request(), [
-            'username' => 'required',
-            'password' => 'required',
-        ]);
-
-        if (auth()->attempt(request(['email', 'password'])) == false) {
-            return back()->withErrors([
-                'message' => 'The email or password is incorrect, please try again'
-            ]);
-
-        }
-        return redirect()->to('/register');
-    }
+//    public function userLogin(){
+//        $this->validate(request(), [
+//            'username' => 'required',
+//            'password' => 'required',
+//        ]);
+//
+//        if (auth()->attempt(request(['email', 'password'])) == false) {
+//            return back()->withErrors([
+//                'message' => 'The email or password is incorrect, please try again'
+//            ]);
+//
+//        }
+//        return redirect()->to('/register');
+//    }
 
     public function ShowRegistrationForm(){
         return RegisterController::create();
