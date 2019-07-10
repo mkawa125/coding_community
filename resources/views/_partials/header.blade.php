@@ -65,14 +65,16 @@
                                                                      src="{{ asset('images/naa-fb.jpg') }}" alt="No Image">
                                                             </div>
                                                             <div class="widget-content-left">
-                                                                <div class="widget-heading">Dahabu Saidi
+                                                                <div class="widget-heading">
+                                                                    {{ auth()->user()->name }}
                                                                 </div>
                                                                 <div class="widget-subheading opacity-8">Admin
                                                                 </div>
                                                             </div>
                                                             <div class="widget-content-right mr-2">
                                                                 <a href="{{ route('logout') }}">
-                                                                    <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
+                                                                    <button class="btn-pill btn-shadow btn  btn-danger">
+                                                                        <i class="fa fa-sign-out" style="color: white"></i>Logout
                                                                     </button>
                                                                 </a>
                                                             </div>
@@ -88,34 +90,25 @@
                                         <div class="grid-menu grid-menu-2col">
                                             <div class="no-gutters row">
                                                 <div class="col-sm-6">
-                                                    <button class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-warning">
-                                                        <i class="pe-7s-chat icon-gradient bg-amy-crisp btn-icon-wrapper mb-2"></i>
-                                                        Message Inbox
+                                                    <button class=" btn btn-primary">
+                                                        <i class="fa fa-user"></i>
+                                                        Profile
                                                     </button>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <button class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-danger">
-                                                        <i class="pe-7s-ticket icon-gradient bg-love-kiss btn-icon-wrapper mb-2"></i>
-                                                        <b>Support Tickets</b>
+                                                    <button class=" btn btn-dark">
+                                                        <i class=" fa fa-cog "></i>
+                                                        <b>Settings</b>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item-divider nav-item">
-                                            </li>
-                                            <li class="nav-item-btn text-center nav-item">
-                                                <button class="btn-wide btn btn-primary btn-sm">
-                                                    Open Messages
-                                                </button>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="widget-content-left  ml-3 header-user-info">
                                 <div class="widget-heading">
-                                    Dahabu Saidi
+                                    {{ auth()->user()->name }}
                                 </div>
                                 <div class="widget-subheading">
                                     Administrator
