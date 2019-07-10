@@ -43,9 +43,8 @@
                         <div class="panel-body" style="border: none">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data" class="login-modal">
+                                    <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
                                         {{ csrf_field() }}
-
                                         <div class="form-group">
                                             <label for="pass1" ><strong>Username or Email:</strong></label>
                                             <div class="input-group">
@@ -78,7 +77,6 @@
                                             Forget Password ?
                                         </a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

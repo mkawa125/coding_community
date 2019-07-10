@@ -90,7 +90,6 @@ class RegisterController extends Controller
         $body['name'] = $request->input('first_name').' '.$request->input('surname');
         $body['gender'] = 'MALE';
         $body['phone_number'] = '0717495198';
-        $body['password'] = bcrypt($request->input('password'));
         $last_user = User::create($body);
         $request->session()->put('last_user', $last_user);
         $request->session()->put('username', $request->input('username'));
@@ -124,20 +123,6 @@ class RegisterController extends Controller
         Auth::loginUsingId($request->session()->get('last_user'));
         return redirect()->route('home');
     }
-//    public function userLogin(){
-//        $this->validate(request(), [
-//            'username' => 'required',
-//            'password' => 'required',
-//        ]);
-//
-//        if (auth()->attempt(request(['email', 'password'])) == false) {
-//            return back()->withErrors([
-//                'message' => 'The email or password is incorrect, please try again'
-//            ]);
-//
-//        }
-//        return redirect()->to('/register');
-//    }
 
     public function ShowRegistrationForm(){
         return RegisterController::create();
