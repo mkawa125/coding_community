@@ -43,7 +43,7 @@
     <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Menu</li>
+                <li class="app-sidebar__heading" style="color: #CCD1D1">Main Menu</li>
                 <li class="mm-active">
                     <a href="#">
                         <i class="metismenu-icon fa fa-home" style="font-size: 15px"></i>
@@ -149,6 +149,37 @@
                         </li>
                     </ul>
                 </li>
+
+
+                <li class="app-sidebar__heading" style="color: #CCD1D1">MY ACCOUNT</li>
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-folder" style="font-size: 15px"></i>
+                        My Storage
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-bookmark" style="font-size: 15px"></i>
+                        Bookmarks
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-history" style="font-size: 15px"></i>
+                        History
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-question-circle" style="font-size: 15px"></i>
+                        My Questions
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>
