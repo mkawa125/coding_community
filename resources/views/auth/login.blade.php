@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-sm-4 instructions">
                     <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc"><strong style="color: #707B7C; text-align: center">
-                            Welcome to codeCom to join more than million developers
+                            Welcome back to codeCom enter your details to login
                         </strong></h5>
                     {{--<h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>--}}
                     <p class="welcome-register">Fill the the correct details to form the given form to register or sign in with social networks below.
