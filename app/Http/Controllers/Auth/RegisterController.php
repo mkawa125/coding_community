@@ -127,10 +127,5 @@ class RegisterController extends Controller
     public function ShowRegistrationForm(){
         return RegisterController::create();
     }
-    public function logout(Request $request)
-    {
-        $this->performLogout($request);
-        return redirect()->route('home');
-    }
 }
 

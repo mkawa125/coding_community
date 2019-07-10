@@ -68,7 +68,7 @@ Route::post('developers', 'Auth\RegisterController@developers');
 Route::get('chats', 'ChartsController@create')->name('chat.create');
 Route::post('developers', 'Auth\RegisterController@developers');
 
-Route::get('/logout', 'Auth\RegisterController@logout')->name('logout');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 
 
