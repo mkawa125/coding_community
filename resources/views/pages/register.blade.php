@@ -4,19 +4,21 @@
     <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
         <div class="row">
             <div class="col-sm-4 instructions">
-                <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc"><strong style="color: #707B7C; text-align: center">
+                <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc">
+                    <strong style="color: #17A589; text-align: center">
                         You have two steps to complete your registration.
                     </strong></h5>
                 <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
                 <p class="welcome-register">Fill the the correct details to form the given form and then click register to proceed with the other steps.
                 </p>
-                <button class="btn btn-primary btn-block">
+                <button class="btn btn-default btn-block" style="border-radius: 16px; color: white; background-color: #3b5998">
                     <i class="fa fa-facebook"></i> Sign in with facebook
                 </button>
 
-                <button class="btn btn-danger btn-block">
+                <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
                     <i class="fa fa-google"></i> Sign in with google
                 </button>
+
                 <div class="social">
                     <h5 class="register-head"><strong>Find us on social networks</strong></h5>
                     <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
@@ -360,8 +362,8 @@
                                         <label for="exampleCheck" class="form-check-label">Accept our <a href="#">Terms
                                                 and Conditions</a>.</label></div>
                                     <div class="col-md-10" style="margin: 10px auto">
-                                        <button class="btn btn-primary btn-block" name="login" type="submit" style="background-color: #2874A6;
-                                        border-radius: 80px; float: right; margin-top: 5px; margin-bottom: 10px; padding: 5px; font-size: small">
+                                        <button class="btn btn-warning btn-block" name="login" type="submit" style="
+                                         float: right; margin-top: 5px; margin-bottom: 10px; padding: 5px; font-size: small">
                                             Register
                                         </button>
                                     </div>
