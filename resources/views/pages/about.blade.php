@@ -4,12 +4,12 @@
         <a class="#" href="#">Home</a> /
         <span><a class="#" href="#">About</a></span>
     </div>
-        <div class="main-content-3" style="background-color: whitesmoke">
+        <div class="main-content-3">
                 <div class="row"  style="margin-top: 10px; padding: 5px 5px 5px 20px">
-                    <div class="col-sm-8 slide-show" style="background-color: white">
-                        {{--<div class="logo-div">--}}
-                            {{--<h5 class="about-head">About Tanzania programming community</h5>--}}
-                        {{--</div>--}}
+                    <div class="col-sm-8 slide-show" style="background-color: white; padding: 0">
+                        <div class="logo-div">
+                            <h5 class="about-head">About Tanzania programming community</h5>
+                        </div>
                         <div class="about-content">
                             <h5 class="home-head" style="margin-top: 15px; color: #707B7C"><strong>Historical background</strong></h5>
                             <p class="welcome">Tanzania programming community is the discussion forum developed by saidi dahabu from university of Dar es salaam on 2018 so as to develope
@@ -44,51 +44,52 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-3 column">
+                    <div class="col-sm-3">
                         <div class="latest_head">
-                            <h5 class="home-head head">Recent discussions </h5>
+                            <h5 class="home-head head">Recent discussions  <i class="fa fa-clock-o"></i></h5>
                         </div>
-                        <ul class="list-group" style="padding: 0">
-                            <li class="list-group-item">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="#">
-                                    How to install laravel in linux mint by using composer
-                                    <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="#">
-                                    How to install laravel in linux mint by using composer
-                                    <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="#">
-                                    How to install laravel in linux mint by using composer
-                                    <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="fa fa-list-alt"></i>
-                                <a href="#">
-                                    How to install laravel in linux mint by using composer
-                                    <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="column">
+                            <ul class="list-group" style="padding: 0">
+                                <li class="list-group-item">
+                                    <i class="fa fa-list-alt"></i>
+                                    <a href="#">
+                                        How to install laravel in linux mint by using composer
+                                        <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-list-alt"></i>
+                                    <a href="#">
+                                        How to install laravel in linux mint by using composer
+                                        <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-list-alt"></i>
+                                    <a href="#">
+                                        How to install laravel in linux mint by using composer
+                                        <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fa fa-list-alt"></i>
+                                    <a href="#">
+                                        How to install laravel in linux mint by using composer
+                                        <span style="color: #D4AC0D; font-size: 11px"><?php echo date('M,d,Y') ?></span>
+                                    </a>
+                                </li>
+                            </ul>
 
-                        <div class="social" style="padding: 15px">
-                            <h5 class="register-head"><strong>Find us on social networks</strong></h5>
-                            <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
-                            <a class="#" href="#" title="Instagram" ><i class="fa fa-instagram"></i></a>
-                            <a class="#" href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
-                            <a class="#" href="#" title="twitter"><i class="fa fa-twitter-square"></i></a>
-                            <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
+                            <div class="social" style="padding: 15px">
+                                <h5 class="register-head"><strong>Find us on social networks</strong></h5>
+                                <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
+                                <a class="#" href="#" title="Instagram" ><i class="fa fa-instagram"></i></a>
+                                <a class="#" href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
+                                <a class="#" href="#" title="twitter"><i class="fa fa-twitter-square"></i></a>
+                                <a class="#" href="#" title="youtube"><i class="fa fa-youtube"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
 
 
