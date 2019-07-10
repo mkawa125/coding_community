@@ -8,15 +8,19 @@
                     <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc"><strong style="color: #707B7C; text-align: center">
                             Welcome to codeCom to join more than million developers
                         </strong></h5>
-                    <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
-                    <p class="welcome-register">Fill the the correct details to form the given form and then click register to proceed with the other steps.
+                    {{--<h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>--}}
+                    <p class="welcome-register">Fill the the correct details to form the given form to register or sign in with social networks below.
                     </p>
-                    <button class="btn btn-primary btn-block">
+                    <button class="btn btn-default btn-block" style="border-radius: 16px; color: white; background-color: #3b5998">
                         <i class="fa fa-facebook"></i> Sign in with facebook
                     </button>
 
-                    <button class="btn btn-danger btn-block">
+                    <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
                         <i class="fa fa-google"></i> Sign in with google
+                    </button>
+
+                    <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
+                        <i class="fa fa-linkedin"></i> Sign in with LinkedIn
                     </button>
                     <div class="social">
                         <h5 class="register-head"><strong>Find us on social networks</strong></h5>
