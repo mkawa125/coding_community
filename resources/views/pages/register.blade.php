@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-4 instructions">
                 <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc">
-                    <strong style="color: #17A589; text-align: center">
+                    <strong style="color: #5cb85c; text-align: center">
                         You have two steps to complete your registration.
                     </strong></h5>
                 <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
@@ -41,7 +41,9 @@
                                     <div class="form-group">
                                         <label for="pass1" ><strong>Username:</strong></label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" id="username" name="username" placeholder="e.g. mkawa92">
+                                            <input type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}"
+                                                   value="{{ old('username') }}"
+                                                   id="username" name="username" placeholder="e.g. mkawa92">
                                         </div>
                                         @if ($errors->has('username'))
                                             <span class="help-block {{ $errors->has('username') ? ' has-error' : '' }}">
@@ -55,7 +57,9 @@
                                             <div class="form-group">
                                                 <label for="first-name"><strong>First name:</strong></label>
                                                 <div class="input-group">
-                                                    <input type="text" name="first_name" id="first_name" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" placeholder="Enter your name" >
+                                                    <input type="text" name="first_name" id="first_name" class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}"
+                                                           value="{{ old('first_name') }}"
+                                                           placeholder="Enter your name" >
                                                 </div>
                                                 @if ($errors->has('first_name'))
                                                     <span class="help-block {{ $errors->has('first_name') ? ' has-error' : '' }}">
@@ -68,7 +72,9 @@
                                            <div class="form-group">
                                                <label for="pass2"><strong>Surname:</strong></label>
                                                <div class="input-group">
-                                                   <input type="text" name="surname" id="surname" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" placeholder="please fill the last name" >
+                                                   <input type="text" name="surname" id="surname"
+                                                          value="{{ old('surname') }}"
+                                                          class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" placeholder="please fill the last name" >
                                                </div>
                                                @if ($errors->has('surname'))
                                                    <span class="help-block {{ $errors->has('surname') ? ' has-error' : '' }}">
@@ -82,7 +88,9 @@
                                     <div class="form-group">
                                         <label for="email-address" ><strong>Email Address:</strong></label>
                                         <div class="input-group">
-                                            <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" placeholder="e.g dahabusaidi@gmail.com">
+                                            <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                                   value="{{ old('email') }}"
+                                                   id="email" name="email" placeholder="e.g dahabusaidi@gmail.com">
                                         </div>
                                         @if ($errors->has('email'))
                                             <span class="help-block {{ $errors->has('email') ? ' has-error' : '' }}">
@@ -96,7 +104,9 @@
                                             <div class="form-group">
                                                 <label for="password"><strong>Enter password:</strong></label>
                                                 <div class="input-group">
-                                                    <input type="password" name="password" id="password" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="************" >
+                                                    <input type="password" name="password" id="password"
+                                                           value="{{ old('password') }}"
+                                                           class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="************" >
                                                 </div>
                                                 @if ($errors->has('password'))
                                                     <span class="help-block {{ $errors->has('password') ? ' has-error' : '' }}">
@@ -121,10 +131,10 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="location"><strong>location:</strong></label>
+                                        <label for="location"><strong>Location:</strong></label>
                                         <div class="input-group">
-                                            <select name="location" class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" id="location">
-                                                <option value="">country</option>
+                                            <select name="location"  class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" id="location">
+                                                <option value="" selected>select country</option>
                                                 <option value="United States">United States</option>
                                                 <option value="United Kingdom">United Kingdom</option>
                                                 <option value="Afghanistan">Afghanistan</option>
@@ -336,7 +346,7 @@
                                                 <option value="Syrian Arab Republic">Syrian Arab Republic</option>
                                                 <option value="Taiwan, Province of China">Taiwan, Province of China</option>
                                                 <option value="Tajikistan">Tajikistan</option>
-                                                <option value="Tanzania, United Republic of" selected>Tanzania</option>
+                                                <option value="Tanzania, United Republic of">Tanzania</option>
                                                 <option value="Thailand">Thailand</option>
                                                 <option value="Timor-leste">Timor-leste</option>
                                                 <option value="Togo">Togo</option>
@@ -384,12 +394,12 @@
                                         </div>
                                         @if ($errors->has('location'))
                                             <span class="help-block {{ $errors->has('location') ? ' has-error' : '' }}">
-                                                        <strong>{{ $errors->first('location') }}</strong>
-                                                    </span>
+                                                <strong>{{ $errors->first('location') }}</strong>
+                                            </span>
                                         @endif
                                     </div>
 
-                                    <div class="col-md-12" style="margin: 10px auto">
+                                    <div class="form-group">
                                         <button class="btn btn-warning btn-block" name="login" type="submit" style="
                                          float: right; margin-top: 5px; margin-bottom: 10px; padding: 5px; font-size: small">
                                             Register
