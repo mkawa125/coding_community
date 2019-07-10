@@ -71,50 +71,17 @@
                                                                 </div>
                                                             </div>
                                                             <div class="widget-content-right mr-2">
-                                                                <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
-                                                                </button>
+                                                                <a href="{{ route('logout') }}">
+                                                                    <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
+                                                                    </button>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="scroll-area-xs" style="height: 150px;">
-                                            <div class="scrollbar-container ps">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item-header nav-item">Activity
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Chat
-                                                            <div class="ml-auto badge badge-pill badge-info">8
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Recover Password
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item-header nav-item">My Account
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Settings
-                                                            <div class="ml-auto badge badge-success">New
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Messages
-                                                            <div class="ml-auto badge badge-warning">512
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Logs
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+
                                         <ul class="nav flex-column">
                                             <li class="nav-item-divider mb-0 nav-item"></li>
                                         </ul>
