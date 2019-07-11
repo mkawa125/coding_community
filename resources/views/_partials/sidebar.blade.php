@@ -154,7 +154,7 @@
                 </li>
 
                 <li class="">
-                    <a href="#">
+                    <a href="{{ route('MyQuestions.index') }}">
                         <i class="metismenu-icon fa fa-question-circle" style="font-size: 15px"></i>
                         My Questions
                     </a>

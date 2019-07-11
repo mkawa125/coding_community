@@ -29,7 +29,7 @@ Route::group(['prefix' => 'signup'], function () {
 });
 
 Route::middleware('auth')->group(function (){
-    Route::resource('questions', 'QuestionsController');
+    Route::resource('MyQuestions', 'QuestionsController');
 });
 //user notes routes
 Route::group(['prefix' => 'notes'], function (){
