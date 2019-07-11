@@ -45,7 +45,7 @@
             <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading" style="color: #CCD1D1">Main Menu</li>
                 <li class="mm-active">
-                    <a href="#">
+                    <a href="{{ route('index') }}">
                         <i class="metismenu-icon fa fa-home" style="font-size: 15px"></i>
                         Home
                     </a>

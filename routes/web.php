@@ -71,8 +71,8 @@ Route::post('developers', 'Auth\RegisterController@developers');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('index');
 Route::post('/home', 'HomeController@index')->name('home');
