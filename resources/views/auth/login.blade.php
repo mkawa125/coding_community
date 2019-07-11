@@ -12,9 +12,6 @@
                     {{--<h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>--}}
                     <p class="welcome-register">Fill the the correct details to form the given form to sign in or sign in with social networks below.
                     </p>
-                    <button class="btn btn-default btn-block" style="border-radius: 16px; color: white; background-color: #3b5998">
-                        <i class="fa fa-facebook"></i> Sign in with facebook
-                    </button>
 
                     <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
                         <i class="fa fa-google"></i> Sign in with google
