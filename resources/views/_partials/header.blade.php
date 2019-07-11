@@ -43,6 +43,15 @@
         </div>
 
         <div class="app-header-right">
+            @if(!Auth::guest())
+            <a href="#">
+                <button class="btn btn-info text-primary" style="background-color: whitesmoke;
+                border: 1px solid #c1c5cc">
+                    <i class="fa fa-question-circle-o text-dark"></i>
+                    <strong>Post Your <span class="text-danger">Question</span></strong>
+                </button>
+            </a>
+            @endif
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
                     @if(!Auth::guest())
