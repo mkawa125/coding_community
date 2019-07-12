@@ -142,7 +142,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('categories.index') }}">
+                    <a href="{{ route('users.index') }}">
                         <i class="metismenu-icon fa fa-users" style="font-size: 15px"></i>
                         Users
                     </a>

@@ -28,8 +28,8 @@
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
                         <a href="{{ route('categories.create') }}">
-                            <button class="btn btn-success">
-                                <i class="fa fa-plus"></i> Add Category
+                            <button class="btn btn-dark">
+                                <i class="fa fa-plus"></i> Add User
                             </button>
                         </a>
                     </div>
@@ -40,19 +40,21 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Category Name</th>
-                        <th>Description</th>
-                        <th>Created By</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>gender</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($categories as $key => $category)
+                    @foreach($users as $key => $user)
                         <tr>
                             <td>{{ $key+1 }}</td>
-                            <td>{{ $category->category_name }}</td>
-                            <td>{{ $category->description }}</td>
-                            <td>{{ $category->addedBy->name }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->pgone_number }}</td>
+                            <td>{{ $user->gender}}</td>
                             <td>
                                 <a class="#" href="#" style="text-decoration: none">
                                     <button class="btn btn-info btn-sm" style="padding: 0 4px"
