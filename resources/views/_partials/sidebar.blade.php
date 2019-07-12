@@ -50,6 +50,7 @@
                         Home
                     </a>
                 </li>
+
                 <li>
                     <a href="#">
                         <i class="metismenu-icon fa fa-list" style="font-size: small"></i>
@@ -57,12 +58,6 @@
                         <i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>
                     </a>
                     <ul>
-                        <li>
-                            <a href="{{ route('index') }}">
-                                <i class="fa fa-plus"></i>
-                                Add New Category
-                            </a>
-                        </li>
 
                         <li>
                             <a href="{{ route('index') }}">
@@ -135,6 +130,43 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+
+
+                <li class="app-sidebar__heading" style="color: #CCD1D1">Management</li>
+                <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class="metismenu-icon fa fa-list" style="font-size: 15px"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class="metismenu-icon fa fa-users" style="font-size: 15px"></i>
+                        Users
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class="metismenu-icon fa fa-list" style="font-size: 15px"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class="metismenu-icon fa fa-tasks" style="font-size: 15px"></i>
+                        Jobs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('categories.index') }}">
+                        <i class="metismenu-icon fa fa-question" style="font-size: 15px"></i>
+                        Questions
+                    </a>
                 </li>
 
 
