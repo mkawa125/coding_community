@@ -15,7 +15,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Category::query()->get();
-        return view('categories/index', compact('categories'));
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -25,7 +25,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**

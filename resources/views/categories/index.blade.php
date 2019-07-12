@@ -18,7 +18,7 @@
                 </div>
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
-                        <a href="#">
+                        <a href="{{ route('categories.create') }}">
                             <button class="btn btn-success">
                                 <i class="fa fa-plus"></i> Add Category
                             </button>

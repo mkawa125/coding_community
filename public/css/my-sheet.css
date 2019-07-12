@@ -668,3 +668,17 @@ body .notes-body{
 .head-column .nav a {
     border-radius: 0;
 }
+.category-body{
+    border: 1px solid silver;
+    margin: 0 auto;
+    padding: 0;
+}
+.category-header{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+}
+.category-header h4{
+    font-size: 15px;
+
+}
