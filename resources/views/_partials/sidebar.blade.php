@@ -150,13 +150,6 @@
 
                 <li>
                     <a href="{{ route('categories.index') }}">
-                        <i class="metismenu-icon fa fa-list" style="font-size: 15px"></i>
-                        Categories
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('categories.index') }}">
                         <i class="metismenu-icon fa fa-tasks" style="font-size: 15px"></i>
                         Jobs
                     </a>
