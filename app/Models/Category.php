@@ -27,6 +27,6 @@ class Category extends Model
     }
 
     public function addedBy(){
-        return $this->belongsTo('App\User', 'added_by');
+        return $this->belongsTo('App\Models\User', 'added_by');
     }
 }

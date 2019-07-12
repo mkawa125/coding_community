@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Symfony\Component\HttpFoundation\Session\Flash;
 
 class CategoriesController extends Controller
 {
@@ -37,6 +38,15 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $this->validate(request(), Category::rules());
+        $category = $request->all();
+        $category['added_by'] = auth()->user()->id;
+        $newCategory = Category::create($category);
+        if ($newCategory){
+            $message = 'Category created successfully';
+            return redirect()->to('/categories')->with('message', $message);
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
