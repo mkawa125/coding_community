@@ -38,11 +38,12 @@
                     </tr>
                     </thead>
                     <tbody>
+                    @foreach($categories as $category)
                     <tr>
                         <td>1</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>Dahabu Saidi</td>
+                        <td>{{ $category->name }}</td>
+                        <td>{{ $category->description }}</td>
+                        <td>{{ $category->added_by }}</td>
                         <td>
                             <a class="#" href="#" style="text-decoration: none">
                                 <button class="btn btn-info btn-sm" title="CLick here to view more details">
@@ -63,6 +64,7 @@
                             </a>
                         </td>
                     </tr>
+                        @endforeach
                     </tbody>
                     <tfoot>
                     <tr>
