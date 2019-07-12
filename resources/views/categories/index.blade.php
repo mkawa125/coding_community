@@ -46,9 +46,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($categories as $category)
+                    @foreach($categories as $key => $category)
                     <tr>
-                        <td>1</td>
+                        <td>{{ $key+1 }}</td>
                         <td>{{ $category->category_name }}</td>
                         <td>{{ $category->description }}</td>
                         <td>{{ $category->addedBy->name }}</td>
@@ -77,15 +77,6 @@
                     </tr>
                         @endforeach
                     </tbody>
-                    <tfoot>
-                    <tr>
-                        <th>#</th>
-                        <th>Category Name</th>
-                        <th>Description</th>
-                        <th>Created By</th>
-                        <th>Actions</th>
-                    </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>
