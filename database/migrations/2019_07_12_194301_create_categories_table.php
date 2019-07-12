@@ -18,7 +18,7 @@ class CreateCategoriesTable extends Migration
             $table->primary('id');
             $table->string('category_name');
             $table->text('description');
-            $table->uuid('added_by')->index();
+            $table->uuid('added_by')->index()->nullable();
             $table->softDeletes();
             $table->timestamps();
 
