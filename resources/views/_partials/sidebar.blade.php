@@ -59,6 +59,13 @@
                     <ul>
                         <li>
                             <a href="{{ route('index') }}">
+                                <i class="fa fa-plus"></i>
+                                Add New Category
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('index') }}">
                                 <i class="fa fa-code"></i>
                                  Programming
                             </a>
