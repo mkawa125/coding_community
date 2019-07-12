@@ -43,9 +43,9 @@
     <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Menu</li>
+                <li class="app-sidebar__heading" style="color: #CCD1D1">Main Menu</li>
                 <li class="mm-active">
-                    <a href="#">
+                    <a href="{{ route('index') }}">
                         <i class="metismenu-icon fa fa-home" style="font-size: 15px"></i>
                         Home
                     </a>
@@ -58,39 +58,33 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="pages-login.html">
-                                <i class="metismenu-icon"></i>
-                                Login
+                            <a href="{{ route('index') }}">
+                                <i class="fa fa-code"></i>
+                                 Programming
                             </a>
                         </li>
                         <li>
                             <a href="pages-login-boxed.html">
-                                <i class="metismenu-icon">
-                                </i>Login Boxed
+                                <i class="fa fa-shield">
+                                </i> Operating systems
                             </a>
                         </li>
                         <li>
                             <a href="pages-register.html">
-                                <i class="metismenu-icon">
-                                </i>Register
+                                <i class="fa fa-video-camera">
+                                </i> Multimedia
                             </a>
                         </li>
                         <li>
                             <a href="pages-register-boxed.html">
-                                <i class="metismenu-icon">
-                                </i>Register Boxed
+                                <i class="fa fa-code-fork">
+                                </i> Software development
                             </a>
                         </li>
                         <li>
                             <a href="pages-forgot-password.html">
-                                <i class="metismenu-icon">
-                                </i>Forgot Password
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-forgot-password-boxed.html">
-                                <i class="metismenu-icon">
-                                </i>Forgot Password Boxed
+                                <i class="fa fa-globe">
+                                </i> Networking
                             </a>
                         </li>
                     </ul>
@@ -104,51 +98,68 @@
                     <ul>
                         <li>
                             <a href="apps-mailbox.html">
-                                <i class="metismenu-icon">
-                                </i>Mailbox
+                                <i class="fa fa-code">
+                                </i> Programming
                             </a>
                         </li>
                         <li>
                             <a href="apps-chat.html">
-                                <i class="metismenu-icon">
-                                </i>Chat
+                                <i class="fa fa-globe">
+                                </i> Networking
                             </a>
                         </li>
                         <li>
                             <a href="apps-faq-section.html">
-                                <i class="metismenu-icon">
-                                </i>FAQ Section
+                                <i class="fa fa-code-fork">
+                                </i> System Analysis
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="apps-faq-section.html">
+                                <i class="fa fa-camera">
+                                </i> Graphics Design
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="metismenu-icon"></i>
-                                Forums
-                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            <a href="apps-faq-section.html">
+                                <i class="fa fa-list">
+                                </i> Others
                             </a>
-                            <ul>
-                                <li>
-                                    <a href="apps-forum-list.html">
-                                        <i class="metismenu-icon">
-                                        </i>Forum Listing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="apps-forum-threads.html">
-                                        <i class="metismenu-icon">
-                                        </i>Forum Threads
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="apps-forum-discussion.html">
-                                        <i class="metismenu-icon">
-                                        </i>Forum Discussion
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>
+
+
+                <li class="app-sidebar__heading" style="color: #CCD1D1">MY ACCOUNT</li>
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-folder" style="font-size: 15px"></i>
+                        My Storage
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-bookmark" style="font-size: 15px"></i>
+                        Bookmarks
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="metismenu-icon fa fa-history" style="font-size: 15px"></i>
+                        History
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{{ route('MyQuestions.index') }}">
+                        <i class="metismenu-icon fa fa-question-circle" style="font-size: 15px"></i>
+                        My Questions
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

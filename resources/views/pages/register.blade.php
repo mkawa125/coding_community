@@ -11,12 +11,12 @@
                 <h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>
                 <p class="welcome-register">Fill the the correct details to form the given form and then click register to proceed with the other steps.
                 </p>
-                <button class="btn btn-default btn-block" style="border-radius: 16px; color: white; background-color: #3b5998">
-                    <i class="fa fa-facebook"></i> Sign in with facebook
-                </button>
-
                 <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
                     <i class="fa fa-google"></i> Sign in with google
+                </button>
+
+                <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
+                    <i class="fa fa-linkedin"></i> Sign in with LinkedIn
                 </button>
 
                 <div class="social">
