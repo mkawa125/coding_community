@@ -672,13 +672,18 @@ body .notes-body{
     border: 1px solid silver;
     margin: 0 auto;
     padding: 0;
+    font-size: small;
 }
 .category-header{
     background-color: whitesmoke;
     text-align: center;
     padding: 10px;
+    border-bottom: 1px solid silver;
 }
 .category-header h4{
     font-size: 15px;
 
+}
+.category-create-form{
+    padding: 15px;
 }

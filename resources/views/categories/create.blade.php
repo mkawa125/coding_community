@@ -26,8 +26,45 @@
                     <div class="category-header">
                         <h4>Fill the form Bellow to create category</h4>
                     </div>
-                </div>
 
+                    <div class="col-md-10" style="margin: 0 auto">
+                        <form class="category-create-form" action="{{ route('categories.store') }}" method="post" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <label for="category_name">Category Name</label>
+                                <div class="input-group">
+                                    <input type="text" id="category_name" required name="category_name"
+                                           placeholder="category name"
+                                           class="form-control{{ $errors->has('category_name') ? ' is-invalid' : '' }}">
+                                </div>
+                                @if ($errors->has('category_name'))
+                                    <span class="help-block {{ $errors->has('category_name') ? ' has-error' : '' }}">
+                                            <strong>{{ $errors->first('category_name') }}</strong>
+                                            </span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label for="category_name">Description</label>
+                                <div class="input-group">
+                                    <textarea id="description" name="description" required rows="3"
+                                              placeholder="Write something about this category ..."
+                                              class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"></textarea>
+                                </div>
+                                @if ($errors->has('description'))
+                                    <span class="help-block {{ $errors->has('description') ? ' has-error' : '' }}">
+                                            <strong>{{ $errors->first('description') }}</strong>
+                                            </span>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <button class="btn btn-success btn-block" type="submit">Save Category</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
