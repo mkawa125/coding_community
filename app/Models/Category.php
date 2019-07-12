@@ -25,4 +25,8 @@ class Category extends Model
             'description' => 'required|min:10',
         ];
     }
+
+    public function addedBy(){
+        return $this->belongsTo('App\User', 'added_by');
+    }
 }

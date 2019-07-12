@@ -43,7 +43,7 @@
                         <td>1</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
-                        <td>{{ $category->added_by }}</td>
+                        <td>{{ $category->addedBy->name }}</td>
                         <td>
                             <a class="#" href="#" style="text-decoration: none">
                                 <button class="btn btn-info btn-sm" title="CLick here to view more details">
