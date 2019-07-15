@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="app-main__inner" style="background-color: rgba(255,255,255,0.45); padding-bottom: 10px; margin: 10px 20px">
-        <div class="app-page-title" style="background-color: #c1cffc">
+        <div class="app-page-title" style="background-color: #E7EAEA">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
                     <div>

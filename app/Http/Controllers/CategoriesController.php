@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Category;
+use Symfony\Component\HttpFoundation\Session\Flash;
 
-class UsersController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::query()->where('id', '!=', auth()->user()->id)->get();
-        return view('users.index', compact('users'));
+        $categories = Category::query()->get();
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -25,7 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
@@ -36,7 +37,16 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(), Category::rules());
+        $category = $request->all();
+        $category['added_by'] = auth()->user()->id;
+        $newCategory = Category::create($category);
+        if ($newCategory){
+            $message = 'Category created successfully';
+            return redirect()->to('/categories')->with('message', $message);
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
