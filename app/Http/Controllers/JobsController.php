@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Job;
 
 class JobsController extends Controller
 {
@@ -13,7 +14,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        return view('jobs.index');
+        $jobs = Job::query()->with('categories');
+        return view('jobs.index', compact('jobs'));
     }
 
     /**

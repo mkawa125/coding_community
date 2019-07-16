@@ -40,19 +40,21 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Category Name</th>
-                        <th>Description</th>
-                        <th>Created By</th>
+                        <th>Job Title</th>
+                        <th>Job Category</th>
+                        <th>Position</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($categories as $key => $category)
+                    @foreach($jobs as $key => $job)
                         <tr>
                             <td>{{ $key+1 }}</td>
-                            <td>{{ $category->category_name }}</td>
-                            <td>{{ $category->description }}</td>
-                            <td>{{ $category->addedBy->name }}</td>
+                            <td>{{ $job->title }}</td>
+                            <td>{{ $job->category }}</td>
+                            <td>{{ $job->position }}</td>
+                            <td>{{ $job->status }}</td>
                             <td>
                                 <a class="#" href="#" style="text-decoration: none">
                                     <button class="btn btn-info btn-sm" style="padding: 0 4px"
