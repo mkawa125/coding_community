@@ -27,9 +27,9 @@
                 </div>
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
-                        <a href="{{ route('categories.create') }}">
+                        <a href="#">
                             <button class="btn btn-dark">
-                                <i class="fa fa-plus"></i> Add User
+                                <i class="fa fa-plus-circle"></i> Create New User
                             </button>
                         </a>
                     </div>
