@@ -15,8 +15,27 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->uuid('id');
+            $table->primary('id');
+
+            $table->string('title');
+            $table->dateTime('announced_date');
+            $table->dateTime('dead_line');
+            $table->text('description');
+            $table->string('organization');
+            $table->string('job_link');
+            $table->string('image_url')->nullable();
+            $table->string('position');
+            $table->uuid('category_id')->index();
+
             $table->timestamps();
             $table->softDeletes();
+
+            //defining foreign keys
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
