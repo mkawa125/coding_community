@@ -22,10 +22,13 @@ class CreateJobsTable extends Migration
             $table->dateTime('dead_line');
             $table->text('description');
             $table->string('organization');
-            $table->string('job_link');
-            $table->string('image_url')->nullable();
             $table->string('position');
             $table->uuid('category_id')->index();
+            $table->string('job_link');
+            $table->string('status');
+            $table->string('image_url')->nullable();
+
+
 
             $table->timestamps();
             $table->softDeletes();
