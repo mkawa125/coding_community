@@ -13,7 +13,7 @@ class JobsController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
