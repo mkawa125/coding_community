@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
-use Symfony\Component\HttpFoundation\Session\Flash;
+use App\Models\Job;
 
-class CategoriesController extends Controller
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::query()->with('addedBy')->get();
-        return view('categories.index', compact('categories'));
+        $jobs = Job::query()->with('categories');
+        return view('jobs.index', compact('jobs'));
     }
 
     /**
@@ -26,7 +25,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        //
     }
 
     /**
@@ -37,16 +36,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate(request(), Category::rules());
-        $category = $request->all();
-        $category['added_by'] = auth()->user()->id;
-        $newCategory = Category::create($category);
-        if ($newCategory){
-            $message = 'Category created successfully';
-            return redirect()->to('/categories')->with('message', $message);
-        }else{
-            return redirect()->back();
-        }
+        //
     }
 
     /**

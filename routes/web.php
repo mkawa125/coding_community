@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('MyQuestions', 'QuestionsController');
     Route::resource('categories', 'CategoriesController');
     Route::resource('users', 'UsersController');
+    Route::resource('jobs', 'JobsController');
 
 });
 //user notes routes

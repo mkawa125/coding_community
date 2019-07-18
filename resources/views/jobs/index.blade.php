@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: mkawa
- * Date: 7/12/19
- * Time: 11:34 PM
+ * Date: 7/16/19
+ * Time: 10:38 PM
  */
 ?>
 
@@ -22,14 +22,14 @@
 
             <div class="card-header-tab card-header" style=" border-bottom: 1px solid cadetblue">
                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    <i class="header-icon fa fa-users mr-3 text-muted opacity-6" style="font-size: small"> </i>
-                    Users
+                    <i class="header-icon fa fa-list mr-3 text-muted opacity-6" style="font-size: small"> </i>
+                    Jobs
                 </div>
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
-                        <a href="#">
-                            <button class="btn btn-dark">
-                                <i class="fa fa-plus-circle"></i> Create New User
+                        <a href="{{ route('categories.create') }}">
+                            <button class="btn btn-success">
+                                <i class="fa fa-plus"></i> Add New Job
                             </button>
                         </a>
                     </div>
@@ -40,21 +40,21 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>gender</th>
+                        <th>Job Title</th>
+                        <th>Job Category</th>
+                        <th>Position</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $key => $user)
+                    @foreach($jobs as $key => $job)
                         <tr>
                             <td>{{ $key+1 }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>{{ $user->pgone_number }}</td>
-                            <td>{{ $user->gender}}</td>
+                            <td>{{ $job->title }}</td>
+                            <td>{{ $job->category }}</td>
+                            <td>{{ $job->position }}</td>
+                            <td>{{ $job->status }}</td>
                             <td>
                                 <a class="#" href="#" style="text-decoration: none">
                                     <button class="btn btn-info btn-sm" style="padding: 0 4px"
