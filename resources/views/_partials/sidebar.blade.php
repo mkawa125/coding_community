@@ -150,7 +150,7 @@
 
                 <li>
                     <a href="{{ route('jobs.index') }}">
-                        <i class="metismenu-icon fa fa-tasks" style="font-size: 15px"></i>
+                        <i class="metismenu-icon fa fa-balance-scale" style="font-size: 15px"></i>
                         Jobs
                     </a>
                 </li>
