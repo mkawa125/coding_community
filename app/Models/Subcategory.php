@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Basic;
+use App\Models\Category;
 
 class Subcategory extends Basic
 {
@@ -17,4 +18,8 @@ class Subcategory extends Basic
         'updated_at',
         'deleted_at',
     ];
+
+    public function category(){
+        $this->belongsTo(Category::class);
+    }
 }

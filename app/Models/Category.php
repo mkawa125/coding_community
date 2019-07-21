@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Emadadly\LaravelUuid\Uuids;
+use App\Models\Subcategory;
 
 class Category extends Model
 {
@@ -28,5 +29,9 @@ class Category extends Model
 
     public function addedBy(){
         return $this->belongsTo('App\Models\User', 'added_by');
+    }
+
+    public function subCategories(){
+        return $this->hasMany(Subcategory::class);
     }
 }
