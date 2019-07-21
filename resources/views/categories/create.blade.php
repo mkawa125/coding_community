@@ -20,14 +20,14 @@
                     {{ \Carbon\Carbon::parse(today())->format('M, d - Y')}}
                 </div>
             </div>
-            <div class="card-body" style="; border-top: 1px solid cadetblue; margin-top: 1px">
+            <div class="card-body" style="; border-top: 1px solid cadetblue; margin-top: 1px; padding: 15px 0">
 
-                <div class="col-md-10 category-body">
+                <div class="col-md-12">
                     <div class="category-header">
                         <h4>Fill the form Bellow to create category</h4>
                     </div>
 
-                    <div class="col-md-10" style="margin: 0 auto">
+                    <div class="col-md-12" style="margin: 0 auto; border: 1px solid whitesmoke">
                         <form class="category-create-form" action="{{ route('categories.store') }}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
@@ -56,10 +56,21 @@
                                             </span>
                                 @endif
                             </div>
-
-                            <div class="form-group">
+                            <div class="field_wrapper">
+                                <label for="subcategories">Create Subcategories</label>
                                 <div class="input-group">
-                                    <button class="btn btn-success btn-block" type="submit">Save Category</button>
+                                    <input type="text" name="subcategories[]" class="form-control"
+                                           placeholder="Subcategory name"
+                                           value="" id="subcategories"/>
+                                    <a href="javascript:void(0);" class="add_button btn btn-success"
+                                       title="Add New Subcategory"
+                                    style="border-radius: 0"> <i class="fa fa-plus-circle"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 15px">
+                                <div class="input-group">
+                                    <button class="btn btn-primary btn-block" type="submit">Save Category</button>
                                 </div>
                             </div>
                         </form>
