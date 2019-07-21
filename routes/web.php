@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('categories', 'CategoriesController');
     Route::resource('users', 'UsersController');
     Route::resource('jobs', 'JobsController');
-    Route::resource('myNotebook', 'MyStorageController');
+    Route::resource('myNotebook', 'MyNotebookController');
 
 });
 //user notes routes

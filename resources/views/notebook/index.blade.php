@@ -21,14 +21,14 @@
 
             <div class="card-header-tab card-header" style=" border-bottom: 1px solid cadetblue">
                 <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
-                    <i class="header-icon fa fa-list mr-3 text-muted opacity-6" style="font-size: small"> </i>
-                    List of all categories
+                    <i class="header-icon fa fa-book mr-3 text-muted opacity-6" style="font-size: small"> </i>
+                    My Notebook
                 </div>
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
                         <a href="{{ route('categories.create') }}">
-                            <button class="btn btn-success">
-                                <i class="fa fa-plus"></i> Add Category
+                            <button class="btn btn-primary">
+                                <i class="fa fa-plus"></i> Create Notes Category
                             </button>
                         </a>
                     </div>
