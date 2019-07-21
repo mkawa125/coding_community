@@ -9,6 +9,7 @@ class Subcategory extends Basic
 {
     protected $fillable = [
         'subcategory_name',
+        'category_id'
     ];
 
     protected $casts = [
