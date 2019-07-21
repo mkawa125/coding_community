@@ -59,7 +59,7 @@
                             <div class="field_wrapper">
                                 <label for="subcategories">Create Subcategories</label>
                                 <div class="input-group">
-                                    <input type="text" name="subcategories[]" class="form-control"
+                                    <input type="text" name="subcategory_name[]" class="form-control"
                                            placeholder="Subcategory name"
                                            value="" id="subcategories"/>
                                     <a href="javascript:void(0);" class="add_button btn btn-success"
@@ -85,7 +85,7 @@
             var maxField = 10; //Input fields increment limitation
             var addButton = $('.add_button'); //Add button selector
             var wrapper = $('.field_wrapper'); //Input field wrapper
-            var fieldHTML = '<div class="input-group" style="margin-top: 8px"><input type="text" class="form-control" placeholder="New Subcategory" name="subcategories[]" value=""/>' +
+            var fieldHTML = '<div class="input-group" style="margin-top: 8px"><input type="text" class="form-control" placeholder="New Subcategory" name="subcategory_name[]" value=""/>' +
                 '<a href="javascript:void(0);" style="border-radius: 0" class="remove_button btn btn-danger"><i class="fa fa-minus-circle"></i></a></div>'; //New input field html
             var x = 1; //Initial field counter is 1
 
