@@ -35,7 +35,54 @@
                 </div>
             </div>
             <div class="card-body" style="; border-top: 1px solid cadetblue; margin-top: 1px">
-                Notes goes here
+                Categories
+                <div class="col-md-12">
+                    <div class="row" style="padding: 0 auto">
+                        <div class="col-md-3">
+                            <div class="row" style="padding: 10px 15px 10px 0">
+                                <div class="col-md-12 category_box">
+                                    <h4>Category one</h4>
+                                    <label>
+                                        <i class="fa fa-pencil"></i> 201 Notes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="row" style="padding: 10px 15px 10px 0">
+                                <div class="col-md-12 category_box">
+                                    <h4>Category one</h4>
+                                    <label>
+                                        <i class="fa fa-pencil"></i> 201 Notes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="row" style="padding: 10px 15px 10px 0">
+                                <div class="col-md-12 category_box">
+                                    <h4>Category one</h4>
+                                    <label>
+                                        <i class="fa fa-pencil"></i> 201 Notes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="row" style="padding: 10px 15px 10px 0">
+                                <div class="col-md-12 category_box">
+                                    <h4>Category one</h4>
+                                    <label>
+                                        <i class="fa fa-pencil"></i> 201 Notes
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
