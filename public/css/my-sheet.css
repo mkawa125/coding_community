@@ -699,5 +699,13 @@ body .notes-body{
     text-align: center;
     font-weight: bold;
     font-size: 16px;
+    color: #b3b7bb;
     font-family: cursive;
+}
+.category_link{
+    text-decoration: none;
+    color: lightsteelblue;
+}
+a.category_link{
+    text-decoration: none;
 }
