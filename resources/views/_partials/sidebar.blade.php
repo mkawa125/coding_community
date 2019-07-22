@@ -165,7 +165,7 @@
 
                 <li class="app-sidebar__heading" style="color: #CCD1D1">MY ACCOUNT</li>
                 <li class="">
-                    <a href="#">
+                    <a href="{{ route('myNotebook.index') }}">
                         <i class="metismenu-icon fa fa-folder" style="font-size: 15px"></i>
                         My Storage
                     </a>

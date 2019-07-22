@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
-use App\Models\Subcategory;
 
-class CategoriesController extends Controller
+class MyNotebookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +13,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::query()
-            ->with('addedBy')
-            ->withCount('subCategories')
-            ->get();
-        return view('categories.index', compact('categories'));
+        return view('notebook.index');
     }
 
     /**
@@ -29,7 +23,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        //
     }
 
     /**
@@ -40,27 +34,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate(request(), Category::rules());
-        $category = $request->all();
-        $category['added_by'] = auth()->user()->id;
-        $newCategory = Category::create($category);
-        $subcategory_array = $_POST['subcategory_name'];
-        if ($subcategory_array != null){
-
-            foreach ($subcategory_array as $subcategory_value){
-                $subcategory['subcategory_name'] = $subcategory_value;
-                $subcategory['category_id'] = $newCategory->id;
-                //dd($subcategory);
-                Subcategory::create($subcategory);
-                $message = 'Category created successfully';
-                return redirect()->to('/categories')->with('message', $message);
-            }
-        }else if ($request->post('subcategory_name') == null){
-            $message = 'Category created successfully';
-            return redirect()->to('/categories')->with('message', $message);
-        }else{
-            return redirect()->back();
-        }
+        //
     }
 
     /**
