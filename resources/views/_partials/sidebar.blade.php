@@ -8,7 +8,7 @@
 ?>
 
 {{--Sidebar start--}}
-<div class="app-sidebar ">
+<div class="app-sidebar sidebar-shadow">
     <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">
@@ -40,7 +40,7 @@
         </span>
     </div>
 
-    <div class="scrollbar-sidebar">
+    <div class="scrollbar-sidebar" style="overflow-style: initial; overflow-y: auto">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading" style="color: #CCD1D1">Main Menu</li>
