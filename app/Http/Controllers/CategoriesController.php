@@ -82,7 +82,9 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::query()->where('id', $id)
+            ->with('subCategories')->first();
+        return view('categories.edit', compact('category'));
     }
 
     /**

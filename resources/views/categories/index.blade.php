@@ -60,7 +60,7 @@
                                 </button>
                             </a>
 
-                            <a class="#" href="#" style="text-decoration: none">
+                            <a class="#" href="{{ route('categories.edit', ['id' => $category->id]) }}" style="text-decoration: none">
                                 <button class="btn btn-success btn-sm" style="padding: 0 4px"
                                         title="Click here to edit this category">
                                     <i class="fa fa-edit"></i>
