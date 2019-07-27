@@ -73,7 +73,7 @@
 
                             <div class="form-group" style="margin-top: 15px">
                                 <div class="input-group">
-                                    <button class="btn btn-primary btn-block" type="submit">Save Category</button>
+                                    <button class="btn btn-warning btn-block" type="submit">Update Category</button>
                                 </div>
                             </div>
                         </form>
