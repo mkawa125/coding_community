@@ -60,19 +60,21 @@
                                 </button>
                             </a>
 
-                            <a class="#" href="#" style="text-decoration: none">
+                            <a class="#" href="{{ route('categories.edit', ['id' => $category->id]) }}" style="text-decoration: none">
                                 <button class="btn btn-success btn-sm" style="padding: 0 4px"
                                         title="Click here to edit this category">
                                     <i class="fa fa-edit"></i>
                                 </button>
                             </a>
 
-                            <a class="#" href="#" style="text-decoration: none">
-                                <button class="btn btn-danger btn-sm" style="padding: 0 4px"
-                                        title="Click here to delete category">
+                            <form style="display: inline" action="{{ route('categories.destroy', ['id' => $category->id]) }}" method="post">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button style="padding: 0 4px" class="btn btn-danger btn-sm" type="submit"
+                                        onclick="return confirm('Are you sure you want to delete this category')">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                            </a>
+                            </form>
                         </td>
                     </tr>
                         @endforeach
