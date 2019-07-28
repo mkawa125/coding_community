@@ -668,3 +668,44 @@ body .notes-body{
 .head-column .nav a {
     border-radius: 0;
 }
+.category-body{
+    border: 1px solid silver;
+    margin: 0 auto;
+    padding: 0;
+    font-size: small;
+}
+.category-header{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+}
+.category-header h4{
+    font-size: 15px;
+
+}
+.category-create-form{
+    padding: 15px;
+}
+.category_box{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: small;
+    text-align: center;
+    box-shadow: 0 1px 1px 0 silver;
+}
+.category_box h4{
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #b3b7bb;
+    font-family: cursive;
+}
+.category_link{
+    text-decoration: none;
+    color: lightsteelblue;
+}
+a.category_link{
+    text-decoration: none;
+}
