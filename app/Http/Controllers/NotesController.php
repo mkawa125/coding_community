@@ -89,7 +89,4 @@ class NotesController extends Controller
         }
         return false;
     }
-    public function sendMailToCustomer(){
-
-    }
 }
