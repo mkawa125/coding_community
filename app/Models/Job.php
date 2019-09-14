@@ -13,12 +13,20 @@ class Job extends Model
 
     public $incrementing = false;
 
+    /**
+     * @var array
+     * set fillable attributes
+     */
     protected $fillable = [
         'category_name',
         'description',
         'added_by',
     ];
 
+    /**
+     * @return array
+     * set rules for job fields
+     */
     public static function rules(){
         return [
             'title' => 'required',
@@ -33,6 +41,9 @@ class Job extends Model
 
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function categories(){
         return $this->belongsTo('App\Models\categories', 'category_id');
     }
