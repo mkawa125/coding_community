@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Job;
 
-class UsersController extends Controller
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::query()->where('id', '!=', auth()->user()->id)->get();
-        return view('users.index', compact('users'));
+        $jobs = Job::query()->with('categories')->get();
+        return view('jobs.index', compact('jobs'));
     }
 
     /**

@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Mail;
 
 class NotesController extends Controller
 {
-    public function create(){
-        return view('notes/create');
-    }
-
-
     public function data(){
         $data = DB::table('user_notes')->where('id', Auth::id())
             ->orderBy('notes_add_date', 'DESC')
@@ -88,8 +83,5 @@ class NotesController extends Controller
             return redirect()->to('notes/data');
         }
         return false;
-    }
-    public function sendMailToCustomer(){
-
     }
 }

@@ -12,7 +12,7 @@ class SessionsController extends Controller
     public function userLogin(){
         //validate user inputs
         $this->validate(request(), [
-            'username' => 'required',
+            'email' => 'required',
             'password' => 'required',
         ]);
 

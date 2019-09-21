@@ -43,6 +43,15 @@
         </div>
 
         <div class="app-header-right">
+            @if(!Auth::guest())
+            <a href="#">
+                <button class="btn btn-info text-primary" style="background-color: whitesmoke;
+                border: 1px solid #c1c5cc">
+                    <i class="fa fa-question-circle-o text-dark"></i>
+                    <strong>Post Your <span class="text-danger">Question</span></strong>
+                </button>
+            </a>
+            @endif
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
                     @if(!Auth::guest())
@@ -65,90 +74,50 @@
                                                                      src="{{ asset('images/naa-fb.jpg') }}" alt="No Image">
                                                             </div>
                                                             <div class="widget-content-left">
-                                                                <div class="widget-heading">Dahabu Saidi
+                                                                <div class="widget-heading">
+                                                                    {{ auth()->user()->name }}
                                                                 </div>
                                                                 <div class="widget-subheading opacity-8">Admin
                                                                 </div>
                                                             </div>
                                                             <div class="widget-content-right mr-2">
-                                                                <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
-                                                                </button>
+                                                                <a href="{{ route('logout') }}">
+                                                                    <button class="btn-pill btn-shadow btn  btn-danger">
+                                                                        <i class="fa fa-sign-out" style="color: white"></i>Logout
+                                                                    </button>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="scroll-area-xs" style="height: 150px;">
-                                            <div class="scrollbar-container ps">
-                                                <ul class="nav flex-column">
-                                                    <li class="nav-item-header nav-item">Activity
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Chat
-                                                            <div class="ml-auto badge badge-pill badge-info">8
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Recover Password
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item-header nav-item">My Account
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Settings
-                                                            <div class="ml-auto badge badge-success">New
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Messages
-                                                            <div class="ml-auto badge badge-warning">512
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="javascript:void(0);" class="nav-link">Logs
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+
                                         <ul class="nav flex-column">
                                             <li class="nav-item-divider mb-0 nav-item"></li>
                                         </ul>
                                         <div class="grid-menu grid-menu-2col">
                                             <div class="no-gutters row">
                                                 <div class="col-sm-6">
-                                                    <button class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-warning">
-                                                        <i class="pe-7s-chat icon-gradient bg-amy-crisp btn-icon-wrapper mb-2"></i>
-                                                        Message Inbox
+                                                    <button class=" btn btn-primary">
+                                                        <i class="fa fa-user"></i>
+                                                        Profile
                                                     </button>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <button class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-danger">
-                                                        <i class="pe-7s-ticket icon-gradient bg-love-kiss btn-icon-wrapper mb-2"></i>
-                                                        <b>Support Tickets</b>
+                                                    <button class=" btn btn-dark">
+                                                        <i class=" fa fa-cog "></i>
+                                                        <b>Settings</b>
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item-divider nav-item">
-                                            </li>
-                                            <li class="nav-item-btn text-center nav-item">
-                                                <button class="btn-wide btn btn-primary btn-sm">
-                                                    Open Messages
-                                                </button>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="widget-content-left  ml-3 header-user-info">
                                 <div class="widget-heading">
-                                    Dahabu Saidi
+                                    {{ auth()->user()->name }}
                                 </div>
                                 <div class="widget-subheading">
                                     Administrator
@@ -161,7 +130,7 @@
                             </div>
                         </div>
                         @else
-                        <a  href="#" data-toggle="modal" data-target="#myModal" style="text-decoration: none;">
+                        <a  href="{{ route('login') }}" style="text-decoration: none;">
                             <button class="btn btn-default">
                                 <i class="fa fa-sign-in"></i> Login
                             </button>

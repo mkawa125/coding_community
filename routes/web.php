@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('welcome', function (){return view('welcome');});
 Route::get('signup', function (){ return view('pages/register'); });
-Route::get('header',function(){return response("Hello", 200)->header('Content-Type', 'text/html');});
-Route::get('json',function(){return response()->json(['name' => 'Dahabu Mkawa', 'state' => 'Tanzania']);});
 
 //user registration routes
 Route::get('/register', 'Auth\RegisterController@create');
@@ -31,6 +28,14 @@ Route::group(['prefix' => 'signup'], function () {
     Route::post('addSkills', 'Auth\RegisterController@addSkills');
 });
 
+Route::middleware('auth')->group(function (){
+    Route::resource('MyQuestions', 'QuestionsController');
+    Route::resource('categories', 'CategoriesController');
+    Route::resource('users', 'UsersController');
+    Route::resource('jobs', 'JobsController');
+    Route::resource('myNotebook', 'MyNotebookController');
+
+});
 //user notes routes
 Route::group(['prefix' => 'notes'], function (){
     Route::get('data', 'NotesController@data');
@@ -52,30 +57,11 @@ Route::group(['prefix' => 'users'], function (){
 //navigation pages
 Route::get('/', 'HomeController@index');
 Route::post('/', 'Auth\RegisterController@home');
-
 Route::get('about', 'HomeController@about');
 Route::post('about', 'Auth\RegisterController@about');
 
-Route::get('jobs', 'HomeController@jobs');
-Route::post('jobs', 'Auth\RegisterController@jobs');
 
-Route::get('categories', 'HomeController@categories');
-Route::post('categories', 'Auth\RegisterController@categories');
-
-Route::get('developers', 'HomeController@developers');
-Route::post('developers', 'Auth\RegisterController@developers');
-
-Route::get('chats', 'ChartsController@create')->name('chat.create');
-Route::post('developers', 'Auth\RegisterController@developers');
-
-//login routes
-Route::get('login', function (){return view('pages/login');});
-Route::post('login', 'Auth\RegisterController@userLogin');
-Route::get('/logout', 'Auth\RegisterController@logout')->name('logout');
-
-
-
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('index');
