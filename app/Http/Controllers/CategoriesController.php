@@ -96,7 +96,7 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // update category here
+        
     }
 
     /**
