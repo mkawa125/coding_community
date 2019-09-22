@@ -1,0 +1,98 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+
+app_config: &app_config
+  docker:
+    # Specify the version you desire here
+    - image: circleci/php:7.3-stretch-node-browsers
+
+jobs:
+  build:
+    <<: *app_config
+    description: Checkout and install platform dependencies
+    steps:
+      - checkout
+      - run: sudo docker-php-ext-install zip
+      - restore_cache:
+          keys:
+            # "composer.lock" can be used if it is committed to the repo
+            - v1-dependencies-{{ checksum "composer.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: composer update --ignore-platform-reqs
+
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+            - node-v1-
+      - run:
+          name: Run Laravel Server
+          command: php artisan serve
+          background: true
+
+  run_unit_test:
+    <<: *app_config
+    steps:
+      - run:
+          name: Run Unit Tests
+          command: /vendor/bin/phpunit
+      - store_test_results:
+          path: ~/phpunit
+      - store_artifacts:
+          path: ~/phpunit
+
+  deploy_to_staging:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - ${ENCODED_FINGER_PRINTS}
+      - run:
+          name: deploy to staging
+          command: |
+            ssh $SSH_USER@$SSH_HOST "cd /var/www/html/staging.biasharaplus.com && git pull origin develop && sudo chmod 777 /var/www/html/staging.biasharaplus.com/.circleci/post_install.sh && /var/www/html/staging.biasharaplus.com/.circleci/post_install.sh"
+
+  deploy_to_live:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - ${ENCODED_FINGER_PRINTS}
+      - run:
+          name: deploy to live environment
+          command: |
+            ssh $SSH_USER@$SSH_HOST "cd /var/www/html/biasharaPlus && git pull origin master && sudo chmod 777 /var/www/html/biasharaPlus/.circleci/post_install.sh && /var/www/html/biasharaPlus/.circleci/post_install.sh"
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - run_unit_test:
+          requires:
+            - build
+      - deploy_to_staging:
+          requires:
+            - run_unit_test
+          filters:
+            branches:
+              only: develop
+      - deploy_to_live:
+          requires:
+            - run_unit_test
+          filters:
+            branches:
+              only: master
