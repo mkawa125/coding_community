@@ -2,19 +2,16 @@
 
 namespace Tests\Feature;
 
+use App\Models\Category;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class viewCategoryTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
+    public function testGetAllCategories(){
+        $category = factory(Category::class)->create();
+        $resp = $this->get('/categories');
+        $resp->assertStatus(200);
     }
 }
