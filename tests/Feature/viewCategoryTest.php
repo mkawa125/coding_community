@@ -11,12 +11,13 @@ use App\Models\User;
 
 class viewCategoryTest extends TestCase
 {
-    use WithoutMiddleware;
     use WithFaker;
 //    use RefreshDatabase;
 
     /** @test */
     public function a_user_can_read_all_categories(){
+        $this->actingAs(factory(User::class)->create());
+
         $category = factory(Category::class)->create();
 
         // when user visit categories page
@@ -31,6 +32,8 @@ class viewCategoryTest extends TestCase
      * @test
      */
     public function user_can_read_single_category(){
+        $this->actingAs(factory(User::class)->create());
+
         $category = factory(Category::class)->create();
         $response = $this->get('/categories/'.$category->id);
 
@@ -49,7 +52,7 @@ class viewCategoryTest extends TestCase
         $this->actingAs(factory(User::class)->create());
         $category = factory(Category::class)->make();
         $response = $this->post('/categories', $category->toArray());
-        $response->assertStatus(302);
+        $response->assertRedirect('/categories');
 
     }
 
