@@ -44,23 +44,9 @@ class CategoriesController extends Controller
         $category = $request->all();
         $category['added_by'] = auth()->user()->id;
         $newCategory = Category::create($category);
-        $subcategory_array = $_POST['subcategory_name'];
-        if ($subcategory_array != null){
+        $message = 'Category created successfully';
+        return redirect()->to('/categories')->with('message', $message);
 
-            foreach ($subcategory_array as $subcategory_value){
-                $subcategory['subcategory_name'] = $subcategory_value;
-                $subcategory['category_id'] = $newCategory->id;
-                //dd($subcategory);
-                Subcategory::create($subcategory);
-                $message = 'Category created successfully';
-                return redirect()->to('/categories')->with('message', $message);
-            }
-        }else if ($request->post('subcategory_name') == null){
-            $message = 'Category created successfully';
-            return redirect()->to('/categories')->with('message', $message);
-        }else{
-            return redirect()->back();
-        }
     }
 
     /**

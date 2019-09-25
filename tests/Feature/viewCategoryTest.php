@@ -48,8 +48,8 @@ class viewCategoryTest extends TestCase
     public function authenticated_user_can_create_category(){
         $this->actingAs(factory(User::class)->create());
         $category = factory(Category::class)->make();
-        $this->post('/categories', $category->toArray());
-        $this->assertEquals(1,Category::all()->count());
+        $response = $this->post('/categories', $category->toArray());
+        $response->assertStatus(302);
 
     }
 }
