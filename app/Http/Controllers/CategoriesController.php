@@ -66,11 +66,12 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param $category
+     * @param  Category $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($id)
     {
+        $category = Category::findOrFail($id);
         return view('categories.show', compact('category'));
     }
 
