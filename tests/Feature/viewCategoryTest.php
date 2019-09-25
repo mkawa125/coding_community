@@ -52,4 +52,15 @@ class viewCategoryTest extends TestCase
         $response->assertStatus(302);
 
     }
+
+    /**
+     * @test
+     * Unauthenticated user can not create category
+     *
+     */
+    public function un_authenticated_user_can_not_create_category(){
+        $category = factory(Category::class)->make();
+        $response = $this->post('/categories', $category->toArray());
+        $response->assertRedirect('/login');
+    }
 }
