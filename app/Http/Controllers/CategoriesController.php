@@ -66,12 +66,12 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param $category
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Category $category)
     {
-        //
+        return view('categories.show', compact('category'));
     }
 
     /**
@@ -96,7 +96,7 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**

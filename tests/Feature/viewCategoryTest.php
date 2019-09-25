@@ -16,10 +16,28 @@ class viewCategoryTest extends TestCase
 //    use RefreshDatabase;
 
     /** @test */
-    public function testGetAllCategories(){
+    public function a_user_can_read_all_categories(){
         $category = factory(Category::class)->create();
-        $resp = $this->get('/categories');
-        $resp->assertStatus(200);
+
+        // when user visit categories page
+        $response = $this->get('/categories');
+
+        // User should be able to read category
+        $response->assertSee($category->category_name);
+        $response->assertStatus(200);
+    }
+
+    /**
+     * @test
+     */
+    public function user_can_read_single_category(){
+        $category = factory(Category::class)->create();
+        $response = $this->get('/categories/'.$category->id);
+
+        // check if user can see category details
+        $response->assertSee($category->category_name)
+            ->assertSee($category->added_by->name);
+        $response->assertStatus(200);
     }
 
     /** @test */
