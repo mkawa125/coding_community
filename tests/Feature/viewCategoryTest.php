@@ -40,16 +40,16 @@ class viewCategoryTest extends TestCase
         $response->assertStatus(200);
     }
 
-    /** @test */
-    public function create_return_validation_error(){
-//        $userIds = User::all()->pluck('id')->toArray();
-//        $data = [
-//            'category_name' => $this->faker->name,
-//            'description' => $this->faker->sentence,
-//            'added_by' => $this->faker->randomElement($userIds)
-//        ];
-//        $response = $this->post('categories', $data);
-//        $response->assertStatus(302);
-//        $response->assertSessionHasErrors($data);
+    /**
+     * @test
+     * Test if Authenticated user can create category
+     * Create new user and make that user to act as Authenticated user
+     */
+    public function authenticated_user_can_create_category(){
+        $this->actingAs(factory(User::class)->create());
+        $category = factory(Category::class)->make();
+        $this->post('/categories', $category->toArray());
+        $this->assertEquals(1,Category::all()->count());
+
     }
 }
