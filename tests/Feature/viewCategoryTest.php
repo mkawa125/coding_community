@@ -36,7 +36,7 @@ class viewCategoryTest extends TestCase
 
         // check if user can see category details
         $response->assertSee($category->category_name)
-            ->assertSee($category->added_by->name);
+            ->assertSee($category->addedBy->name);
         $response->assertStatus(200);
     }
 

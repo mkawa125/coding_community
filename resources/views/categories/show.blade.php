@@ -8,3 +8,4 @@
 ?>
 
 {{ $category->category_name }}
+{{ $category->addedBy->name }}
