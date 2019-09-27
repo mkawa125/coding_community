@@ -53,7 +53,7 @@
                         <td>{{ $category->description }}</td>
                         <td>{{ $category->addedBy->name }}</td>
                         <td>
-                            <a class="#" href="#" style="text-decoration: none">
+                            <a class="#" href="{{ route('categories.show', ['id' => $category->id]) }}" style="text-decoration: none">
                                 <button class="btn btn-info btn-sm" style="padding: 0 4px"
                                         title="CLick here to view more details">
                                     <i class="fa fa-eye"></i>
