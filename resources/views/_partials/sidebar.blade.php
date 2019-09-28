@@ -8,7 +8,7 @@
 ?>
 
 {{--Sidebar start--}}
-<div class="app-sidebar sidebar-shadow">
+<div class="app-sidebar">
     <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">
