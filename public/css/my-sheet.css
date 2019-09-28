@@ -159,17 +159,7 @@ header{
     box-shadow: 2px 3px 3px 0 #CCD1D1;
     font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 }
-.main-content-2{
-    margin:0 auto;
-    background-color: white;
-    color: #707B7C;
-    padding: 10px;
-    border: 1px solid #C1C4C4;
-    font-size: small;
-    border-top: 4px solid #EC7063;
-    font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
-    box-shadow: 1px 3px 3px 1px #c1c5cc;
-}
+
 .main-content-4{
     /*margin:0 auto;*/
     /*background-color: white;*/

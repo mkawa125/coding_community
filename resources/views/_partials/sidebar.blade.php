@@ -51,116 +51,116 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon fa fa-list" style="font-size: small"></i>
-                        Categories
-                        <i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>
-                    </a>
-                    <ul>
+                {{--<li>--}}
+                    {{--<a href="#">--}}
+                        {{--<i class="metismenu-icon fa fa-list" style="font-size: small"></i>--}}
+                        {{--Categories--}}
+                        {{--<i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>--}}
+                    {{--</a>--}}
+                    {{--<ul>--}}
 
-                        <li>
-                            <a href="{{ route('index') }}">
-                                <i class="fa fa-code"></i>
-                                 Programming
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-login-boxed.html">
-                                <i class="fa fa-shield">
-                                </i> Operating systems
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-register.html">
-                                <i class="fa fa-video-camera">
-                                </i> Multimedia
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-register-boxed.html">
-                                <i class="fa fa-code-fork">
-                                </i> Software development
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages-forgot-password.html">
-                                <i class="fa fa-globe">
-                                </i> Networking
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon fa fa-balance-scale" style="font-size: small"></i>
-                        Jobs
-                        <i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="apps-mailbox.html">
-                                <i class="fa fa-code">
-                                </i> Programming
-                            </a>
-                        </li>
-                        <li>
-                            <a href="apps-chat.html">
-                                <i class="fa fa-globe">
-                                </i> Networking
-                            </a>
-                        </li>
-                        <li>
-                            <a href="apps-faq-section.html">
-                                <i class="fa fa-code-fork">
-                                </i> System Analysis
-                            </a>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a href="{{ route('index') }}">--}}
+                                {{--<i class="fa fa-code"></i>--}}
+                                 {{--Programming--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="pages-login-boxed.html">--}}
+                                {{--<i class="fa fa-shield">--}}
+                                {{--</i> Operating systems--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="pages-register.html">--}}
+                                {{--<i class="fa fa-video-camera">--}}
+                                {{--</i> Multimedia--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="pages-register-boxed.html">--}}
+                                {{--<i class="fa fa-code-fork">--}}
+                                {{--</i> Software development--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="pages-forgot-password.html">--}}
+                                {{--<i class="fa fa-globe">--}}
+                                {{--</i> Networking--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<a href="#">--}}
+                        {{--<i class="metismenu-icon fa fa-balance-scale" style="font-size: small"></i>--}}
+                        {{--Jobs--}}
+                        {{--<i class="metismenu-state-icon fa fa-angle-right" style="font-size: small"></i>--}}
+                    {{--</a>--}}
+                    {{--<ul>--}}
+                        {{--<li>--}}
+                            {{--<a href="apps-mailbox.html">--}}
+                                {{--<i class="fa fa-code">--}}
+                                {{--</i> Programming--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="apps-chat.html">--}}
+                                {{--<i class="fa fa-globe">--}}
+                                {{--</i> Networking--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="apps-faq-section.html">--}}
+                                {{--<i class="fa fa-code-fork">--}}
+                                {{--</i> System Analysis--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
 
-                        <li>
-                            <a href="apps-faq-section.html">
-                                <i class="fa fa-camera">
-                                </i> Graphics Design
-                            </a>
-                        </li>
-                        <li>
-                            <a href="apps-faq-section.html">
-                                <i class="fa fa-list">
-                                </i> Others
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                        {{--<li>--}}
+                            {{--<a href="apps-faq-section.html">--}}
+                                {{--<i class="fa fa-camera">--}}
+                                {{--</i> Graphics Design--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<a href="apps-faq-section.html">--}}
+                                {{--<i class="fa fa-list">--}}
+                                {{--</i> Others--}}
+                            {{--</a>--}}
+                        {{--</li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
 
 
-                <li class="app-sidebar__heading" style="color: #CCD1D1">Management</li>
-                <li>
-                    <a href="{{ route('categories.index') }}">
-                        <i class="metismenu-icon fa fa-list" style="font-size: 15px"></i>
-                        Categories
-                    </a>
-                </li>
+                {{--<li class="app-sidebar__heading" style="color: #CCD1D1">Management</li>--}}
+                {{--<li>--}}
+                    {{--<a href="{{ route('categories.index') }}">--}}
+                        {{--<i class="metismenu-icon fa fa-list" style="font-size: 15px"></i>--}}
+                        {{--Categories--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
-                <li>
-                    <a href="{{ route('users.index') }}">
-                        <i class="metismenu-icon fa fa-users" style="font-size: 15px"></i>
-                        Users
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="{{ route('users.index') }}">--}}
+                        {{--<i class="metismenu-icon fa fa-users" style="font-size: 15px"></i>--}}
+                        {{--Users--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
-                <li>
-                    <a href="{{ route('jobs.index') }}">
-                        <i class="metismenu-icon fa fa-balance-scale" style="font-size: 15px"></i>
-                        Jobs
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="{{ route('jobs.index') }}">--}}
+                        {{--<i class="metismenu-icon fa fa-balance-scale" style="font-size: 15px"></i>--}}
+                        {{--Jobs--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
-                <li>
-                    <a href="{{ route('categories.index') }}">
-                        <i class="metismenu-icon fa fa-question" style="font-size: 15px"></i>
-                        Questions
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="{{ route('categories.index') }}">--}}
+                        {{--<i class="metismenu-icon fa fa-question" style="font-size: 15px"></i>--}}
+                        {{--Questions--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
 
                 <li class="app-sidebar__heading" style="color: #CCD1D1">MY ACCOUNT</li>
@@ -189,6 +189,13 @@
                     <a href="{{ route('MyQuestions.index') }}">
                         <i class="metismenu-icon fa fa-question-circle" style="font-size: 15px"></i>
                         My Questions
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="{{ route('logout') }}">
+                        <i class="metismenu-icon fa fa-sign-out" style="font-size: 15px"></i>
+                        Logout
                     </a>
                 </li>
 
