@@ -4,15 +4,6 @@
     <div class="container-fluid" style=" padding: 0">
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
-                <div class="col-sm-4 instructions">
-                    <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
-                        <i class="fa fa-google"></i> Sign in with google
-                    </button>
-
-                    <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
-                        <i class="fa fa-linkedin"></i> Sign in with LinkedIn
-                    </button>
-                </div>
                 <div class="col-sm-7" style="margin: 0 auto">
                     <div class="panel" style="border: none">
                         <div class="panel-heading" style="background-color: #73C6B6; border: none">
@@ -33,7 +24,7 @@
                                                 <input type="email" required class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" placeholder="username or email">
                                             </div>
                                             @if ($errors->has('email'))
-                                            <span class="help-block {{ $errors->has('email') ? ' has-error' : '' }}">
+                                                <span class="help-block {{ $errors->has('email') ? ' has-error' : '' }}">
                                             <strong>{{ $errors->first('email') }}</strong>
                                             </span>
                                             @endif
@@ -62,6 +53,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="col-sm-4 instructions">
+                    <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
+                        <i class="fa fa-google"></i> Sign in with google
+                    </button>
+
+                    <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
+                        <i class="fa fa-linkedin"></i> Sign in with LinkedIn
+                    </button>
                 </div>
             </div>
         </div>
