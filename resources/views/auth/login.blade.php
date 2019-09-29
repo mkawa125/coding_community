@@ -5,14 +5,6 @@
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
                 <div class="col-sm-4 instructions">
-                    <h5 class="register-head" style="text-align: center; border-bottom: 1px solid #c1c5cc">
-                        <strong style="color: #AF7AC5; text-align: center">
-                            Welcome back to codeCom enter your details to login
-                        </strong></h5>
-                    {{--<h5 class="register-head" style="color: chocolate"><strong>Step 1 of 2</strong></h5>--}}
-                    <p class="welcome-register">Fill the the correct details to form the given form to sign in or sign in with social networks below.
-                    </p>
-
                     <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
                         <i class="fa fa-google"></i> Sign in with google
                     </button>
@@ -20,13 +12,6 @@
                     <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
                         <i class="fa fa-linkedin"></i> Sign in with LinkedIn
                     </button>
-                    <div class="social">
-                        <h5 class="register-head"><strong>Find us on social networks</strong></h5>
-                        <a class="#" href="#" title="facebook" ><i class="fa fa-facebook-square"></i></a>
-                        <a class="#" href="#" title="Instagram" ><i class="fa fa-instagram"></i></a>
-                        <a class="#" href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a>
-                        <a class="#" href="#" title="Click here to join whatssap group"><i class="fa fa-whatsapp"></i></a>
-                    </div>
                 </div>
                 <div class="col-sm-7" style="margin: 0 auto">
                     <div class="panel" style="border: none">
@@ -63,11 +48,10 @@
                                             </div>
                                         </div>
 
-                                        <input type="checkbox" name="remember" id="remember">
-                                        <label for="remember">Remember me</label>
-                                        <button class="btn btn-dark btn-block" value="login" name="login" type="submit">
-                                            Signin <i class="fa fa-sign-in"></i></button>
-
+                                        <div>
+                                            <button class="btn btn-dark" style="float: right" value="login" name="login" type="submit">
+                                                Signin <i class="fa fa-sign-in"></i></button>
+                                        </div>
                                     </form>
                                     <div class="col-md-12" style="margin-bottom: 15px; color: #3b5998">
                                         <a href="#" class="#" style="margin-top: 15px; color: #3b5998; font-weight: bold; font-family: sans-serif">
