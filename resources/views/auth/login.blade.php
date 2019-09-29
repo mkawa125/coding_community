@@ -61,7 +61,7 @@
                                                 Login <i class="fa fa-sign-in"></i></button>
                                         </div>
                                     </form>
-                                    <div class="col-md-12" style="margin-bottom: 15px; color: #3b5998">
+                                    <div class="form-group" style="margin-bottom: 15px; color: #3b5998">
                                         <a href="#" class="#" style="margin-top: 15px; color: #3b5998; font-weight: bold; font-family: sans-serif">
                                             Forget Password ?
                                         </a>
