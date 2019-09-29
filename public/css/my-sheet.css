@@ -95,6 +95,10 @@ header{
     /*background-color: #73C6B6;*/
     /*box-shadow: 0 2px 2px 0 #c1c5cc;*/
 }
+.input-group.input-group-append.input-group-text{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
 .fa-twitter-square{
     color:#1DA1F2;
 }

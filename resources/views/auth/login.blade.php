@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .input-group-text{
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding: 0 15px;
+        }
+    </style>
     <div class="container-fluid" style=" padding: 0">
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
@@ -21,6 +28,11 @@
                                         <div class="form-group">
                                             <label for="pass1" ><strong>Username or Email:</strong></label>
                                             <div class="input-group">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                </div>
                                                 <input type="email" required class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" name="email" placeholder="username or email">
                                             </div>
                                             @if ($errors->has('email'))
@@ -35,12 +47,17 @@
                                         <div class="form-group">
                                             <label for="pass2"><strong>Enter password:</strong></label>
                                             <div class="input-group">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">
+                                                        <i class="fa fa-lock"></i>
+                                                    </div>
+                                                </div>
                                                 <input type="password" required name="password" id="password" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Enter your password" >
                                             </div>
                                         </div>
 
                                         <div>
-                                            <button class="btn btn-dark" style="float: right" value="login" name="login" type="submit">
+                                            <button class="btn btn-dark" style="float: right; padding: 6px 20px" value="login" name="login" type="submit">
                                                 Login <i class="fa fa-sign-in"></i></button>
                                         </div>
                                     </form>
@@ -55,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 instructions">
+                <div class="col-sm-3 instructions">
                     <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
                         <i class="fa fa-google"></i> Sign in with google
                     </button>
