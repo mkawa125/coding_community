@@ -5,15 +5,15 @@
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
                 <div class="col-sm-7" style="margin: 0 auto">
-                    <div class="panel" style="border: none">
-                        <div class="panel-heading" style="background-color: #73C6B6; border: none">
+                    <div class="panel">
+                        <div class="panel-heading">
                             <h4 class="panel-title home-head" style="color: #424949">
                                 <strong>
                                     Login to your account <i class="fa fa-lock" style="margin-left: 15px"></i>
                                 </strong>
                             </h4>
                         </div>
-                        <div class="panel-body" style="border: none">
+                        <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <form method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
 
                                         <div>
                                             <button class="btn btn-dark" style="float: right" value="login" name="login" type="submit">
-                                                Signin <i class="fa fa-sign-in"></i></button>
+                                                Login <i class="fa fa-sign-in"></i></button>
                                         </div>
                                     </form>
                                     <div class="col-md-12" style="margin-bottom: 15px; color: #3b5998">
@@ -56,11 +56,11 @@
                 </div>
 
                 <div class="col-sm-4 instructions">
-                    <button class="btn btn-danger btn-block" style="border-radius: 16px; background-color: #CC3333">
+                    <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
                         <i class="fa fa-google"></i> Sign in with google
                     </button>
 
-                    <button class="btn btn-primary btn-block" style="border-radius: 16px; background-color: #0077B5">
+                    <button class="btn btn-primary btn-block" style="border-radius: 8px; background-color: #0077B5">
                         <i class="fa fa-linkedin"></i> Sign in with LinkedIn
                     </button>
                 </div>
