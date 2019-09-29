@@ -9,47 +9,45 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .card{
+            box-shadow: 1px 3px 3px 1px #c1c5cc;
+        }
+    </style>
     @include('notebook.modal')
-    <div class="col-md-11" style="margin: 0 auto">
+    <div class="col-md-10" style="margin: 0 auto">
         @if($message = Session::get('message'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                 {{ $message }}
             </div>
         @endif
-        <div class="card mb-3" style="padding: 15px">
-
-
-            <div class="card-header-tab card-header" style=" border-bottom: 1px solid cadetblue">
-                <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+        <div class="card mb-3" style="padding: 0">
+            <div class="card-header" style="background-color: whitesmoke">
+                <div class="">
                     <i class="header-icon fa fa-book mr-3 text-muted opacity-6" style="font-size: small"> </i>
                     My Notebook
                 </div>
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
-                        <a href="javascript:void(0)" id="create_category">
+                        <a  id="create_category">
                             <button class="btn btn-primary">
-                                <i class="fa fa-plus"></i> Create Notes Category
+                                <i class="fa fa-plus"></i> New Category
                             </button>
                         </a>
                     </div>
-
-                    <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Basic Modal
-                    </button>
                 </div>
             </div>
-            <div class="card-body" style="; border-top: 1px solid cadetblue; margin-top: 1px">
-                Categories
+            <div class="card-body" style="margin-top: 1px">
                 <div class="col-md-12">
                     <div class="row" style="padding: 0 auto">
                         <div class="col-md-3">
                             <a href="#" class="category_link">
                                 <div class="row" style="padding: 10px 15px 10px 0">
                                     <div class="col-md-12 category_box">
-                                        <h4>Category one</h4>
+                                        <h4><i class="fa fa-folder"></i> Category one</h4>
                                         <label>
-                                            <i class="fa fa-pencil"></i> 201 Notes
+                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
                                         </label>
                                     </div>
                                 </div>
@@ -60,9 +58,9 @@
                             <a href="#" class="category_link">
                                 <div class="row" style="padding: 10px 15px 10px 0">
                                     <div class="col-md-12 category_box">
-                                        <h4>Category one</h4>
+                                        <h4><i class="fa fa-folder"></i> Category one</h4>
                                         <label>
-                                            <i class="fa fa-pencil"></i> 201 Notes
+                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
                                         </label>
                                     </div>
                                 </div>
@@ -73,9 +71,9 @@
                             <a href="#" class="category_link">
                                 <div class="row" style="padding: 10px 15px 10px 0">
                                     <div class="col-md-12 category_box">
-                                        <h4>Category one</h4>
+                                        <h4><i class="fa fa-folder"></i> Category one</h4>
                                         <label>
-                                            <i class="fa fa-pencil"></i> 201 Notes
+                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
                                         </label>
                                     </div>
                                 </div>
@@ -86,9 +84,9 @@
                             <a href="#" class="category_link">
                                 <div class="row" style="padding: 10px 15px 10px 0">
                                     <div class="col-md-12 category_box">
-                                        <h4>Category one</h4>
+                                        <h4><i class="fa fa-folder"></i> Category one</h4>
                                         <label>
-                                            <i class="fa fa-pencil"></i> 201 Notes
+                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
                                         </label>
                                     </div>
                                 </div>
