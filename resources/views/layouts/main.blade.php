@@ -45,24 +45,20 @@
 </head>
 <body>
 
-<div class="container-fluid" style="background-color: whitesmoke">
-    <div class="row" style="margin-top: 54px">
-        <div class="col-md-2" style="padding: 0">
-            @include('pages.side-nav-bar')
-        </div>
+<div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
 
-        <div class="col-md-10">
-            <div id="content">
-                <header>
-                    @include('include.head')
-                </header>
+    @include('_partials.header')
 
+    {{--Main menu start--}}
+    <div class="app-main">
+        @include('_partials.sidebar')
+        <div class="app-main__outer">
+            <div class="app-main__inner">
                 @yield('content')
             </div>
-
-            <footer>
-                @include('include.footer')
-            </footer>
+            {{--footer start--}}
+            @include('_partials.footer')
+            {{--footer ends--}}
         </div>
     </div>
 </div>

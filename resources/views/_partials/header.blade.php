@@ -1,6 +1,6 @@
 {{--Header start--}}
 @include('modals.login_modal')
-<div class="app-header header-shadow">
+<div class="app-header" style="">
     <div class="app-header__logo">
         <div class="logo-src" style="font-family: cursive"><strong><span class="text-danger">Code</span><span class="text-warning">Community</span></strong></div>
         <div class="header__pane ml-auto">
@@ -44,13 +44,7 @@
 
         <div class="app-header-right">
             @if(!Auth::guest())
-            <a href="#">
-                <button class="btn btn-info text-primary" style="background-color: whitesmoke;
-                border: 1px solid #c1c5cc">
-                    <i class="fa fa-question-circle-o text-dark"></i>
-                    <strong>Post Your <span class="text-danger">Question</span></strong>
-                </button>
-            </a>
+
             @endif
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
@@ -122,11 +116,6 @@
                                 <div class="widget-subheading">
                                     Administrator
                                 </div>
-                            </div>
-                            <div class="widget-content-right header-user-info ml-3">
-                                <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
-                                </button>
                             </div>
                         </div>
                         @else
