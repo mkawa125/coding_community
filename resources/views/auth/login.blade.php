@@ -73,15 +73,15 @@
                 </div>
 
                 <div class="col-sm-3 instructions">
-                    <a href="{{ route('auth.google') }}">
-                        <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
-                            <i class="fa fa-google"></i> Sign in with google
-                        </button>
+                    <a href="{{ route('auth.google') }}" class="btn btn-block google">
+                        <img src="{{ asset('images/google-trans.png') }}" width="13" height="13" alt="" style="margin-right: 10px">
+                        <span class="text-primary">Sign in</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
                     </a>
 
-                    <button class="btn btn-primary btn-block" style="border-radius: 8px; background-color: #0077B5">
-                        <i class="fa fa-linkedin"></i> Sign in with LinkedIn
-                    </button>
+                    <a href="" class="btn btn-primary btn-block">
+                            <i class="fa fa-facebook"></i> Sign in with Facebook
+                    </a>
+
                 </div>
             </div>
         </div>
