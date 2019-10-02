@@ -343,7 +343,7 @@ header{
 }
 .outer_main{
     padding-left: 0;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     flex:1;
     flex-direction:column;
     display:flex;
@@ -351,14 +351,16 @@ header{
     background-color: #D6DBDF;
 }
 .google{
-    border: 1px solid #D6DBDF;
+    border: 1px solid #ABB2B9;
     text-align: left;
     box-shadow: 0 2px 2px 0 #ABB2B9;
     background-color: white;
+    border-radius: 0;
 }
 .github{
     text-align: left;
     box-shadow: 0 1px 1px 0 #27AE60;
+    border-radius: 0;
 }
 .google:hover{
     border: 1px solid #D6EAF8;

@@ -8,18 +8,12 @@
 ?>
 <div class="" style="background-color: #D6DBDF; text-align: center">
     <div class="" style="background-color: #D6DBDF; text-align: center">
-        <div class="" >
-
-            <div class="">
-
-                        Powered by <a href="#">
-                            mkawa.host
-                        </a>
+        Powered by <a href="#">
+            mkawa.host
+        </a>
 
 
-                        <i class="fa fa-copyright"></i>
-                        {{ date('Y') }}
-            </div>
-        </div>
+        <i class="fa fa-copyright"></i>
+        {{ date('Y') }}
     </div>
 </div>
