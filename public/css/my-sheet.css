@@ -341,10 +341,20 @@ header{
         display: none;
     }
 }
+.outer_main{
+    padding-left: 0;
+    padding-bottom: 60px;
+    flex:1;
+    flex-direction:column;
+    display:flex;
+    z-index:12;
+    background-color: #D6DBDF;
+}
 .google{
     border: 1px solid #D6DBDF;
     text-align: left;
     box-shadow: 0 2px 2px 0 #ABB2B9;
+    background-color: white;
 }
 .github{
     text-align: left;

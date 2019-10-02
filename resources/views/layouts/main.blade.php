@@ -29,13 +29,15 @@
     @include('_partials.header')
 
     {{--Main menu start--}}
-    <div class="app-main" style="background-image: url(../public/images/code.jpg)">
-        <div class="app-main__outer">
+    <div class="app-main">
+        <div class="outer_main">
             <div class="app-main__inner">
-                @yield('content')
+                <div class="col-md-8 offset-3" style="background-color: ">
+                    @yield('content')
+                </div>
             </div>
             {{--footer start--}}
-            @include('_partials.footer')
+            @include('_partials.login_footer')
             {{--footer ends--}}
         </div>
     </div>

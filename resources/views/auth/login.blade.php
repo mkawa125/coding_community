@@ -11,7 +11,7 @@
     <div class="container-fluid" style=" padding: 0">
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
-                <div class="col-sm-7" style="margin: 0 auto">
+                <div class="col-sm-8" style="margin: 0 auto">
                     <div class="panel">
                         <div class="panel-heading">
                             <h4 class="panel-title home-head" style="color: #424949">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-3 instructions">
+                <div class="col-sm-4 instructions">
                     <a href="{{ url('/auth/google') }}" class="btn  btn-block google">
                         <img src="{{ asset('images/google-trans.png') }}" width="12" height="12" alt="" style="margin-right: 10px">
                         <span class="text-primary">Login</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
