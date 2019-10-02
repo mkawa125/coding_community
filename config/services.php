@@ -30,9 +30,14 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\User::class,
+        'model' => App\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '566947147971-g5g7oii3qln9vhk9l2qluq3fmp9o0aof.apps.googleusercontent.com',
+        'client_secret' => 'YgOYJOBkIZIR2_bHaLhIyxoW',
+        'redirect' => 'http://learnl52.hd/auth/google/callback',
+    ],
 ];
