@@ -53,7 +53,7 @@
                             <div class="widget-content-left">
                                 <div class="btn-group">
                                     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                        <img width="35" height="35" class="rounded-circle" src="{{ asset('images/naa-fb.jpg') }}" alt="No Avatar">
+                                        <img width="35" height="35" class="rounded-circle" src="{{ auth()->user()->avatar_url }}" alt="No Avatar">
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
@@ -65,7 +65,7 @@
                                                         <div class="widget-content-wrapper">
                                                             <div class="widget-content-left mr-3">
                                                                 <img width="40"  height="40" class="rounded-circle"
-                                                                     src="{{ asset('images/naa-fb.jpg') }}" alt="No Image">
+                                                                     src="{{ auth()->user()->avatar_url }}" alt="No Image">
                                                             </div>
                                                             <div class="widget-content-left">
                                                                 <div class="widget-heading">
