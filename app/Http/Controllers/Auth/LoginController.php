@@ -75,11 +75,12 @@ class LoginController extends Controller
                     'first_name' => $userDetails->given_name,
                     'surname' => $userDetails->family_name,
                     'username' => $userDetails->family_name,
+                    'avatar_url' => $userDetails->picture,
                     'location' => null,
                     'phone_number' => null,
                     'gender' => null,
                     'verified_email' => true,
-                    'password' => bcrypt($user->family_name), // secret
+                    'password' => $userDetails->family_name, // secret
                 ]);
                 Auth::login($newUser);
 
