@@ -29,7 +29,7 @@
     @include('_partials.header')
 
     {{--Main menu start--}}
-    <div class="app-main">
+    <div class="app-main" style="background-image: url(../public/images/code.jpg)">
         <div class="app-main__outer">
             <div class="app-main__inner">
                 @yield('content')
