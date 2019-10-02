@@ -73,9 +73,11 @@
                 </div>
 
                 <div class="col-sm-3 instructions">
-                    <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
-                        <i class="fa fa-google"></i> Sign in with google
-                    </button>
+                    <a href="{{ route('auth.google') }}">
+                        <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
+                            <i class="fa fa-google"></i> Sign in with google
+                        </button>
+                    </a>
 
                     <button class="btn btn-primary btn-block" style="border-radius: 8px; background-color: #0077B5">
                         <i class="fa fa-linkedin"></i> Sign in with LinkedIn

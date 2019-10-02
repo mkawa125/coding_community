@@ -13,6 +13,9 @@
 
 Route::get('signup', function (){ return view('pages/register'); });
 
+Route::get('auth/google', 'Auth\LoginController@redirectToGoogle')->name('auth.google');
+Route::get('auth/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
 //user registration routes
 Route::get('/register', 'Auth\RegisterController@create');
 Route::get('/register', 'Auth\RegisterController@create');
