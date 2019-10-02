@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
     <style>
@@ -11,7 +11,7 @@
     <div class="container-fluid" style=" padding: 0">
         <div class="col-sm-10 main-content-4" style="margin: 0 auto; padding: 0">
             <div class="row">
-                <div class="col-sm-7" style="margin: 0 auto">
+                <div class="col-sm-8" style="margin: 0 auto">
                     <div class="panel">
                         <div class="panel-heading">
                             <h4 class="panel-title home-head" style="color: #424949">
@@ -72,14 +72,15 @@
                     </div>
                 </div>
 
-                <div class="col-sm-3 instructions">
-                    <button class="btn btn-danger btn-block" style="border-radius: 8px; background-color: #CC3333">
-                        <i class="fa fa-google"></i> Sign in with google
-                    </button>
+                <div class="col-sm-4 instructions">
 
-                    <button class="btn btn-primary btn-block" style="border-radius: 8px; background-color: #0077B5">
-                        <i class="fa fa-linkedin"></i> Sign in with LinkedIn
-                    </button>
+                    <a href="{{ url('/auth/github')}}" class="btn btn-success btn-block github">
+                        <i class="fa fa-github" style="color: black; font-size: medium; margin-right: 10px"></i> Log In With Github
+                    </a>
+                    <a href="{{ url('/auth/google') }}" class="btn  btn-block google">
+                        <img src="{{ asset('images/google-trans.png') }}" width="12" height="12" alt="" style="margin-right: 10px">
+                        <span class="text-primary">Login</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
+                    </a>
                 </div>
             </div>
         </div>

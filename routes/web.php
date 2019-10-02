@@ -13,6 +13,10 @@
 
 Route::get('signup', function (){ return view('pages/register'); });
 
+// login with google
+Route::get('auth/{provider}', 'Auth\LoginController@redirect')->name('auth.redirect');
+Route::get('auth/callback/{provider}', 'Auth\LoginController@handleCallback');
+
 //user registration routes
 Route::get('/register', 'Auth\RegisterController@create');
 Route::get('/register', 'Auth\RegisterController@create');

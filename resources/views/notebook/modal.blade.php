@@ -30,7 +30,7 @@
     }
     .modal-title{
         text-align: center;
-        padding: 8px;
+        padding: 15px;
     }
     .modal-footer{
         background-color: whitesmoke;
@@ -62,18 +62,16 @@
         font-style: italic;
     }
 </style>
-<div class="modal fade" id="ajax-crud-modal" aria-hidden="true">
+<div class="modal fade" id="ajax-crud-modal" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background-color: whitesmoke; box-shadow: 0 2px 2px 0 #D5D8DC">
-                <div class="row">
                     <div class="col-md-11">
                         <h4 class="modal-title" id="userCrudModal" style="text-align: center"></h4>
                     </div>
                     <div class="col-md-1">
-                        <button type="button" class="close pull-right text-danger" data-dismiss="modal">&times;</button>
+                        <button type="button" style="font-size: small" class="close text-danger" data-dismiss="modal">&times;</button>
                     </div>
-                </div>
 
             </div>
             <div class="modal-body">
@@ -83,9 +81,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="name" class="col-sm-12">Merchant Type Name</label>
+                                <label for="name" class="col-sm-12">Category Name</label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Merchant type name" value="" required="">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Category nam e.g programming" value="" required="">
                                 </div>
                             </div>
                         </div>
@@ -93,7 +91,15 @@
                             <div class="form-group">
                                 <label class="col-sm-12" for="description">Descriptions</label>
                                 <div class="col-sm-12">
-                                    <textarea class="form-control" required placeholder="Write something about this merchant type ..." name="description" rows="4" id="description"></textarea>
+                                    <textarea class="form-control" required placeholder="Write something about this category ..." name="description" rows="4" id="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-sm-12" for="description">Choose file color</label>
+                                <div class="col-sm-12">
                                 </div>
                             </div>
                         </div>
@@ -101,8 +107,11 @@
 
                     <div class="form-group" style="margin-top: 15px">
                         <div class="col-sm-12">
-                            <button type="submit" style="float: right" class="btn btn-primary btn-block" id="btn-save" value="create">
+                            <button type="submit" style="float: right; margin-left: 10px" class="btn btn-primary" id="btn-save" value="create">
                                 Save changes
+                            </button>
+                            <button type="button" data-dismiss="modal" style="float: right; border: 1px solid #AEB6BF" class="btn btn-white">
+                                Cancel
                             </button>
                         </div>
                     </div>

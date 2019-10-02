@@ -33,6 +33,8 @@ class User extends Authenticatable
         'gender',
         'gender',
         'gender',
+        'google_id',
+        'avatar_url'
     ];
 
     public $incrementing = false;
