@@ -62,15 +62,15 @@
         font-style: italic;
     }
 </style>
-<div class="modal fade" id="ajax-crud-modal" aria-hidden="true">
+<div class="modal fade" id="ajax-crud-modal" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background-color: whitesmoke; box-shadow: 0 2px 2px 0 #D5D8DC">
                 <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-10">
                         <h4 class="modal-title" id="userCrudModal" style="text-align: center"></h4>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                         <button type="button" class="close pull-right text-danger" data-dismiss="modal">&times;</button>
                     </div>
                 </div>
@@ -101,8 +101,11 @@
 
                     <div class="form-group" style="margin-top: 15px">
                         <div class="col-sm-12">
-                            <button type="submit" style="float: right" class="btn btn-primary btn-block" id="btn-save" value="create">
+                            <button type="submit" style="float: right; margin-left: 10px" class="btn btn-primary" id="btn-save" value="create">
                                 Save changes
+                            </button>
+                            <button type="button" data-dismiss="modal" style="float: right; border: 1px solid #AEB6BF" class="btn btn-white">
+                                Cancel
                             </button>
                         </div>
                     </div>

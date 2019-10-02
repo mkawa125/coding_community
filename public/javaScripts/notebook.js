@@ -11,6 +11,7 @@ $(document).ready(function () {
         $('#merchantTypeForm').trigger("reset");
         $('#userCrudModal').html("Create New Merchant Type");
         $('#ajax-crud-modal').modal('show');
+        $('#ajax-crud-modal').appendTo("body");
     });
 
     /* When click edit user */

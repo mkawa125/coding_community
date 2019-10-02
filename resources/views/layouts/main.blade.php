@@ -32,7 +32,7 @@
     <div class="app-main">
         <div class="outer_main">
             <div class="app-main__inner">
-                <div class="col-md-8 offset-3" style="background-color: ">
+                <div class="col-md-8 offset-3">
                     @yield('content')
                 </div>
             </div>
