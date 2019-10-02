@@ -55,6 +55,10 @@ class LoginController extends Controller
 
             $user = Socialite::driver('google')->user();
 
+            $userDetails = $user->user;
+            $userDetails = (object) $userDetails;
+//            dd($userDetails);
+
             $finduser = User::where('google_id', $user->id)->first();
 
             if($finduser){
@@ -65,18 +69,25 @@ class LoginController extends Controller
 
             }else{
                 $newUser = User::create([
-                    'name' => $user->name,
-                    'email' => $user->email,
-                    'google_id'=> $user->id
+                    'name' => $userDetails->name,
+                    'email' => $userDetails->email,
+                    'google_id'=> $userDetails->id,
+                    'first_name' => $userDetails->given_name,
+                    'surname' => $userDetails->family_name,
+                    'username' => $userDetails->family_name,
+                    'location' => null,
+                    'phone_number' => null,
+                    'gender' => null,
+                    'verified_email' => true,
+                    'password' => bcrypt($user->family_name), // secret
                 ]);
-
                 Auth::login($newUser);
 
                 return redirect()->back();
             }
 
         } catch (Exception $e) {
-            return redirect('auth/google');
+            dd($e);
         }
     }
 
