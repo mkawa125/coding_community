@@ -345,6 +345,9 @@ header{
     border: 1px solid #F1948A;
     text-align: left;
 }
+.github{
+    text-align: left;
+}
 .google:hover{
     border: 1px solid #D6EAF8;
     background-color: whitesmoke;

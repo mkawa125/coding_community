@@ -44,22 +44,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToGoogle()
+    public function redirect($driver)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($driver)->redirect();
     }
 
-    public function handleGoogleCallback()
+    public function handleCallback($driver)
     {
         try {
 
-            $user = Socialite::driver('google')->user();
+            $user = Socialite::driver($driver)->user();
 
             $userDetails = $user->user;
             $userDetails = (object) $userDetails;
-//            dd($userDetails);
 
-            $finduser = User::where('google_id', $user->id)->first();
+            $finduser = User::where('email', $user->email)->first();
 
             if($finduser){
 
@@ -67,7 +66,7 @@ class LoginController extends Controller
 
                  return redirect('/home');
 
-            }else{
+            }elseif($driver == 'google'){
                 $newUser = User::create([
                     'name' => $userDetails->name,
                     'email' => $userDetails->email,
@@ -83,19 +82,27 @@ class LoginController extends Controller
                     'password' => $userDetails->family_name, // secret
                 ]);
                 Auth::login($newUser);
-
+                return redirect()->back();
+            }elseif ($driver == 'github'){
+                $newUser = User::create([
+                    'name' => $userDetails->name,
+                    'email' => $userDetails->email,
+                    'google_id'=> $userDetails->id,
+                    'first_name' => $userDetails->name,
+                    'surname' => $userDetails->login,
+                    'username' => $userDetails->name,
+                    'avatar_url' => $userDetails->avatar_url,
+                    'location' => null,
+                    'verified_email' => true,
+                    'password' => $userDetails->login, // secret
+                ]);
+                Auth::login($newUser);
+                return redirect()->back();
+            }else{
                 return redirect()->back();
             }
-
         } catch (Exception $e) {
-            return redirect('auth/google');
+            return redirect('auth/'.$driver.'');
         }
     }
-
-    public function logout(Request $request)
-    {
-        $this->performLogout($request);
-        return redirect()->route('home');
-    }
-
 }

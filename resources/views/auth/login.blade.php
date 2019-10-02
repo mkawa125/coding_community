@@ -73,13 +73,13 @@
                 </div>
 
                 <div class="col-sm-3 instructions">
-                    <a href="{{ route('auth.google') }}" class="btn btn-block google">
+                    <a href="{{ url('/auth/google') }}" class="btn btn-block google">
                         <img src="{{ asset('images/google-trans.png') }}" width="13" height="13" alt="" style="margin-right: 10px">
                         <span class="text-primary">Sign in</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
                     </a>
 
-                    <a href="" class="btn btn-primary btn-block">
-                            <i class="fa fa-facebook"></i> Sign in with Facebook
+                    <a href="{{ url('/auth/github')}}" class="btn btn-success btn-block github">
+                            <i class="fa fa-github" style="color: black; font-size: medium; margin-right: 10px"></i> Log In With Github
                     </a>
 
                 </div>
