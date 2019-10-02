@@ -81,7 +81,6 @@
                         <img src="{{ asset('images/google-trans.png') }}" width="12" height="12" alt="" style="margin-right: 10px">
                         <span class="text-primary">Login</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
                     </a>
-
                 </div>
             </div>
         </div>

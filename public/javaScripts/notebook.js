@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('#create_category').click(function () {
         $('#btn-save').val("create_category");
         $('#merchantTypeForm').trigger("reset");
-        $('#userCrudModal').html("Create New Merchant Type");
+        $('#userCrudModal').html("Create New Category");
         $('#ajax-crud-modal').modal('show');
         $('#ajax-crud-modal').appendTo("body");
     });
