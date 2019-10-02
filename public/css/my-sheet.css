@@ -342,11 +342,13 @@ header{
     }
 }
 .google{
-    border: 1px solid #F1948A;
+    border: 1px solid #D6DBDF;
     text-align: left;
+    box-shadow: 0 2px 2px 0 #ABB2B9;
 }
 .github{
     text-align: left;
+    box-shadow: 0 1px 1px 0 #27AE60;
 }
 .google:hover{
     border: 1px solid #D6EAF8;
@@ -354,7 +356,7 @@ header{
 }
 .instructions a{
     text-decoration: none;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-size: 13px;
     font-weight: bold;
 }

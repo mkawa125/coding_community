@@ -73,9 +73,9 @@
                 </div>
 
                 <div class="col-sm-3 instructions">
-                    <a href="{{ url('/auth/google') }}" class="btn btn-block google">
-                        <img src="{{ asset('images/google-trans.png') }}" width="13" height="13" alt="" style="margin-right: 10px">
-                        <span class="text-primary">Sign in</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
+                    <a href="{{ url('/auth/google') }}" class="btn  btn-block google">
+                        <img src="{{ asset('images/google-trans.png') }}" width="12" height="12" alt="" style="margin-right: 10px">
+                        <span class="text-primary">Login</span> with <img src="{{ asset('images/Googlelogo.png') }}"  width="42" height="16" alt="">
                     </a>
 
                     <a href="{{ url('/auth/github')}}" class="btn btn-success btn-block github">

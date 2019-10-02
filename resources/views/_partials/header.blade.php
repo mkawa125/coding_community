@@ -125,7 +125,7 @@
                             </button>
                         </a>
                         <a href="{{ route('register') }}">
-                            <button class="btn btn-success">
+                            <button class="btn btn-primary">
                             <i class="fa fa-user"></i>
                             Register For Free
                             </button>
