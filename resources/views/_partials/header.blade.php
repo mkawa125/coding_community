@@ -1,6 +1,6 @@
 {{--Header start--}}
 @include('modals.login_modal')
-<div class="app-header header-shadow">
+<div class="app-header" style="">
     <div class="app-header__logo">
         <div class="logo-src" style="font-family: cursive"><strong><span class="text-danger">Code</span><span class="text-warning">Community</span></strong></div>
         <div class="header__pane ml-auto">
@@ -44,13 +44,7 @@
 
         <div class="app-header-right">
             @if(!Auth::guest())
-            <a href="#">
-                <button class="btn btn-info text-primary" style="background-color: whitesmoke;
-                border: 1px solid #c1c5cc">
-                    <i class="fa fa-question-circle-o text-dark"></i>
-                    <strong>Post Your <span class="text-danger">Question</span></strong>
-                </button>
-            </a>
+
             @endif
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
@@ -59,7 +53,7 @@
                             <div class="widget-content-left">
                                 <div class="btn-group">
                                     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                        <img width="35" height="35" class="rounded-circle" src="{{ asset('images/naa-fb.jpg') }}" alt="No Avatar">
+                                        <img width="35" height="35" class="rounded-circle" src="{{ auth()->user()->avatar_url }}" alt="No Avatar">
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
@@ -71,7 +65,7 @@
                                                         <div class="widget-content-wrapper">
                                                             <div class="widget-content-left mr-3">
                                                                 <img width="40"  height="40" class="rounded-circle"
-                                                                     src="{{ asset('images/naa-fb.jpg') }}" alt="No Image">
+                                                                     src="{{ auth()->user()->avatar_url }}" alt="No Image">
                                                             </div>
                                                             <div class="widget-content-left">
                                                                 <div class="widget-heading">
@@ -123,11 +117,6 @@
                                     Administrator
                                 </div>
                             </div>
-                            <div class="widget-content-right header-user-info ml-3">
-                                <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                    <i class="fa text-white fa-calendar pr-1 pl-1"></i>
-                                </button>
-                            </div>
                         </div>
                         @else
                         <a  href="{{ route('login') }}" style="text-decoration: none;">
@@ -136,7 +125,7 @@
                             </button>
                         </a>
                         <a href="{{ route('register') }}">
-                            <button class="btn btn-success">
+                            <button class="btn btn-primary">
                             <i class="fa fa-user"></i>
                             Register For Free
                             </button>
