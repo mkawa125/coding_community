@@ -119,7 +119,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <small style="text-align: center; font-size: small; color: #B5B5B6; margin: 0 auto">@PayIt create new merchant type</small>
+                <small style="text-align: center; font-size: small; color: #B5B5B6; margin: 0 auto">@CodingCommunity create new folder</small>
             </div>
         </div>
     </div>
