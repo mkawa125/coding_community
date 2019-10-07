@@ -22,7 +22,7 @@
                 {{ $message }}
             </div>
         @endif
-        <div class="card mb-3" style="padding: 0">
+        <div class="card mb-3" style="padding: 0; box-shadow: 0 1px 2px 0 #CCD1D1;">
             <div class="card-header" style="background-color: whitesmoke">
                 <div class="">
                     <i class="header-icon fa fa-book mr-3 text-muted opacity-6" style="font-size: small"> </i>
