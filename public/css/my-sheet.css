@@ -760,4 +760,7 @@ a.category_link{
     border: none;
     box-shadow: none;
 }
-
+.color_box{
+    background-color: white;
+    font-size: medium;
+}
