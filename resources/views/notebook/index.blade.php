@@ -22,8 +22,8 @@
                 {{ $message }}
             </div>
         @endif
-        <div class="card mb-3" style="padding: 0; box-shadow: 0 1px 2px 0 #CCD1D1;">
-            <div class="card-header" style="background-color: whitesmoke">
+        <div class="card mb-3" style="padding: 0; box-shadow: 0 1px 2px 0 #CCD1D1; border-top: 1px solid whitesmoke">
+            <div class="card-header card_head" style="background-color: #FBFCFC; border: none; ">
                 <div class="">
                     <i class="header-icon fa fa-book mr-3 text-muted opacity-6" style="font-size: small"> </i>
                     My Notebook
@@ -31,7 +31,7 @@
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
                         <a  id="create_category">
-                            <button class="btn btn-primary">
+                            <button class="btn add_folder">
                                 <i class="fa fa-plus"></i> New Category
                             </button>
                         </a>
