@@ -98,9 +98,9 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="col-sm-12" for="color">Choose file color</label>
+                                <label class="col-sm-12" for="folder_color">Choose file color</label>
                                 <div class="col-sm-12">
-                                    <input class="color_box" type="color" name="folder_color" value="#16A085" id="color">
+                                    <input class="color_box" type="color" name="folder_color" value="" id="folder_color">
                                 </div>
                             </div>
                         </div>
