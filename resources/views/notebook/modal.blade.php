@@ -75,7 +75,7 @@
 
             </div>
             <div class="modal-body">
-                <form id="merchantTypeForm" name="merchantTypeForm" class="form-horizontal">
+                <form id="categoryForm" name="categoryForm" class="form-horizontal">
                     <input type="hidden" name="id" id="merchant_id">
                     <input type="hidden" name="admin_name" id="admin_name" value="<?php echo auth()->user()->name ?>">
                     <div class="row">

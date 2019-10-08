@@ -63,8 +63,8 @@ $(document).ready(function () {
     });
 });
 
-if ($("#merchantTypeForm").length > 0) {
-    $("#merchantTypeForm").validate({
+if ($("#categoryForm").length > 0) {
+    $("#categoryForm").validate({
 
         submitHandler: function(form) {
 
@@ -72,7 +72,7 @@ if ($("#merchantTypeForm").length > 0) {
             $('#btn-save').html('Sending..');
 
             $.ajax({
-                data: $('#merchantTypeForm').serialize(),
+                data: $('#categoryForm').serialize(),
                 url: "api/v2/InsertMerchantTypes",
                 type: "POST",
                 dataType: 'json',
