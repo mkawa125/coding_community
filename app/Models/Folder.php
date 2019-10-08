@@ -23,8 +23,8 @@ class folder extends Model
     public static function rules(){
         return [
             'folder_name' => 'required',
-            'description' => 'required|min:10',
-            'folder_color' => 'required|min:10',
+            'description' => 'required|min:5',
+            'folder_color' => 'required|min:3',
         ];
     }
 }

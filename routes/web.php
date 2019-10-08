@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function (){
     Route::resource('users', 'UsersController');
     Route::resource('jobs', 'JobsController');
     Route::resource('myNotebook', 'MyNotebookController');
+    Route::resource('folders', 'FolderController');
 
 });
 //user notes routes

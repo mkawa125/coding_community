@@ -73,7 +73,7 @@ if ($("#categoryForm").length > 0) {
 
             $.ajax({
                 data: $('#categoryForm').serialize(),
-                url: "api/v2/InsertMerchantTypes",
+                url: "/folders",
                 type: "POST",
                 dataType: 'json',
                 success: function (data) {
@@ -90,25 +90,10 @@ if ($("#categoryForm").length > 0) {
 
                     if (actionType == "create-merchantType") {
                         $('#merchantTypeBody').prepend(merchantType);
-                        toastr.options = {
-                            "closeButton": true,
-                            "newestOnTop": false,
-                            "positionClass": "toast-top-right",
-                            "timeOut": "3000",
-                            "title": 'Success',
-                        };
-                        toastr.success('Merchant Type Successfully created', 'Success');
 
                     } else {
                         $("#merchant_id_" + data.id).replaceWith(merchantType);
-                        toastr.options = {
-                            "closeButton": true,
-                            "newestOnTop": false,
-                            "positionClass": "toast-top-right",
-                            "timeOut": "3000",
-                            "title": 'Success',
-                        };
-                        toastr.success('Merchant Type Successfully Edited', 'Edit Success');
+
                     }
 
                     $('#merchantTypeForm').trigger("reset");
