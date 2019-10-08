@@ -42,9 +42,11 @@ class FolderController extends Controller
                 'developerMessage' => $validator->errors(),
             ], 400);
         }else{
+
+            $folder = Folder::create($request->all());
             return response()->json([
                 'message' => 'success',
-                'data' => $request->all()
+                'data' => $folder
             ]);
         }
 

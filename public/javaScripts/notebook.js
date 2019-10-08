@@ -77,6 +77,7 @@ if ($("#categoryForm").length > 0) {
                 type: "POST",
                 dataType: 'json',
                 success: function (data) {
+                    console.log(data);
                     var merchantType = '<tr id="merchant_id_' + data.id + '" class="text-success">';
                     merchantType += '<td>' + '#' + '</td>';
                     merchantType += '<td>' +  data.name  + '</td>';
