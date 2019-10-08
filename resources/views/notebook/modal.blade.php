@@ -98,8 +98,9 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="col-sm-12" for="description">Choose file color</label>
+                                <label class="col-sm-12" for="color">Choose file color</label>
                                 <div class="col-sm-12">
+                                    <input class="color_box" type="color" name="folder_color" value="#16A085" id="color">
                                 </div>
                             </div>
                         </div>
@@ -108,7 +109,7 @@
                     <div class="form-group" style="margin-top: 15px">
                         <div class="col-sm-12">
                             <button type="submit" style="float: right; margin-left: 10px" class="btn btn-primary" id="btn-save" value="create">
-                                Save changes
+                                Save Folder
                             </button>
                             <button type="button" data-dismiss="modal" style="float: right; border: 1px solid #AEB6BF" class="btn btn-white">
                                 Cancel
@@ -118,7 +119,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <small style="text-align: center; font-size: small; color: #B5B5B6; margin: 0 auto">@PayIt create new merchant type</small>
+                <small style="text-align: center; font-size: small; color: #B5B5B6; margin: 0 auto">@CodingCommunity create new folder</small>
             </div>
         </div>
     </div>

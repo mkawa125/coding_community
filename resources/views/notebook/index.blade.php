@@ -22,8 +22,8 @@
                 {{ $message }}
             </div>
         @endif
-        <div class="card mb-3" style="padding: 0">
-            <div class="card-header" style="background-color: whitesmoke">
+        <div class="card mb-3" style="padding: 0; box-shadow: 0 1px 2px 0 #CCD1D1; border-top: 1px solid whitesmoke">
+            <div class="card-header card_head" style="background-color: #FBFCFC; border: none; ">
                 <div class="">
                     <i class="header-icon fa fa-book mr-3 text-muted opacity-6" style="font-size: small"> </i>
                     My Notebook
@@ -31,7 +31,7 @@
                 <div class="btn-actions-pane-right actions-icon-btn">
                     <div class="btn-group dropdown"  style="margin-right: 10px">
                         <a  id="create_category">
-                            <button class="btn btn-primary">
+                            <button class="btn add_folder">
                                 <i class="fa fa-plus"></i> New Category
                             </button>
                         </a>
@@ -45,7 +45,7 @@
                             <a href="#" class="category_link">
                                 <div class="row" style="padding: 10px 15px 10px 0">
                                     <div class="col-md-12 category_box">
-                                        <h4><i class="fa fa-folder"></i> Category one</h4>
+                                        <h4><i class="fa fa-folder" style="color: #1ABC9C"></i> Category one</h4>
                                         <label>
                                             <i class="fa fa-pencil-square-o"></i> 201 Notes
                                         </label>

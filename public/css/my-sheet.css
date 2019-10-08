@@ -720,24 +720,56 @@ body .notes-body{
     padding: 15px;
 }
 .category_box{
-    background-color: whitesmoke;
-    border-radius: 4px;
+    background-color: white;
+    border-radius: 3px;
     padding: 15px;
     font-size: small;
     text-align: left;
-    box-shadow: 0 1px 2px 1px #c1c5cc;
+    box-shadow: 0 1px 1px 0 #CCD1D1;
+    border: 1px solid #EBEDEF;
+}
+.category_box:hover{
+    background-color: whitesmoke;
+    border-radius: 3px;
+    padding: 15px;
+    font-size: small;
+    text-align: left;
+    box-shadow: 0 1px 1px 0 #CCD1D1;
+    border: 1px solid #EBEDEF;
 }
 .category_box h4{
     text-align: left;
     font-weight: bold;
     font-size: 16px;
-    color: #b3b7bb;
+    color: #7F8C8D;
     font-family: cursive;
 }
 .category_link{
     text-decoration: none;
-    color: lightsteelblue;
+    color: #808B96;
 }
 a.category_link{
     text-decoration: none;
+}
+.card_head{
+    -webkit-box-shadow:0 1px 1px whitesmoke;
+    -moz-box-shadow:0 1px 1px whitesmoke;
+    box-shadow:0 1px 2px 0 #D5DBDB;
+}
+.add_folder{
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #D5D8DC;
+    box-shadow: 0 1px 1px 0 #D5D8DC;
+}
+.add_folder:hover{
+    background-color: #45B39D;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+.color_box{
+    background-color: white;
+    font-size: medium;
 }
