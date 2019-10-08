@@ -83,10 +83,19 @@ if ($("#categoryForm").length > 0) {
                     console.log(data);
                     var folder = '<div>' +
                         '<a href="#">' +
-
+                        '<div class="row" style="padding: 10px 15px 10px 0">'+
+                        '<div class="col-md-12 category_box">'+
+                        '<h4>' +
+                        ' <i class="fa fa-folder" style="color: data.folder_color"></i> ' +
+                         ' '+ data.data.folder_name +
+                        '</h4>'+
+                        '<label>'+
+                            '<i class="fa fa-pencil-square-o"></i> 201 Notes'+
+                        '</label>'+
+                        '</div>'+
+                        '</div>'+
                         '</a>'+
-                        '</div>'
-                    ;
+                        '</div>';
 
                     if (actionType == "create_category") {
                         $('#notebook_body').prepend(folder);
