@@ -15,9 +15,9 @@ $(document).ready(function () {
     });
 
     /* When click edit user */
-    $('body').on('click', '#edit-merchantType', function () {
-        var merchant_id = $(this).data('id');
-        $.get('/merchantTypes/' + merchant_id +'/edit', function (data) {
+    $('body').on('click', '#edit_category', function () {
+        var folder_id = $(this).data('id');
+        $.get('/folders/' + folder_id +'/edit', function (data) {
             $('#userCrudModal').html("Edit Merchant Type");
             $('#btn-save').val("edit-merchantType");
             $('#ajax-crud-modal').modal('show');
