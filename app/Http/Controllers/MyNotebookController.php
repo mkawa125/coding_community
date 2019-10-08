@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Folder;
 
 class MyNotebookController extends Controller
 {
@@ -13,7 +14,8 @@ class MyNotebookController extends Controller
      */
     public function index()
     {
-        return view('notebook.index');
+        $folders = Folder::query()->get();
+        return view('notebook.index', compact('folders'));
     }
 
     /**

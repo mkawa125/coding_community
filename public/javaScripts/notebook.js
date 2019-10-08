@@ -78,22 +78,18 @@ if ($("#categoryForm").length > 0) {
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
-                    var merchantType = '<tr id="merchant_id_' + data.id + '" class="text-success">';
-                    merchantType += '<td>' + '#' + '</td>';
-                    merchantType += '<td>' +  data.name  + '</td>';
-                    merchantType += '<td>' +  data.description + '</td>';
-                    merchantType += '<td>' +
-                        '<a href="javascript:void(0)" id="edit-merchantType" data-id="' + data.id + '" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a> ';
-                    merchantType +=
-                        ' <a href="javascript:void(0)" id="delete-merchantType" data-id="' + data.id + '" class="btn btn-danger delete-merchant btn-xs"><i class="fa fa-trash-o"></i></a>' +
-                        '</td>' +
-                        '</tr>';
+                    var folder = '<div>' +
+                        '<a href="#">' +
 
-                    if (actionType == "create-merchantType") {
-                        $('#merchantTypeBody').prepend(merchantType);
+                        '</a>'+
+                        '</div>'
+                    ;
+
+                    if (actionType == "create_category") {
+                        $('#notebook_body').prepend(folder);
 
                     } else {
-                        $("#merchant_id_" + data.id).replaceWith(merchantType);
+                        $("#merchant_id_" + data.id).replaceWith(folder);
 
                     }
 

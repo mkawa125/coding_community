@@ -38,60 +38,23 @@
                     </div>
                 </div>
             </div>
-            <div class="card-body" style="margin-top: 1px">
+            <div class="card-body" id="" style="margin-top: 1px">
                 <div class="col-md-12">
                     <div class="row" style="padding: 0 auto">
-                        <div class="col-md-3">
-                            <a href="#" class="category_link">
-                                <div class="row" style="padding: 10px 15px 10px 0">
-                                    <div class="col-md-12 category_box">
-                                        <h4><i class="fa fa-folder" style="color: #1ABC9C"></i> Category one</h4>
-                                        <label>
-                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
-                                        </label>
+                        @foreach($folders as $folder)
+                            <div class="col-md-3" id="notebook_body">
+                                <a href="#" class="category_link">
+                                    <div class="row" style="padding: 10px 15px 10px 0">
+                                        <div class="col-md-12 category_box">
+                                            <h4><i class="fa fa-folder" style="color: {{ $folder->folder_color }}"></i> {{ $folder->folder_name }}</h4>
+                                            <label>
+                                                <i class="fa fa-pencil-square-o"></i> 201 Notes
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3">
-                            <a href="#" class="category_link">
-                                <div class="row" style="padding: 10px 15px 10px 0">
-                                    <div class="col-md-12 category_box">
-                                        <h4><i class="fa fa-folder"></i> Category one</h4>
-                                        <label>
-                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
-                                        </label>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3">
-                            <a href="#" class="category_link">
-                                <div class="row" style="padding: 10px 15px 10px 0">
-                                    <div class="col-md-12 category_box">
-                                        <h4><i class="fa fa-folder"></i> Category one</h4>
-                                        <label>
-                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
-                                        </label>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3">
-                            <a href="#" class="category_link">
-                                <div class="row" style="padding: 10px 15px 10px 0">
-                                    <div class="col-md-12 category_box">
-                                        <h4><i class="fa fa-folder"></i> Category one</h4>
-                                        <label>
-                                            <i class="fa fa-pencil-square-o"></i> 201 Notes
-                                        </label>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                            @endforeach
                     </div>
                 </div>
             </div>
