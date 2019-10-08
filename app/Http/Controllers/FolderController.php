@@ -47,7 +47,7 @@ class FolderController extends Controller
             return response()->json([
                 'message' => 'success',
                 'data' => $folder
-            ]);
+            ], 200);
         }
 
     }
@@ -71,7 +71,11 @@ class FolderController extends Controller
      */
     public function edit($id)
     {
-        //
+        $folder = Folder::findOrFail($id);
+        return response()->json([
+            'message' => 'success',
+            'data' => $folder
+        ], 200);
     }
 
     /**

@@ -18,13 +18,15 @@ $(document).ready(function () {
     $('body').on('click', '#edit_category', function () {
         var folder_id = $(this).data('id');
         $.get('/folders/' + folder_id +'/edit', function (data) {
+            console.log(data);
             $('#userCrudModal').html("Edit Folder Details");
             $('#btn-save').val("edit-merchantType");
             $('#ajax-crud-modal').modal('show');
             $('#ajax-crud-modal').appendTo("body");
             $('#merchant_id').val(data.id);
-            $('#folder_name').val(data.folder_name);
-            $('#description').val(data.Description);
+            $('#folder_name').val(data.data.folder_name);
+            $('#folder_color').val(data.data.folder_color);
+            $('#description').val(data.data.description);
         })
     });
     //delete user login
