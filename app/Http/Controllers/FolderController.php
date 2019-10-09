@@ -60,7 +60,8 @@ class FolderController extends Controller
      */
     public function show($id)
     {
-        //
+        $folder = Folder::findOrFail($id);
+        return view('notebook.folders.show', compact('folder'));
     }
 
     /**

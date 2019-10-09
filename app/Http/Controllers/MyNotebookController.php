@@ -15,7 +15,7 @@ class MyNotebookController extends Controller
     public function index()
     {
         $folders = Folder::query()->get();
-        return view('notebook.index', compact('folders'));
+        return view('notebook.folders.index', compact('folders'));
     }
 
     /**
