@@ -81,12 +81,13 @@ if ($("#categoryForm").length > 0) {
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
-                    var folder = '<div>' +
-                        '<a href="#">' +
+                    var color = data.data.folder_color;
+                    var folder = '<div class="col-md-3">' +
+                        '<a id="edit_category" class="category_link" data-id="'+ data.data.id+'">' +
                         '<div class="row" style="padding: 10px 15px 10px 0">'+
                         '<div class="col-md-12 category_box">'+
                         '<h4>' +
-                        ' <i class="fa fa-folder" style="color: data.folder_color"></i> ' +
+                        ' <i class="fa fa-folder" style="color: '+ color +'"></i> ' +
                          ' '+ data.data.folder_name +
                         '</h4>'+
                         '<label>'+
