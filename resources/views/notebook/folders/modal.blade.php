@@ -75,15 +75,15 @@
 
             </div>
             <div class="modal-body">
-                <form id="merchantTypeForm" name="merchantTypeForm" class="form-horizontal">
+                <form id="categoryForm" name="categoryForm" class="form-horizontal">
                     <input type="hidden" name="id" id="merchant_id">
-                    <input type="hidden" name="admin_name" id="admin_name" value="<?php echo auth()->user()->name ?>">
+                    <input type="hidden" name="user_id" id="user_id" value="<?php echo auth()->user()->id ?>">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="name" class="col-sm-12">Category Name</label>
+                                <label for="name" class="col-sm-12">Folder Name</label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Category nam e.g programming" value="" required="">
+                                    <input type="text" class="form-control" id="folder_name" name="folder_name" placeholder="Folder name e.g programming" value="" required="">
                                 </div>
                             </div>
                         </div>
@@ -91,16 +91,16 @@
                             <div class="form-group">
                                 <label class="col-sm-12" for="description">Descriptions</label>
                                 <div class="col-sm-12">
-                                    <textarea class="form-control" required placeholder="Write something about this category ..." name="description" rows="4" id="description"></textarea>
+                                    <textarea class="form-control" required placeholder="Write something about this folder ..." name="description" rows="4" id="description"></textarea>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="col-sm-12" for="color">Choose file color</label>
+                                <label class="col-sm-12" for="folder_color">Choose file color</label>
                                 <div class="col-sm-12">
-                                    <input class="color_box" type="color" name="folder_color" value="#16A085" id="color">
+                                    <input class="color_box" type="color" name="folder_color" value="" id="folder_color">
                                 </div>
                             </div>
                         </div>

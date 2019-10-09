@@ -747,6 +747,7 @@ body .notes-body{
 .category_link{
     text-decoration: none;
     color: #808B96;
+    cursor: pointer;
 }
 a.category_link{
     text-decoration: none;

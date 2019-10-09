@@ -15,15 +15,18 @@ $(document).ready(function () {
     });
 
     /* When click edit user */
-    $('body').on('click', '#edit-merchantType', function () {
-        var merchant_id = $(this).data('id');
-        $.get('/merchantTypes/' + merchant_id +'/edit', function (data) {
-            $('#userCrudModal').html("Edit Merchant Type");
+    $('body').on('click', '#edit_category', function () {
+        var folder_id = $(this).data('id');
+        $.get('/folders/' + folder_id +'/edit', function (data) {
+            console.log(data);
+            $('#userCrudModal').html("Edit Folder Details");
             $('#btn-save').val("edit-merchantType");
             $('#ajax-crud-modal').modal('show');
+            $('#ajax-crud-modal').appendTo("body");
             $('#merchant_id').val(data.id);
-            $('#name').val(data.Name);
-            $('#description').val(data.Description);
+            $('#folder_name').val(data.data.folder_name);
+            $('#folder_color').val(data.data.folder_color);
+            $('#description').val(data.data.description);
         })
     });
     //delete user login
@@ -63,8 +66,8 @@ $(document).ready(function () {
     });
 });
 
-if ($("#merchantTypeForm").length > 0) {
-    $("#merchantTypeForm").validate({
+if ($("#categoryForm").length > 0) {
+    $("#categoryForm").validate({
 
         submitHandler: function(form) {
 
@@ -72,46 +75,38 @@ if ($("#merchantTypeForm").length > 0) {
             $('#btn-save').html('Sending..');
 
             $.ajax({
-                data: $('#merchantTypeForm').serialize(),
-                url: "api/v2/InsertMerchantTypes",
+                data: $('#categoryForm').serialize(),
+                url: "/folders",
                 type: "POST",
                 dataType: 'json',
                 success: function (data) {
-                    var merchantType = '<tr id="merchant_id_' + data.id + '" class="text-success">';
-                    merchantType += '<td>' + '#' + '</td>';
-                    merchantType += '<td>' +  data.name  + '</td>';
-                    merchantType += '<td>' +  data.description + '</td>';
-                    merchantType += '<td>' +
-                        '<a href="javascript:void(0)" id="edit-merchantType" data-id="' + data.id + '" class="btn btn-success btn-xs"><i class="fa fa-edit"></i></a> ';
-                    merchantType +=
-                        ' <a href="javascript:void(0)" id="delete-merchantType" data-id="' + data.id + '" class="btn btn-danger delete-merchant btn-xs"><i class="fa fa-trash-o"></i></a>' +
-                        '</td>' +
-                        '</tr>';
+                    console.log(data);
+                    var color = data.data.folder_color;
+                    var folder = '<div class="col-md-3">' +
+                        '<a id="edit_category" class="category_link" data-id="'+ data.data.id+'">' +
+                        '<div class="row" style="padding: 10px 15px 10px 0">'+
+                        '<div class="col-md-12 category_box">'+
+                        '<h4>' +
+                        ' <i class="fa fa-folder" style="color: '+ color +'"></i> ' +
+                         ' '+ data.data.folder_name +
+                        '</h4>'+
+                        '<label>'+
+                            '<i class="fa fa-pencil-square-o"></i> 201 Notes'+
+                        '</label>'+
+                        '</div>'+
+                        '</div>'+
+                        '</a>'+
+                        '</div>';
 
-                    if (actionType == "create-merchantType") {
-                        $('#merchantTypeBody').prepend(merchantType);
-                        toastr.options = {
-                            "closeButton": true,
-                            "newestOnTop": false,
-                            "positionClass": "toast-top-right",
-                            "timeOut": "3000",
-                            "title": 'Success',
-                        };
-                        toastr.success('Merchant Type Successfully created', 'Success');
+                    if (actionType == "create_category") {
+                        $('#notebook_body').prepend(folder);
 
                     } else {
-                        $("#merchant_id_" + data.id).replaceWith(merchantType);
-                        toastr.options = {
-                            "closeButton": true,
-                            "newestOnTop": false,
-                            "positionClass": "toast-top-right",
-                            "timeOut": "3000",
-                            "title": 'Success',
-                        };
-                        toastr.success('Merchant Type Successfully Edited', 'Edit Success');
+                        $("#merchant_id_" + data.id).replaceWith(folder);
+
                     }
 
-                    $('#merchantTypeForm').trigger("reset");
+                    $('#categoryForm').trigger("reset");
                     $('#ajax-crud-modal').modal('hide');
                     $('#btn-save').html('Save Changes');
 
