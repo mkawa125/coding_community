@@ -106,7 +106,7 @@ if ($("#categoryForm").length > 0) {
 
                     }
 
-                    $('#merchantTypeForm').trigger("reset");
+                    $('#categoryForm').trigger("reset");
                     $('#ajax-crud-modal').modal('hide');
                     $('#btn-save').html('Save Changes');
 
