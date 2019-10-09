@@ -43,7 +43,7 @@
                     <div class="row" style="padding: 0 auto" id="notebook_body">
                         @foreach($folders as $folder)
                             <div class="col-md-3" >
-                                <a id="edit_category" class="category_link" data-id="{{ $folder->id }}">
+                                <a href="{{ url('folders', ['id' => $folder->id]) }}" class="category_link" data-id="{{ $folder->id }}">
                                     <div class="row" style="padding: 10px 15px 10px 0">
                                         <div class="col-md-12 category_box">
                                             <h4>
