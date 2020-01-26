@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Folder;
 
 class MyNotebookController extends Controller
 {
@@ -14,8 +13,7 @@ class MyNotebookController extends Controller
      */
     public function index()
     {
-        $folders = Folder::query()->get();
-        return view('notebook.folders.index', compact('folders'));
+        return view('notebook.index');
     }
 
     /**
@@ -27,6 +25,7 @@ class MyNotebookController extends Controller
     {
         //
     }
+
 
     /**
      * Store a newly created resource in storage.
