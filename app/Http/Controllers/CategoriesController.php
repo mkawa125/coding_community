@@ -15,10 +15,10 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::query()
+        $query = Category::query()
             ->with('addedBy')
-            ->withCount('subCategories')
-            ->get();
+            ->withCount('subCategories')->get();
+
         return view('categories.index', compact('categories'));
     }
 

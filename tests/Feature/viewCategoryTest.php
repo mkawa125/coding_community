@@ -16,6 +16,7 @@ class viewCategoryTest extends TestCase
 
     /** @test */
     public function a_user_can_read_all_categories(){
+        $this->withoutExceptionHandling();
         $this->actingAs(factory(User::class)->create());
 
         $category = factory(Category::class)->create();
