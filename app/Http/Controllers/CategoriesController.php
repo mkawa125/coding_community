@@ -71,6 +71,7 @@ class CategoriesController extends Controller
     {
         $category = Category::query()->where('id', $id)
             ->with('subCategories')->first();
+            
         return view('categories.edit', compact('category'));
     }
 
